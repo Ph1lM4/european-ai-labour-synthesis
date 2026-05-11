@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 3 / Alternative A &mdash; Bidirectional hover-highlight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+h2{font-size:18px;font-weight:700;letter-spacing:-0.02em;margin:32px 0 8px;line-height:1.3}
+h2 .num{color:var(--ring);font-weight:700}
+
+.section-sub{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5;max-width:760px}
+
+.corridor-map{margin:14px 0;padding:20px 18px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.country-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:6px;margin-bottom:14px}
+@media(max-width:768px){.country-grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:480px){.country-grid{grid-template-columns:repeat(4,1fr)}}
+.country-cell{aspect-ratio:1.6/1;padding:8px 6px;border-radius:var(--radius-sm);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;border:2px solid transparent;transition:all .15s;background-clip:padding-box;font-family:var(--font)}
+.country-cell .code{font-size:13px;font-weight:700;letter-spacing:0.02em;color:#0a0a0a}
+.country-cell .scale{font-size:9px;font-weight:600;color:rgba(0,0,0,0.65);letter-spacing:0.04em;text-transform:uppercase}
+.cell-I{background:var(--class-i)}
+.cell-II{background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 4px,rgba(0,0,0,0.10) 4px,rgba(0,0,0,0.10) 5px)}
+.cell-III{background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 3px,rgba(0,0,0,0.18) 3px,rgba(0,0,0,0.18) 5px)}
+.cell-IV{background:var(--class-iv)}
+.cell-IV .code,.cell-IV .scale{color:#fafafa}
+
+.country-cell.linked{border-color:var(--ring);box-shadow:0 0 0 2px rgba(249,115,22,0.30)}
+.country-cell:hover,.country-cell:focus-visible{transform:translateY(-2px);outline:none}
+
+.class-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+@media(max-width:900px){.class-panel{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.class-panel{grid-template-columns:1fr}}
+.class-card{padding:16px 18px;background:var(--card);border:2px solid var(--card-border);border-radius:var(--radius-lg);border-left-width:3px;cursor:pointer;transition:all .15s;font-family:var(--font);text-align:left}
+.class-card.c-I{border-left-color:var(--class-i)}
+.class-card.c-II{border-left-color:var(--class-ii)}
+.class-card.c-III{border-left-color:var(--class-iii)}
+.class-card.c-IV{border-left-color:var(--class-iv)}
+.class-card .class-header{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.class-card .class-num{font-size:16px;font-weight:700;letter-spacing:-0.02em}
+.class-card.c-I .class-num{color:var(--class-i)}
+.class-card.c-II .class-num{color:var(--class-ii)}
+.class-card.c-III .class-num{color:var(--class-iii)}
+.class-card.c-IV .class-num{color:#fca5a5}
+.class-card .class-count{font-size:12px;color:var(--muted-foreground);font-weight:600}
+.class-card h3{font-size:13px;font-weight:600;margin-bottom:4px;color:var(--fg)}
+.class-card .countries{font-size:11px;color:var(--muted-foreground);line-height:1.6;letter-spacing:0.02em}
+
+.class-card.linked{border-color:var(--ring);box-shadow:0 0 0 2px rgba(249,115,22,0.30)}
+.class-card:hover,.class-card:focus-visible{transform:translateY(-2px);outline:none}
+
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:8px}
+.legend-item{display:inline-flex;align-items:center;gap:6px}
+.legend-swatch{width:14px;height:14px;border-radius:3px;border:1px solid rgba(255,255,255,0.15)}
+
+.demo-banner{padding:12px 16px;background:rgba(249,115,22,0.06);border-left:3px solid var(--ring);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:12.5px;color:#d4d4d8;margin:14px 0;line-height:1.6}
+.demo-banner strong{color:var(--ring)}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 3 / Alternative A</div>
+  <h1>Bidirectional hover-highlight</h1>
+  <p class="note">Hover or focus a country &rarr; its class card lights up with the orange ring. Hover or focus a class card &rarr; that class&rsquo;s countries get the orange outline. Always-on, no clicks. On touch, tap acts as hover. Demonstrates the §3 ↔ §4 connection without forcing users to learn a Sankey or click controls.</p>
+</header>
+
+<main class="container">
+
+  <div class="demo-banner"><strong>Try it.</strong> Hover any country tile to see its class card highlight. Hover any class card to see its countries highlight on the map.</div>
+
+  <h2><span class="num">3.</span> The 36-Country Corridor Map</h2>
+  <p class="section-sub">Hover a cell to see its class card light up below.</p>
+  <div class="corridor-map">
+    <div class="country-grid" id="country-grid" role="img" aria-label="36-country grid colour-coded by fragility class"></div>
+    <div class="legend" aria-label="Legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-i)"></span><span>Class I (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 4px,rgba(0,0,0,0.20) 4px,rgba(0,0,0,0.20) 5px)"></span><span>Class II (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 3px,rgba(0,0,0,0.30) 3px,rgba(0,0,0,0.30) 5px)"></span><span>Class III (15)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iv)"></span><span>Class IV (3)</span></span>
+    </div>
+  </div>
+
+  <h2><span class="num">4.</span> Fragility classes</h2>
+  <p class="section-sub">Hover a class card to see its countries highlight on the map above.</p>
+  <div class="class-panel" id="class-panel"></div>
+</main>
+
+<script>
+(function(){
+'use strict';
+let DATA=null;
+const COUNTRY_ORDER=['DK','FI','IS','NO','SE','BE','FR','LU','NL',
+  'AT','BA','BG','CH','DE','ES','LI','LV','RO',
+  'CY','CZ','EE','EL','HR','HU','IE','IT','LT','MT','PL','PT','SI','SK','UK',
+  'MK','RS','TR'];
+
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{DATA=d;render()}).catch(e=>{
+  document.getElementById('country-grid').innerHTML='<p style="color:var(--muted);font-size:13px;grid-column:1/-1">Data fetch failed.</p>';
+  console.error(e);
+});
+
+const RULE={
+  I:'Within ±1 corridor of baseline AND no routine variant lands in C3.',
+  II:'Baseline C2; ≥1 routine variant pushes to C3.',
+  III:'Muddle-Through baseline lands in C3 post-rescaling.',
+  IV:'Candidate-partial-coverage with extreme Lens 5 readings.'
+};
+
+function render(){
+  if(!DATA)return;
+  // Grid
+  const grid=document.getElementById('country-grid');
+  grid.innerHTML=COUNTRY_ORDER.map(code=>{
+    const c=DATA.countries[code]; if(!c)return '';
+    const scaleAbbr=c.scale_tag==='both'?'A+D':(c.scale_tag||'').slice(0,3);
+    return `<button class="country-cell cell-${c.fragility_class}" data-code="${code}" data-class="${c.fragility_class}" aria-label="${c.name}, Class ${c.fragility_class}">
+      <span class="code">${code}</span><span class="scale">${scaleAbbr}</span>
+    </button>`;
+  }).join('');
+  // Class panel
+  const panel=document.getElementById('class-panel');
+  const order=['I','II','III','IV'];
+  panel.innerHTML=order.map(k=>{
+    const cl=DATA.fragility_classes[k]; if(!cl)return '';
+    return `<button class="class-card c-${k}" data-class="${k}" aria-label="Class ${k}: ${cl.label}, ${cl.n_countries} countries">
+      <div class="class-header">
+        <span class="class-num">Class ${k}</span>
+        <span class="class-count">${cl.n_countries} countries</span>
+      </div>
+      <h3>${cl.label}</h3>
+      <p style="font-size:11.5px;color:var(--muted);line-height:1.55;margin:0 0 6px">${RULE[k]}</p>
+      <p class="countries">${(cl.countries||[]).join(' · ')}</p>
+    </button>`;
+  }).join('');
+  attachLink();
+}
+
+function attachLink(){
+  const cells=document.querySelectorAll('.country-cell');
+  const cards=document.querySelectorAll('.class-card');
+  function activate(cls){
+    cells.forEach(el=>el.classList.toggle('linked',el.getAttribute('data-class')===cls));
+    cards.forEach(el=>el.classList.toggle('linked',el.getAttribute('data-class')===cls));
+  }
+  function clear(){
+    cells.forEach(el=>el.classList.remove('linked'));
+    cards.forEach(el=>el.classList.remove('linked'));
+  }
+  [...cells,...cards].forEach(el=>{
+    const cls=el.getAttribute('data-class');
+    el.addEventListener('mouseenter',()=>activate(cls));
+    el.addEventListener('focus',()=>activate(cls));
+    el.addEventListener('mouseleave',clear);
+    el.addEventListener('blur',clear);
+    el.addEventListener('click',e=>{e.preventDefault();activate(cls);setTimeout(clear,2500)});
+  });
+}
+})();
+</script>
+</body>
+</html>

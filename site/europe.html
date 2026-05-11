@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europe &mdash; European AI Labour Market Synthesis | Nexalps</title>
+<meta name="description" content="Europe doesn't have one answer. It has 36. The same analysis at three scales: EU-27, the full set of 36 European markets, and where the two diverge.">
+<link rel="canonical" href="https://synthesis.nexalps.com/europe.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Europe — European AI Labour Market Synthesis">
+<meta property="og:description" content="Europe doesn't have one answer. It has 36.">
+<meta property="og:url" content="https://synthesis.nexalps.com/europe.html">
+<meta property="og:site_name" content="Nexalps">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://synthesis.nexalps.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Europe — European AI Labour Market Synthesis">
+<meta name="twitter:description" content="Europe doesn't have one answer. It has 36.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"European AI Labour Market Synthesis — Pan-European Aggregate","description":"Population-weighted aggregates across the 36-market panel and the EU-27 sub-set, with delta strip surfacing what shifts when scope is restricted. Class distributions: 9/9/15/3 across 36 markets; 7/6/14/0 across EU-27.","url":"https://synthesis.nexalps.com/europe.html","creator":{"@type":"Person","name":"Philipp Maul","url":"https://www.linkedin.com/in/pmaul/","affiliation":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"}},"publisher":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-30","spatialCoverage":"Europe","temporalCoverage":"2024/2035","variableMeasured":["working-age population weighted aggregate","headline corridor","class distribution","36-market vs EU-27 delta"],"keywords":["pan-European aggregate","EU-27","36-market scope","UN PPP2024","working-age population","corridor mass"],"isPartOf":{"@type":"Dataset","name":"European AI Labour Market Synthesis (Part 6)","url":"https://synthesis.nexalps.com/"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])}}(document,window.posthog||[]);
+posthog.init('phc_bjax6jdRxYJAaExodvALjRru8AQzUSbYFNlWlXiJM8A',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only'});
+setTimeout(function(){
+  if(typeof posthog==='undefined') return;
+  var thresholds=[25,50,75,100], fired={};
+  window.addEventListener('scroll', function(){
+    var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+    thresholds.forEach(function(t){
+      if(pct>=t && !fired[t]){ fired[t]=true; posthog.capture('scroll_depth',{percent:t,page:'europe'}); }
+    });
+  }, {passive:true});
+  document.querySelectorAll('a[target="_blank"]').forEach(function(a){
+    a.addEventListener('click', function(){ posthog.capture('outbound_click',{url:a.href, page:'europe'}); });
+  });
+}, 500);
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --background:#09090b;--foreground:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --accent:#27272a;--border:rgba(255,255,255,0.12);--input-border:rgba(255,255,255,0.15);
+  --ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+  --transition:150ms cubic-bezier(0.4,0,0.2,1);
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--background);color:var(--foreground);line-height:1.5;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100px;left:8px;background:var(--ring);color:#000;padding:8px 16px;border-radius:0 0 var(--radius-sm) var(--radius-sm);font-weight:700;z-index:200;text-decoration:none}
+.skip-link:focus{top:0}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+.site-nav{position:fixed;top:0;right:0;left:0;z-index:9999;display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:12px 20px;pointer-events:none}
+
+.site-nav-links{display:flex;gap:18px;align-items:center;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:8px 14px}
+.site-nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+.site-nav-links a:hover{color:var(--foreground)}
+.site-nav-links a[aria-current="page"]{color:var(--ring)}
+.nav-sep{width:1px;background:var(--border);margin:0 4px;align-self:stretch}
+
+.burger{display:none;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-md);min-width:44px;min-height:44px;padding:13px 12px;cursor:pointer;flex-direction:column;justify-content:center;gap:4px}
+.burger span{display:block;width:18px;height:2px;background:var(--foreground);border-radius:1px;transition:transform .2s,opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.burger-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:9998;background:rgba(9,9,11,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:72px 24px 32px;flex-direction:column;gap:24px}
+.burger-panel.open{display:flex}
+.burger-panel a{font-size:20px;font-weight:600;color:var(--muted);text-decoration:none}
+.burger-panel a:hover{color:var(--foreground)}
+.burger-panel a[aria-current="page"]{color:var(--ring)}
+.burger-sep{height:1px;background:var(--border);margin:4px 0}
+@media(max-width:1100px){.site-nav-links{display:none}.burger{display:flex}}
+
+.einfache-banner{background:rgba(249,115,22,0.10);border:1px solid rgba(249,115,22,0.25);border-radius:var(--radius-md);padding:14px 18px;margin:24px 0;font-size:13px;line-height:1.6;color:#d4d4d8}
+.einfache-banner strong{color:var(--ring);font-weight:700}
+.coming-soon{padding:48px 32px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);max-width:560px;margin:48px auto;text-align:left}
+.coming-soon h2{font-size:22px;font-weight:700;margin-bottom:12px}
+.coming-soon p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.coming-soon button{background:var(--ring);color:#000;border:1px solid var(--ring);border-radius:var(--radius-md);padding:10px 18px;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer}
+
+.hero{padding:80px 32px 24px}
+.hero h1{font-size:36px;font-weight:700;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;max-width:820px}
+.hero .lede{font-size:18px;color:var(--muted);line-height:1.7;max-width:680px;margin-bottom:20px;font-weight:400}
+.hero .byline{font-size:12px;color:var(--muted-foreground);line-height:1.6}
+.hero .byline a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.hero .byline a:hover{color:var(--foreground)}
+.hero .byline + .byline{margin-top:4px}
+@media(max-width:640px){.hero h1{font-size:24px;padding-right:60px}.hero .lede{font-size:16px}.hero{padding:64px 20px 20px}}
+
+h2{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin:48px 0 8px;line-height:1.3}
+h2 .num{color:var(--ring);font-weight:700}
+h2 .subtitle{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:4px}
+.section-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.5;max-width:760px}
+.section-intro{font-size:15px;color:#d4d4d8;line-height:1.75;margin-bottom:20px;max-width:760px}
+p{font-size:16px;color:#d4d4d8;line-height:1.8}
+
+.sm-pyramid{margin:24px 0 32px;padding:0;max-width:760px}
+.sm-pyramid .sm-headline{font-size:20px;font-weight:700;margin:0 0 6px;color:var(--foreground);line-height:1.3}
+.sm-pyramid .sm-sub{font-size:15px;color:var(--muted);font-style:italic;margin:0 0 16px;line-height:1.6}
+.sm-pyramid .sm-header{font-style:italic;font-size:18px;font-weight:600;margin:20px 0 8px;color:var(--foreground);line-height:1.4}
+.sm-pyramid .sm-support{font-size:16px;line-height:1.7;margin:0 0 12px;max-width:760px;color:#d4d4d8}
+.sm-pyramid .sm-support:last-child{margin-bottom:0}
+
+.delta-bar{margin:24px 0 16px;padding:14px 18px;background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.20);border-radius:var(--radius-md);border-left:3px solid var(--ring);max-width:none}
+.delta-bar .delta-label{font-size:11px;font-weight:700;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px}
+.delta-bar h3{font-size:16px;font-weight:700;color:var(--foreground);margin-bottom:10px}
+.delta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 18px}
+@media(max-width:900px){.delta-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.delta-grid{grid-template-columns:1fr}}
+.delta-item{display:flex;flex-direction:column;gap:3px;padding:6px 4px;border-radius:var(--radius-sm);transition:background .12s;cursor:default}
+.delta-item:hover,.delta-item:focus-within{background:rgba(255,255,255,0.03)}
+.delta-item .label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted-foreground)}
+.delta-item .arrow{font-size:14px;color:var(--foreground);font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.01em}
+.delta-item .arrow .from{color:var(--muted)}
+.delta-item .arrow .to{color:var(--foreground)}
+.delta-item .arrow .glyph{color:var(--ring);margin:0 4px}
+.delta-item .note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:2px}
+
+.primary-panel{margin:18px 0;padding:24px 26px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-top:3px solid #a1a1aa;max-width:none}
+.primary-panel .scope-label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.primary-panel h3{font-size:20px;font-weight:700;margin-bottom:4px;color:var(--foreground)}
+.primary-panel .scope-meta{font-size:12px;color:var(--muted-foreground);margin-bottom:18px;line-height:1.5}
+.primary-panel .stat-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:8px 0;border-bottom:1px solid var(--card-border);font-size:13px}
+.primary-panel .stat-row:last-child{border-bottom:none}
+.primary-panel .stat-label{color:var(--muted)}
+.primary-panel .stat-value{color:var(--foreground);font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.primary-panel .stat-block{margin:10px 0;padding:12px 0;border-bottom:1px solid var(--card-border)}
+.primary-panel .stat-block:last-child{border-bottom:none}
+.primary-panel .stat-block .stat-label-blk{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted-foreground);margin-bottom:8px}
+.primary-panel .stat-block .stat-grid{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:13px}
+.primary-panel .stat-block .stat-grid .k{color:var(--muted)}
+.primary-panel .stat-block .stat-grid .v{color:#d4d4d8;font-variant-numeric:tabular-nums;text-align:right}
+
+.variation-block{margin:20px 0;max-width:760px}
+.variation-block .label{font-size:11px;font-weight:700;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.variation-block p{font-size:15px;color:#d4d4d8;line-height:1.75;margin:0}
+
+.pull-quote{margin:0 0 28px;padding:6px 0 6px 18px;border-left:3px solid var(--ring);max-width:760px}
+.pull-quote p{font-size:20px;font-weight:400;color:var(--foreground);line-height:1.45;margin:0;font-style:italic}
+
+.footer{padding:24px 0 40px;font-size:12px;color:var(--muted-foreground);line-height:1.7;border-top:1px solid var(--card-border);margin-top:48px}
+.footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.footer a:hover{color:var(--foreground)}
+.footer .cite-as{margin-top:8px;font-style:italic;color:var(--muted)}
+
+@media(max-width:768px){.container{padding:0 16px}h2{padding-right:60px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+/* ── Pagination ── */
+.cta-bar{max-width:760px;margin:48px auto;padding:32px 24px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);text-align:center}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 24px;border-radius:var(--radius-md);font-family:var(--font);font-size:14px;font-weight:600;text-decoration:none;transition:all var(--transition);line-height:1.5}
+.btn-primary{background:var(--ring);color:#000}.btn-primary:hover{background:#fb923c}
+.btn-outline{background:transparent;color:var(--muted);border:1px solid var(--border)}.btn-outline:hover{border-color:rgba(255,255,255,0.25);color:var(--foreground)}
+@media(max-width:640px){.btn-row{flex-direction:column;align-items:stretch}.btn{padding:14px 24px;min-height:44px;display:flex;align-items:center;justify-content:center}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="site-nav-links">
+    <a href="index.html">Overview</a>
+    <a href="findings.html">Findings</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="europe.html" aria-current="page">Europe</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="nav-sep"></span>
+    <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+    <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+    <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+    <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+    <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+  </div>
+  <button class="burger" id="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="burger-panel" id="burger-panel" role="dialog" aria-label="Navigation menu">
+  <a href="index.html">Overview</a>
+  <a href="findings.html">Findings</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="europe.html" aria-current="page">Europe</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <div class="burger-sep"></div>
+  <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+  <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+  <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+  <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+  <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+</div>
+
+<main id="main" role="main">
+
+<!-- ─────────── STANDARD MODE ─────────── -->
+<div data-lang="standard">
+
+<header class="hero container">
+  <h1>Europe doesn&rsquo;t have one answer. It has 36.</h1>
+  <p class="lede">We ran the same analysis at three scales: the EU-27, the full set of 36 European markets, and where the two diverge.</p>
+  <p class="byline">Part 6 of 7 &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a></p>
+  <p class="byline">Based on <a href="sources.html">59 primary sources</a> including Autor 2024 (QJE), Cedefop 2025, Draghi 2024, the European Climate Risk Assessment, Eurostat EUROPOP2023, the Rhodium / MIT Clean Investment Monitor, and OECD Pension Markets in Focus 2025.</p>
+</header>
+
+<section class="container" role="region" aria-label="Europe Minto open">
+  <div class="sm-pyramid">
+    <h3 class="sm-header">&ldquo;There is no single European corridor &rarr; variation is the answer.&rdquo;</h3>
+    <p class="sm-support">On a population-weighted average, the EU-27 looks like it is coping. But that average masks a wide range. More than a third of EU-27 workers live in markets that are already past coping. The average tells you something about Europe. Only the country-by-country view shows the true shape of its parts, and therefore of Europe as a whole.</p>
+    <h3 class="sm-header">&ldquo;The spillover pressure sits at the EU&rsquo;s borders, not within them.&rdquo;</h3>
+    <p class="sm-support">If you look only at EU-27 member states, you do not see any labour markets in &ldquo;active crisis.&rdquo; But if you also include nearby countries applying to join the EU, three of them &mdash; North Macedonia, Serbia, and Turkey &mdash; do look like they are in crisis. So the biggest pressure is at the EU&rsquo;s edges rather than inside it, in the markets the EU is still deciding whether to bring in.</p>
+    <h3 class="sm-header">&ldquo;For nearly 40% of EU-27 workers, the optimism path runs through climate, not tech.&rdquo;</h3>
+    <p class="sm-support">Almost 40% of EU-27 workers live in countries whose economies have stopped growing in the conventional sense &mdash; Germany, France, Austria, Sweden, Finland, and Luxembourg. In those countries, the comforting story <em>&ldquo;old jobs disappear, new ones appear at the same rate&rdquo;</em> breaks down. Output is not expanding to make room for new jobs. A more realistic best-case is shifting people into climate-adaptation work instead.</p>
+    <p class="sm-support">This might sound counterintuitive. Climate change itself threatens certain jobs, but redirecting workers into climate-adaptation jobs that grow as Europe decarbonises can work. For nearly 40% of EU-27 workers, the optimism path runs through climate, not conventional tech.</p>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Pan-European headline finding">
+  <div class="pull-quote" id="headline-pull"></div>
+</section>
+
+<section class="container" role="region" aria-label="Aggregate panels">
+  <h2><span class="num">1.</span> The 36-market read &mdash; and what changes if you restrict it to the EU-27 <span class="subtitle">Population-weighted aggregates: the 36-market panel is the primary read; the delta strip shows what shifts when you narrow the scope to EU-27 member states.</span></h2>
+  <p class="section-intro">We focus on the full 36-market set because looking only at the EU-27 average would hide problems building up in nearby border countries as well as within the group. The &ldquo;delta strip&rdquo; is a side-by-side comparison showing what changes when you switch from 36 markets to the EU-27, using 20&ndash;64 population weights from a UN PPP2024 baseline.</p>
+  <div class="variation-block" id="variation-guard"></div>
+  <div class="delta-bar" role="region" aria-label="36-market to EU-27 deltas">
+    <div class="delta-label">What changes if you restrict to EU-27</div>
+    <h3>Eight aggregate-level deltas (36-market <span aria-hidden="true">&rarr;</span> EU-27)</h3>
+    <div class="delta-grid" id="delta-grid"></div>
+  </div>
+  <article class="primary-panel" id="primary-panel">
+    <div class="scope-label" id="primary-scope-label">36 European markets</div>
+    <h3 id="primary-title">Loading&hellip;</h3>
+    <div class="scope-meta" id="primary-meta"></div>
+    <div id="primary-stats"></div>
+  </article>
+</section>
+
+</div><!-- /standard -->
+
+<!-- ─────────── EINFACHE STUB ─────────── -->
+<div data-lang="einfache" hidden>
+<section class="container">
+  <div class="einfache-banner">
+    <strong>Status: Erstentwurf &mdash; vor Veröffentlichung muss eine Einfache-Sprache-Fachperson den Text prüfen.</strong><br>
+    First draft. Before public release this text needs review by a certified Einfache-Sprache editor.
+  </div>
+</section>
+<div class="coming-soon">
+  <h2>Einfache Sprache &mdash; coming soon</h2>
+  <p>This page is being prepared in Einfache Sprache. The standard version is available; click <strong>Standard</strong> to read it.</p>
+  <p>Diese Seite wird in Einfacher Sprache vorbereitet. Die Standard-Version ist verfügbar.</p>
+  <button onclick="document.querySelectorAll('.lang-toggle').forEach(b=>b.click())">&larr; Back to Standard</button>
+</div>
+</div>
+
+<nav class="cta-bar page-pagination container" aria-label="Page navigation">
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-outline" data-direction="back" data-target-page="overview">&larr; Overview</a>
+    <a href="methodology.html" class="btn btn-primary" data-direction="forward" data-target-page="methodology">Methodology &rarr;</a>
+  </div>
+</nav>
+
+</main>
+
+<footer class="footer container" role="contentinfo">
+  Built by <a href="https://www.linkedin.com/in/pmaul/" target="_blank" rel="noopener">Philipp Maul</a> &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a> &middot; License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> (data) + <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a> (code) &middot; Last updated 2026-05-11<br>
+  <a href="findings.html">Findings</a> &middot; <a href="scenarios.html">Scenarios</a> &middot; <a href="europe.html">Europe</a> &middot; <a href="methodology.html">Methodology</a> &middot; <a href="sources.html">Sources</a> &middot; <a href="glossary.html">Glossary</a><br>
+  <span class="cite-as">Cite as: Maul, P. (2026). Part 6 — European AI Labour Market Synthesis. Nexalps. https://synthesis.nexalps.com/</span>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+// ── Einfache toggle ──
+const LANG_KEY='synthesis-nexalps-language-mode';
+function getLangMode(){return localStorage.getItem(LANG_KEY)||'standard'}
+function applyLang(){
+  const mode=getLangMode();
+  document.querySelectorAll('[data-lang="standard"]').forEach(el=>{el.hidden=(mode!=='standard')});
+  document.querySelectorAll('[data-lang="einfache"]').forEach(el=>{el.hidden=(mode!=='einfache')});
+  document.querySelectorAll('.lang-toggle').forEach(b=>{
+    const on=mode==='einfache';
+    b.classList.toggle('active',on);
+    b.setAttribute('aria-pressed',on?'true':'false');
+    b.textContent=on?'Standard':'Einfache Sprache';
+  });
+}
+document.querySelectorAll('.lang-toggle').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const cur=getLangMode();
+    localStorage.setItem(LANG_KEY,cur==='einfache'?'standard':'einfache');
+    applyLang();
+  });
+});
+applyLang();
+
+// ── Burger ──
+const bbtn=document.getElementById('burger-btn');
+const bpan=document.getElementById('burger-panel');
+if(bbtn&&bpan){
+  bbtn.addEventListener('click',()=>{const o=bpan.classList.toggle('open');bbtn.classList.toggle('open',o);bbtn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',e=>{if(!bpan.contains(e.target)&&!bbtn.contains(e.target)&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+}
+
+// ── Data load + render ──
+fetch('./data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  const agg=(d.cross_cutting_findings||{}).pan_european_aggregate;
+  if(!agg){
+    document.getElementById('primary-title').textContent='Pan-European aggregate block missing from data.json.';
+    return;
+  }
+  renderPrimary(agg.european_36);
+  renderDelta(agg.eu_27,agg.european_36);
+  renderVariationGuard(agg.variation_guard_note_p1, agg.variation_guard_note_p2);
+  renderPullQuote(agg.headline_finding_pan_european);
+}).catch(e=>{
+  console.error('Data load failed:',e);
+  document.getElementById('primary-title').textContent='Data fetch failed.';
+});
+
+function renderPrimary(data){
+  if(!data)return;
+  const cdN=data.class_distribution||{};
+  const cdP=data.class_distribution_population_weighted_pct||{};
+  const rmN=data.regime_mix||{};
+  const rmP=data.regime_mix_population_weighted_pct||{};
+  const ratio=(typeof data.weighted_lens1_ratio==='number')?data.weighted_lens1_ratio.toFixed(2):'&mdash;';
+  const corridorLabel=data.headline_corridor_label||('C'+(data.headline_corridor||'?'));
+  const country=data.country_count||'?';
+  const breach=(data.capability_floor_breach_count!=null)?data.capability_floor_breach_count:'&mdash;';
+  const squeeze=(data.squeeze_cluster_count!=null)?data.squeeze_cluster_count:'&mdash;';
+  const fmtClassRow=(cls,n,pct)=>`<span class="k">Class ${cls}</span><span class="v">${n} &middot; ${typeof pct==='number'?pct.toFixed(1):'&mdash;'}%</span>`;
+  const fmtRegimeRow=(k,n,pct,labelTxt)=>`<span class="k">${labelTxt}</span><span class="v">${n} &middot; ${typeof pct==='number'?pct.toFixed(1):'&mdash;'}%</span>`;
+  document.getElementById('primary-title').textContent=data.scope||'36 European markets';
+  document.getElementById('primary-meta').textContent=`${country} markets · ${data.weighting_method||''}`;
+  document.getElementById('primary-stats').innerHTML=`
+    <div class="stat-row"><span class="stat-label" title="Lens 1 ratio = displacement velocity ÷ absorption capacity. 1.00 = same pace; 2.80 = displacement at 2.8× absorption.">Weighted Lens 1 ratio</span><span class="stat-value">${ratio}</span></div>
+    <div class="stat-row"><span class="stat-label">Headline corridor</span><span class="stat-value">C${data.headline_corridor||'?'} &middot; ${corridorLabel}</span></div>
+    <div class="stat-block">
+      <div class="stat-label-blk">Class distribution (count &middot; pop-weighted %)</div>
+      <div class="stat-grid">
+        ${fmtClassRow('I',cdN.I||0,cdP.I)}
+        ${fmtClassRow('II',cdN.II||0,cdP.II)}
+        ${fmtClassRow('III',cdN.III||0,cdP.III)}
+        ${fmtClassRow('IV',cdN.IV||0,cdP.IV)}
+      </div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-label-blk">Regime mix (count &middot; pop-weighted %)</div>
+      <div class="stat-grid">
+        ${fmtRegimeRow('growth',rmN.growth_baseline||0,rmP.growth_baseline,'Growth baseline')}
+        ${fmtRegimeRow('secstag',rmN.secular_stagnation_warning||0,rmP.secular_stagnation_warning,'Secular stagnation')}
+        ${fmtRegimeRow('postgrowth',rmN.post_growth_empirical||0,rmP.post_growth_empirical,'Post-growth')}
+      </div>
+    </div>
+    <div class="stat-row"><span class="stat-label">Capability-floor breach</span><span class="stat-value">${breach} markets</span></div>
+    <div class="stat-row"><span class="stat-label">Squeeze cluster</span><span class="stat-value">${squeeze} markets</span></div>
+  `;
+}
+
+function renderDelta(eu27,e36){
+  if(!eu27||!e36)return;
+  const cd27=eu27.class_distribution||{},cd36=e36.class_distribution||{};
+  const cdp27=eu27.class_distribution_population_weighted_pct||{},cdp36=e36.class_distribution_population_weighted_pct||{};
+  const rmp27=eu27.regime_mix_population_weighted_pct||{},rmp36=e36.regime_mix_population_weighted_pct||{};
+  // Direction: 36-market -> EU-27 (full on left, restricted on right)
+  const items=[
+    {label:'Class IV (count)',from:cd36.IV||0,to:cd27.IV||0,note:'BA, MK, RS, TR drop out when restricted to EU-27 &mdash; the cascade pressure sits at the EU&rsquo;s borders, not within them.'},
+    {label:'Class IV (% working-age pop)',from:`${(cdp36.IV||0).toFixed(1)}%`,to:`${(cdp27.IV||0).toFixed(1)}%`,note:'Removing the four candidate countries collapses the population-weighted Class IV share to zero.'},
+    {label:'Post-growth pop share',from:`${(rmp36.post_growth_empirical||0).toFixed(1)}%`,to:`${(rmp27.post_growth_empirical||0).toFixed(1)}%`,note:'CH, NO, UK exit when restricted to EU-27; the post-growth share dips slightly.'},
+    {label:'Capability-floor breach',from:`${e36.capability_floor_breach_count||'?'} mkts`,to:`${eu27.capability_floor_breach_count||'?'} mkts`,note:'5 markets drop out of the breach list when the lens narrows to EU-27.'},
+    {label:'Class I (count)',from:cd36.I||0,to:cd27.I||0,note:'IS + NO leave the resilient cohort when restricted to EU-27 (both EFTA, not EU members).'},
+    {label:'Headline corridor',from:`C${e36.headline_corridor||'?'}`,to:`C${eu27.headline_corridor||'?'}`,note:'Both aggregates land in C2 &mdash; the variation underneath is the analysis.'},
+    {label:'Squeeze cluster',from:`${e36.squeeze_cluster_count||'?'} mkts`,to:`${eu27.squeeze_cluster_count||'?'} mkts`,note:'NO drops out under EU-27 (EFTA, not member).'},
+    {label:'Weighted Lens 1 ratio',from:(e36.weighted_lens1_ratio||0).toFixed(2),to:(eu27.weighted_lens1_ratio||0).toFixed(2),note:'Ratio = displacement velocity ÷ absorption capacity. Slightly tighter when the candidate countries are excluded.'}
+  ];
+  const grid=document.getElementById('delta-grid');
+  grid.innerHTML=items.map((it,i)=>`<div class="delta-item" data-stat="${it.label}" tabindex="0" role="group" aria-label="${it.label}: ${it.from} to ${it.to}">
+    <span class="label">${it.label}</span>
+    <span class="arrow"><span class="from">${it.from}</span><span class="glyph">&rarr;</span><span class="to">${it.to}</span></span>
+    <span class="note">${it.note}</span>
+  </div>`).join('');
+  // PostHog tracking on delta-tile hover/focus
+  grid.querySelectorAll('.delta-item').forEach(el=>{
+    const stat=el.getAttribute('data-stat');
+    const fire=()=>{try{posthog.capture('delta_tile_hover',{stat})}catch(e){}};
+    el.addEventListener('mouseenter',fire);
+    el.addEventListener('focus',fire);
+  });
+}
+
+function renderVariationGuard(p1, p2){
+  const el=document.getElementById('variation-guard');
+  if(!el)return;
+  if(!p1){el.style.display='none';return;}
+  const paragraphs=[p1,p2].filter(Boolean).map(p=>`<p>${p}</p>`).join('');
+  el.innerHTML=`<div class="label">Variation guard</div>${paragraphs}`;
+}
+
+function renderPullQuote(text){
+  const el=document.getElementById('headline-pull');
+  if(!el)return;
+  if(!text){el.style.display='none';return;}
+  el.innerHTML=`<p>${text}</p>`;
+}
+
+// ── Pagination ──
+document.querySelectorAll('nav.page-pagination a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    try{posthog.capture('pagination_click',{direction:a.dataset.direction,target_page:a.dataset.targetPage,page:'europe'})}catch(e){}
+  });
+});
+
+})();
+</script>
+</body>
+</html>

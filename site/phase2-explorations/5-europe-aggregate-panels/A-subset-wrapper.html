@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 5 / Alternative A &mdash; Subset wrapper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+.subset-shell{position:relative;padding:30px 28px 24px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-top:3px solid #a1a1aa;margin:24px 0}
+.subset-shell .scope-label-outer{position:absolute;top:-1px;left:24px;background:var(--bg);padding:0 10px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;transform:translateY(-50%)}
+.subset-shell h2.outer-title{font-size:17px;font-weight:700;margin-bottom:4px;color:var(--fg)}
+.subset-shell .outer-meta{font-size:11.5px;color:var(--muted-foreground);margin-bottom:16px;line-height:1.5}
+
+.outer-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 28px;margin-bottom:18px}
+@media(max-width:640px){.outer-stats{grid-template-columns:1fr}}
+.stat-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--card-border);padding:6px 0;font-size:12.5px}
+.stat-row .stat-label{color:var(--muted)}
+.stat-row .stat-value{color:var(--fg);font-weight:600;font-variant-numeric:tabular-nums}
+
+.subset-inner{position:relative;margin:18px 0 8px;padding:24px 22px 18px;background:rgba(249,115,22,0.04);border:1px solid rgba(249,115,22,0.20);border-radius:var(--radius-md);border-top:3px solid var(--ring)}
+.subset-inner .scope-label-inner{position:absolute;top:-1px;left:18px;background:var(--bg);padding:0 8px;font-size:10.5px;font-weight:700;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;transform:translateY(-50%)}
+.subset-inner h3.inner-title{font-size:15px;font-weight:700;margin-bottom:4px;color:var(--fg)}
+.subset-inner .inner-meta{font-size:11px;color:var(--muted-foreground);margin-bottom:14px;line-height:1.5}
+.inner-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 24px}
+@media(max-width:640px){.inner-stats{grid-template-columns:1fr}}
+
+.ring-label{margin-top:18px;padding:14px 18px;background:rgba(127,29,29,0.10);border-left:3px solid var(--class-iii);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:12px;color:#fca5a5;line-height:1.7}
+.ring-label strong{color:#fecaca}
+
+.delta-strip{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;padding:12px 14px;background:rgba(255,255,255,0.025);border-radius:var(--radius-sm);font-size:11.5px;color:var(--muted-foreground)}
+.delta-strip .delta-item{display:inline-flex;flex-direction:column;gap:2px}
+.delta-strip .delta-item .label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted-foreground)}
+.delta-strip .delta-item .arrow{color:var(--fg);font-weight:700;font-variant-numeric:tabular-nums;font-size:13px}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 5 / Alternative A</div>
+  <h1>Subset wrapper &mdash; 36 contains EU-27</h1>
+  <p class="note">36-market panel as the outer container. EU-27 panel as a nested inner panel inside it. The 9-country ring between them &mdash; EFTA-4 + UK + 4 candidates &mdash; is labelled as where the cascade pressure sits. The subset relationship is dramatised by the layout itself, no comparison table needed.</p>
+</header>
+
+<main class="container">
+  <article class="subset-shell" id="subset-shell" role="region" aria-label="36 markets containing EU-27">
+    <span class="scope-label-outer" id="outer-label">36 European markets</span>
+    <h2 class="outer-title" id="outer-title">Loading…</h2>
+    <div class="outer-meta" id="outer-meta"></div>
+    <div class="outer-stats" id="outer-stats"></div>
+
+    <div class="subset-inner" role="region" aria-label="EU-27 nested subset">
+      <span class="scope-label-inner" id="inner-label">EU-27 subset</span>
+      <h3 class="inner-title" id="inner-title">Loading…</h3>
+      <div class="inner-meta" id="inner-meta"></div>
+      <div class="inner-stats" id="inner-stats"></div>
+    </div>
+
+    <div class="ring-label" id="ring-label"></div>
+
+    <div class="delta-strip" id="delta-strip" aria-label="Asymmetry deltas EU-27 to 36-market"></div>
+  </article>
+</main>
+
+<script>
+(function(){
+'use strict';
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('outer-title').textContent='Data fetch failed.';
+  console.error(e);
+});
+
+function render(d){
+  const agg=(d.cross_cutting_findings||{}).pan_european_aggregate||{};
+  const eu27=agg.eu_27, e36=agg.european_36;
+  if(!eu27||!e36){document.getElementById('outer-title').textContent='Aggregate data missing.';return}
+
+  document.getElementById('outer-title').textContent=e36.scope||'36 European markets';
+  document.getElementById('outer-meta').textContent=`${e36.country_count} markets · ${e36.weighting_method||''}`;
+  document.getElementById('outer-stats').innerHTML=renderStats(e36);
+
+  document.getElementById('inner-title').textContent=eu27.scope||'EU-27';
+  document.getElementById('inner-meta').textContent=`${eu27.country_count} markets · ${eu27.weighting_method||''}`;
+  document.getElementById('inner-stats').innerHTML=renderStats(eu27);
+
+  // Compute ring countries (in 36 not in EU-27)
+  const eu27Set=new Set(eu27.country_list||[]);
+  const ring=(e36.country_list||[]).filter(c=>!eu27Set.has(c));
+  const cd36=e36.class_distribution||{};
+  const cd27=eu27.class_distribution||{};
+  const ringCount=ring.length;
+  const ringClassIV=cd36.IV-cd27.IV;
+  document.getElementById('ring-label').innerHTML=`<strong>The ring &middot; ${ringCount} markets</strong>: ${ring.join(' · ')}.<br/>The cascade pressure sits at the EU&rsquo;s borders, not within them. Class IV count: <strong>${cd27.IV} in EU-27 &rarr; ${cd36.IV} in 36-market</strong> &mdash; the entire Class IV cohort lies in this ring.`;
+
+  // Delta strip: top deltas from EU-27 to 36-market
+  const cdp36=e36.class_distribution_population_weighted_pct||{};
+  const cdp27=eu27.class_distribution_population_weighted_pct||{};
+  const rmp36=e36.regime_mix_population_weighted_pct||{};
+  const rmp27=eu27.regime_mix_population_weighted_pct||{};
+  const items=[
+    {label:'Class IV (count)',arrow:`${cd27.IV||0} → ${cd36.IV||0}`},
+    {label:'Class IV (% pop)',arrow:`${(cdp27.IV||0).toFixed(1)}% → ${(cdp36.IV||0).toFixed(1)}%`},
+    {label:'Class I (count)',arrow:`${cd27.I||0} → ${cd36.I||0}`},
+    {label:'Post-growth pop share',arrow:`${(rmp27.post_growth_empirical||0).toFixed(1)}% → ${(rmp36.post_growth_empirical||0).toFixed(1)}%`},
+    {label:'Capability-floor breach',arrow:`${eu27.capability_floor_breach_count||'?'} → ${e36.capability_floor_breach_count||'?'}`}
+  ];
+  document.getElementById('delta-strip').innerHTML=items.map(it=>`<div class="delta-item"><span class="label">${it.label}</span><span class="arrow">${it.arrow}</span></div>`).join('');
+}
+
+function renderStats(data){
+  const cd=data.class_distribution||{};
+  const cdp=data.class_distribution_population_weighted_pct||{};
+  const rm=data.regime_mix||{};
+  const rmp=data.regime_mix_population_weighted_pct||{};
+  const ratio=typeof data.weighted_lens1_ratio==='number'?data.weighted_lens1_ratio.toFixed(2):'—';
+  const corridor=`C${data.headline_corridor||'?'} · ${data.headline_corridor_label||''}`;
+  const breach=data.capability_floor_breach_count!=null?data.capability_floor_breach_count:'—';
+  const squeeze=data.squeeze_cluster_count!=null?data.squeeze_cluster_count:'—';
+  return [
+    row('Weighted Lens 1 ratio',ratio),
+    row('Headline corridor',corridor),
+    row('Class I',`${cd.I||0} · ${(cdp.I||0).toFixed(1)}%`),
+    row('Class II',`${cd.II||0} · ${(cdp.II||0).toFixed(1)}%`),
+    row('Class III',`${cd.III||0} · ${(cdp.III||0).toFixed(1)}%`),
+    row('Class IV',`${cd.IV||0} · ${(cdp.IV||0).toFixed(1)}%`),
+    row('Post-growth pop',`${rm.post_growth_empirical||0} mkts · ${(rmp.post_growth_empirical||0).toFixed(1)}%`),
+    row('Capability-floor breach',`${breach} markets`),
+    row('Squeeze cluster',`${squeeze} markets`)
+  ].join('');
+}
+function row(label,val){return `<div class="stat-row"><span class="stat-label">${label}</span><span class="stat-value">${val}</span></div>`}
+})();
+</script>
+</body>
+</html>

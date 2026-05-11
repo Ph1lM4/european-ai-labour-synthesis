@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Findings &mdash; European AI Labour Market Synthesis | Nexalps</title>
+<meta name="description" content="No European labour market is fully safe from AI-driven job displacement. 36 markets stress-tested across five lenses and eight scenarios; 15 already past the absorption threshold; only 9 hold up under our softer rule.">
+<link rel="canonical" href="https://synthesis.nexalps.com/findings.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Findings — European AI Labour Market Synthesis">
+<meta property="og:description" content="No European labour market is fully safe from AI-driven job displacement. 36 markets, five lenses, eight scenarios; only 9 hold up under our softer rule.">
+<meta property="og:url" content="https://synthesis.nexalps.com/findings.html">
+<meta property="og:site_name" content="Nexalps">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://synthesis.nexalps.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Findings — European AI Labour Market Synthesis">
+<meta name="twitter:description" content="No European labour market is fully safe from AI-driven job displacement. 36 markets, five lenses, eight scenarios; only 9 hold up under our softer rule.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"European AI Labour Market Synthesis (Part 6)","description":"Corridor map across 36 European labour markets (EU-27 + EFTA + UK + 4 candidates) scored across five lenses, stress-tested under eight scenarios, bracketed by four fragility classes.","url":"https://synthesis.nexalps.com/","creator":{"@type":"Person","name":"Philipp Maul","url":"https://www.linkedin.com/in/pmaul/","affiliation":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"}},"publisher":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-30","spatialCoverage":"Europe","keywords":["AI labour market","European labour","fragility class","corridor map","ALMP","reskilling","Cedefop","Autor 2024","Lens framework"],"distribution":{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://synthesis.nexalps.com/data.json"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])}}(document,window.posthog||[]);
+posthog.init('phc_bjax6jdRxYJAaExodvALjRru8AQzUSbYFNlWlXiJM8A',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only'});
+setTimeout(function(){
+  if(typeof posthog==='undefined') return;
+  var thresholds=[25,50,75,100], fired={};
+  window.addEventListener('scroll', function(){
+    var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+    thresholds.forEach(function(t){
+      if(pct>=t && !fired[t]){ fired[t]=true; posthog.capture('scroll_depth',{percent:t,page:'findings'}); }
+    });
+  }, {passive:true});
+  document.querySelectorAll('a[target="_blank"]').forEach(function(a){
+    a.addEventListener('click', function(){ posthog.capture('outbound_click',{url:a.href, page:'findings'}); });
+  });
+}, 500);
+</script>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --background:#09090b;--foreground:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --accent:#27272a;--border:rgba(255,255,255,0.12);--input-border:rgba(255,255,255,0.15);
+  --ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+  --transition:150ms cubic-bezier(0.4,0,0.2,1);
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--background);color:var(--foreground);line-height:1.5;-webkit-font-smoothing:antialiased}
+
+.skip-link{position:absolute;top:-100px;left:8px;background:var(--ring);color:#000;padding:8px 16px;border-radius:0 0 var(--radius-sm) var(--radius-sm);font-weight:700;z-index:200;text-decoration:none}
+.skip-link:focus{top:0}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+.container-narrow{max-width:760px;margin:0 auto;padding:0 32px}
+
+.site-nav{position:fixed;top:0;right:0;left:0;z-index:9999;display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:12px 20px;pointer-events:none}
+
+.site-nav-links{display:flex;gap:18px;align-items:center;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:8px 14px}
+.site-nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+.site-nav-links a:hover{color:var(--foreground)}
+.site-nav-links a[aria-current="page"]{color:var(--ring)}
+.nav-sep{width:1px;background:var(--border);margin:0 4px;align-self:stretch}
+
+.burger{display:none;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-md);min-width:44px;min-height:44px;padding:13px 12px;cursor:pointer;flex-direction:column;justify-content:center;gap:4px}
+.burger span{display:block;width:18px;height:2px;background:var(--foreground);border-radius:1px;transition:transform .2s,opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.burger-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:9998;background:rgba(9,9,11,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:72px 24px 32px;flex-direction:column;gap:24px}
+.burger-panel.open{display:flex}
+.burger-panel a{font-size:20px;font-weight:600;color:var(--muted);text-decoration:none}
+.burger-panel a:hover{color:var(--foreground)}
+.burger-panel a[aria-current="page"]{color:var(--ring)}
+.burger-sep{height:1px;background:var(--border);margin:4px 0}
+@media(max-width:1100px){.site-nav-links{display:none}.burger{display:flex}}
+
+.hero{padding:80px 32px 24px}
+.hero h1{font-size:36px;font-weight:700;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;max-width:820px}
+.hero .lede{font-size:18px;color:var(--muted);line-height:1.7;max-width:680px;margin-bottom:20px;font-weight:400}
+.hero .byline{font-size:12px;color:var(--muted-foreground);line-height:1.6}
+.hero .byline a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.hero .byline a:hover{color:var(--foreground)}
+.hero .byline + .byline{margin-top:4px}
+@media(max-width:640px){.hero h1{font-size:24px;padding-right:60px}.hero .lede{font-size:16px}.hero{padding:64px 20px 20px}}
+
+.stats-bar{display:flex;gap:12px;flex-wrap:wrap;padding-bottom:12px}
+.stat-card{flex:1;min-width:150px;display:flex;flex-direction:column;gap:2px;padding:16px 20px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg)}
+.stat-card .stat-value{font-size:24px;font-weight:700;color:var(--foreground);letter-spacing:-0.025em;line-height:1.2}
+.stat-card .stat-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);line-height:1.4}
+.stat-card .stat-sublabel{font-size:10px;color:var(--muted-foreground);opacity:0.7;letter-spacing:0;text-transform:none;line-height:1.5;margin-top:4px}
+@media(max-width:768px){.stats-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat-card{min-width:0;padding:10px 12px}.stat-card .stat-value{font-size:20px}}
+
+h2{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin:48px 0 8px;line-height:1.3}
+h2 .num{color:var(--ring);font-weight:700}
+h2 .subtitle{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:4px}
+.section-sub{font-size:14px;color:var(--muted);margin-bottom:24px;line-height:1.5;max-width:760px}
+p{font-size:16px;color:#d4d4d8;line-height:1.8}
+.prose p{margin-bottom:16px;max-width:760px}
+.prose strong{color:var(--foreground);font-weight:600}
+
+/* §3 dot corridor map (Phase 2J — ESRA-style, Web Mercator) */
+.map-section{margin:6px 0 18px;padding:18px 18px 22px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.map-section h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:14px}
+.controls-row{display:flex;justify-content:space-between;align-items:center;gap:14px;margin:8px 0 14px;flex-wrap:wrap}
+.view-toggle{background:var(--card);border:1px solid var(--card-border);color:var(--foreground);font-family:var(--font);font-size:12px;font-weight:600;padding:8px 14px;border-radius:var(--radius-sm);cursor:pointer;transition:all .12s;display:inline-flex;align-items:center;gap:6px}
+.view-toggle:hover,.view-toggle:focus-visible{border-color:rgba(255,255,255,0.25);outline:none}
+.view-toggle .arrow{color:var(--muted-foreground);font-weight:500}
+.map-shell{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:18px;align-items:start}
+@media(max-width:899px){.map-shell{grid-template-columns:1fr}}
+.map-svg-wrap{position:relative;background:rgba(0,0,0,0.18);border-radius:var(--radius-sm);padding:14px}
+@media(max-width:480px){.map-svg-wrap{padding:6px}.map-section{padding:10px 8px 14px}}
+#map-svg{display:block;width:100%;height:auto}
+#map-svg .country-region{cursor:pointer;outline:none}
+/* Invisible per-country polygon overlay; catches hover/click on gaps between dots. */
+#map-svg .country-region path.hit-area{fill:transparent;pointer-events:all;cursor:pointer}
+#map-svg .country-region circle{transition:opacity .15s;pointer-events:none}
+#map-svg .country-region:focus-visible circle{stroke:var(--ring);stroke-width:0.6}
+#map-svg .country-region.dimmed circle{opacity:0.25}
+#map-svg .country-region.ringed circle{stroke:var(--ring);stroke-width:0.6;stroke-opacity:0.85}
+#map-svg .country-region.active circle{stroke:rgba(255,255,255,0.75);stroke-width:0.5}
+#map-svg .country-region.cls-I circle{fill:var(--class-i)}
+#map-svg .country-region.cls-II circle{fill:var(--class-ii)}
+#map-svg .country-region.cls-III circle{fill:var(--class-iii)}
+#map-svg .country-region.cls-IV circle{fill:var(--class-iv)}
+#map-svg .country-region.is-ukraine circle{opacity:0.55}
+/* Microstate radius bump — LU / LI / MT render as 1–2 dots and visually disappear at 3.4 px. */
+#map-svg .country-region[data-code="LU"] circle,
+#map-svg .country-region[data-code="LI"] circle,
+#map-svg .country-region[data-code="MT"] circle{r:4}
+.detail-panel{position:sticky;top:80px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-md);padding:14px 16px;font-size:12.5px;color:var(--foreground);line-height:1.55;min-height:160px;display:flex;flex-direction:column;gap:8px}
+@media(max-width:899px){.detail-panel{position:static;margin-top:14px}}
+.detail-panel .empty-hint{color:var(--muted-foreground);font-size:12px;font-style:italic}
+.detail-panel .d-name{font-size:14px;font-weight:700;color:var(--foreground)}
+.detail-panel .d-code{color:var(--muted);font-weight:600;margin-left:4px;font-size:12px}
+.detail-panel .d-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:2px 0}
+.detail-panel .chip{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;border:1px solid transparent}
+.detail-panel .chip.cls-I{background:rgba(34,197,94,0.10);border-color:rgba(34,197,94,0.35);color:var(--class-i)}
+.detail-panel .chip.cls-II{background:rgba(245,158,11,0.10);border-color:rgba(245,158,11,0.35);color:var(--class-ii)}
+.detail-panel .chip.cls-III{background:rgba(239,68,68,0.10);border-color:rgba(239,68,68,0.35);color:var(--class-iii)}
+.detail-panel .chip.cls-IV{background:rgba(127,29,29,0.18);border-color:rgba(252,165,165,0.45);color:#fca5a5}
+.detail-panel .chip.corridor{background:rgba(255,255,255,0.04);border-color:var(--card-border);color:var(--muted)}
+.detail-panel .chip.regime{background:rgba(255,255,255,0.04);border-color:var(--card-border);color:var(--muted-foreground);font-weight:500}
+.detail-panel .d-mech{color:#d4d4d8;font-size:12px;line-height:1.55;margin-top:4px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:14px;justify-content:center}
+.legend-item{display:inline-flex;align-items:center;gap:6px}
+.legend-swatch{width:12px;height:12px;border-radius:2px;border:1px solid rgba(255,255,255,0.10)}
+.geo-note{font-size:12px;color:var(--muted-foreground);margin-top:10px;text-align:center;line-height:1.5}
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 14px;background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.25);border-radius:var(--radius-md);margin:18px 0 6px;font-size:13px;color:#d4d4d8}
+.filter-bar.hidden{display:none}
+.filter-bar .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.30);border-radius:9999px;font-size:12px;font-weight:600;color:var(--ring)}
+.filter-bar .clear-btn{margin-left:auto;background:transparent;border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:4px 12px;color:var(--muted);font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer;transition:all .12s}
+.filter-bar .clear-btn:hover,.filter-bar .clear-btn:focus-visible{border-color:rgba(255,255,255,0.25);color:var(--foreground);outline:none}
+.beeswarm-frame{width:100%;height:600px;border:none;background:var(--background);border-radius:var(--radius-sm)}
+@media(max-width:899px){.beeswarm-frame{height:540px}}
+.view{display:none}
+.view.active{display:block}
+
+/* §3 class-cards (cross-link UI) */
+.class-panel{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 4px}
+@media(max-width:900px){.class-panel{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.class-panel{grid-template-columns:1fr}}
+.class-card{padding:14px 16px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-left:3px solid;cursor:pointer;transition:all .15s;font-family:var(--font);text-align:left;width:100%}
+.class-card.c-I{border-left-color:var(--class-i)}
+.class-card.c-II{border-left-color:var(--class-ii)}
+.class-card.c-III{border-left-color:var(--class-iii)}
+.class-card.c-IV{border-left-color:var(--class-iv)}
+.class-card.active{border-color:var(--ring);box-shadow:0 0 0 2px rgba(249,115,22,0.30)}
+.class-card:hover,.class-card:focus-visible{transform:translateY(-2px);outline:none}
+.class-card .class-header{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.class-card .class-num{font-size:15px;font-weight:700;letter-spacing:-0.02em}
+.class-card.c-I .class-num{color:var(--class-i)}
+.class-card.c-II .class-num{color:var(--class-ii)}
+.class-card.c-III .class-num{color:var(--class-iii)}
+.class-card.c-IV .class-num{color:#fca5a5}
+.class-card .class-count{font-size:11px;color:var(--muted-foreground);font-weight:600}
+.class-card h4{font-size:13px;font-weight:600;margin-bottom:4px;color:var(--foreground)}
+.class-card p.rule{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 6px}
+.class-card .countries{font-size:10.5px;color:var(--muted-foreground);line-height:1.55;font-family:'Geist',ui-monospace,monospace;letter-spacing:0.02em}
+
+/* §4 population-weighted stack */
+.stack-box{margin:24px 0;padding:24px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.stack-box h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:14px}
+.scope-row{margin-bottom:24px}
+.scope-row:last-child{margin-bottom:0}
+.scope-row .scope-label{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.scope-row .scope-label .scope-name{color:var(--foreground);font-weight:700;font-size:14px}
+.scope-row .scope-label .scope-meta{font-size:11px;color:var(--muted-foreground);font-weight:500}
+.stack-bar{display:flex;height:44px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--card-border)}
+.stack-seg{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0a0a0a;font-weight:700;font-size:12px;line-height:1.2;padding:0 6px;min-width:0;position:relative;cursor:pointer;border:none;font-family:var(--font);transition:filter .12s}
+.stack-seg:hover,.stack-seg:focus-visible{filter:brightness(1.1);outline:none}
+.stack-seg.dimmed{filter:brightness(0.5);opacity:0.55}
+.stack-seg .pct{font-size:13px;letter-spacing:-0.01em}
+.stack-seg .n{font-size:10px;font-weight:600;opacity:0.75;letter-spacing:0.04em;text-transform:uppercase}
+.stack-seg.cls-I{background:var(--class-i)}
+.stack-seg.cls-II{background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 5px,rgba(0,0,0,0.10) 5px,rgba(0,0,0,0.10) 6px)}
+.stack-seg.cls-III{background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 4px,rgba(0,0,0,0.18) 4px,rgba(0,0,0,0.18) 6px);color:#fafafa}
+.stack-seg.cls-IV{background:var(--class-iv);color:#fafafa}
+.stack-seg[data-pct="0"]{display:none}
+.stack-seg.thin{font-size:10px}
+.stack-seg.thin .pct{font-size:10px}
+.stack-seg.thin .n{display:none}
+@media(max-width:480px){.stack-bar{flex-direction:column;height:auto}.stack-seg{min-height:44px;padding:6px 8px}}
+.inline-stack{margin:18px 0 8px;max-width:760px}
+.inline-stack-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:6px}
+.inline-stack .stack-bar{height:32px}
+.inline-stack .stack-seg{cursor:default}
+.inline-stack .stack-seg .pct{font-size:13px}
+.inline-stack .stack-seg .n{font-size:9.5px}
+.asymmetry-callout{margin-top:18px;padding:14px 18px;background:rgba(249,115,22,0.06);border-left:3px solid var(--ring);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:12.5px;color:#d4d4d8;line-height:1.7}
+.asymmetry-callout strong{color:var(--foreground)}
+
+/* §5 reskilling-capacity funnel — sister-layer chart-box port (ai-project style). */
+.chart-box{margin:24px 0;padding:20px 22px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md);overflow-x:auto;max-width:880px}
+.chart-box h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:14px}
+.funnel-row{display:grid;grid-template-columns:200px minmax(0,1fr) 110px;gap:14px;align-items:center;margin-bottom:10px;font-size:13px}
+@media(max-width:640px){.funnel-row{grid-template-columns:140px minmax(0,1fr) 88px;font-size:12px;gap:10px}}
+.funnel-row .funnel-label{color:var(--muted-foreground);font-weight:500;line-height:1.35}
+.funnel-row .funnel-label strong{color:var(--foreground);font-weight:600}
+.funnel-row .funnel-bar{position:relative;height:22px;background:rgba(255,255,255,0.04);border-radius:var(--radius-sm);overflow:hidden}
+.funnel-row .funnel-fill{position:absolute;top:0;left:0;height:100%;border-radius:var(--radius-sm);display:flex;align-items:center;padding-left:10px;color:#0a0a0a;font-weight:700;font-size:11px;letter-spacing:-0.01em;white-space:nowrap}
+.funnel-row .funnel-fill.cohort{background:var(--muted);color:#0a0a0a}
+.funnel-row .funnel-fill.throughput{background:var(--muted-foreground);color:#fafafa}
+.funnel-row .funnel-fill.churn{background:rgba(113,113,122,0.55);color:#fafafa}
+.funnel-row .funnel-fill.net-new{background:var(--ring);color:#0a0a0a}
+.funnel-row .funnel-fill.thin{padding-left:0;padding-right:6px;justify-content:flex-end;color:#fafafa;font-size:10px}
+.funnel-row .funnel-tip-label{position:absolute;top:50%;transform:translateY(-50%);padding-left:8px;font-size:11px;font-weight:700;color:var(--foreground);white-space:nowrap;letter-spacing:-0.01em}
+.funnel-row .funnel-value{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
+.funnel-callout{margin-top:14px;padding:12px 14px;background:rgba(249,115,22,0.06);border-left:3px solid var(--ring);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:13px;color:#d4d4d8;line-height:1.6}
+.funnel-callout strong{color:var(--foreground);font-weight:600}
+.findings-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0}
+@media(max-width:900px){.findings-list{grid-template-columns:1fr}}
+.finding-card{padding:18px 22px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-left:3px solid var(--ring)}
+.finding-card .f-num{font-size:11px;font-weight:700;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.finding-card h3{font-size:15px;font-weight:600;margin-bottom:8px;line-height:1.4}
+.finding-card p{font-size:13px;color:#d4d4d8;line-height:1.7;margin:0}
+
+.italy-block{margin:32px 0;max-width:760px}
+.italy-block .italy-lead{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--foreground);line-height:1.4}
+.italy-block p{font-size:15px;color:#d4d4d8;line-height:1.75;margin:0}
+.italy-block .number{font-weight:700;color:#fca5a5}
+
+.sm-pyramid{margin:24px 0 32px;padding:0;max-width:760px}
+.sm-pyramid .sm-header{font-style:italic;font-size:18px;font-weight:600;margin:20px 0 8px;color:var(--foreground);line-height:1.4}
+.sm-pyramid .sm-header:first-child{margin-top:0}
+.sm-pyramid .sm-support{font-size:16px;line-height:1.7;margin:0 0 12px;max-width:760px;color:#d4d4d8}
+.sm-pyramid .sm-support:last-child{margin-bottom:0}
+
+.footer{padding:24px 0 40px;font-size:12px;color:var(--muted-foreground);line-height:1.7;border-top:1px solid var(--card-border);margin-top:48px}
+.footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px;transition:color var(--transition)}
+.footer a:hover{color:var(--foreground)}
+.footer .cite-as{margin-top:8px;font-style:italic;color:var(--muted)}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+}
+@media(max-width:768px){.container,.container-narrow{padding:0 16px}h2{padding-right:60px}}
+/* ── Pagination ── */
+.cta-bar{max-width:760px;margin:48px auto;padding:32px 24px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);text-align:center}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 24px;border-radius:var(--radius-md);font-family:var(--font);font-size:14px;font-weight:600;text-decoration:none;transition:all var(--transition);line-height:1.5}
+.btn-primary{background:var(--ring);color:#000}.btn-primary:hover{background:#fb923c}
+.btn-outline{background:transparent;color:var(--muted);border:1px solid var(--border)}.btn-outline:hover{border-color:rgba(255,255,255,0.25);color:var(--foreground)}
+@media(max-width:640px){.btn-row{flex-direction:column;align-items:stretch}.btn{padding:14px 24px;min-height:44px;display:flex;align-items:center;justify-content:center}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="site-nav-links">
+    <a href="index.html">Overview</a>
+    <a href="findings.html" aria-current="page">Findings</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="europe.html">Europe</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="nav-sep"></span>
+    <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+    <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+    <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+    <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+    <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+  </div>
+  <button class="burger" id="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="burger-panel" id="burger-panel" role="dialog" aria-label="Navigation menu">
+  <a href="index.html">Overview</a>
+  <a href="findings.html" aria-current="page">Findings</a>
+  <a href="scenarios.html">Scenarios</a>
+  <a href="europe.html">Europe</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <div class="burger-sep"></div>
+  <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+  <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+  <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+  <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+  <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+</div>
+
+<main id="main" role="main">
+
+<header class="hero container">
+  <h1>No European labour market is fully safe from AI-driven job displacement.</h1>
+  <p class="lede">We stress-tested 36 markets across five lenses and eight scenarios. Most countries can only handle some of the disruption, with 15 probably already being past their limit. Under the rules we applied, only nine have the statistical strength to hold up under pressure.</p>
+  <p class="byline">By <a href="https://www.linkedin.com/in/pmaul/" target="_blank" rel="noopener">Philipp Maul</a> &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a> &middot; May 2026 &middot; Part 6 of 7 in the European AI Labour Market suite</p>
+  <p class="byline">Based on <a href="sources.html">59 primary sources</a> including Autor 2024 (QJE), Cedefop 2025, Draghi 2024, the European Climate Risk Assessment, Eurostat EUROPOP2023, the Rhodium / MIT Clean Investment Monitor, and OECD Pension Markets in Focus 2025.</p>
+</header>
+
+<section class="container" role="region" aria-label="Summary statistics">
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-label">Markets scored</div>
+      <div class="stat-value">36</div>
+      <div class="stat-sublabel">EU-27 + EFTA-4 + UK + 4 candidates</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Class I — Robust</div>
+      <div class="stat-value">9</div>
+      <div class="stat-sublabel">Under softer rule. Strict rule: 0.</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Capability-floor breach</div>
+      <div class="stat-value">12</div>
+      <div class="stat-sublabel">Countries below adaptive-capacity floor</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Reskilling gap</div>
+      <div class="stat-value">15 yrs</div>
+      <div class="stat-sublabel">7.55M need / ~450K net new annual</div>
+    </div>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="Prelude">
+  <h2><span class="num">1.</span> Prelude</h2>
+  <p>Forecasts of how AI will reshape European jobs come in three flavours: vendor reports tied to compute spending (often US-centric), macro projections that assume yesterday&rsquo;s patterns repeat, and political messaging anchored to promises that land unevenly. Few ask what happens if the &ldquo;old jobs disappear, new jobs appear&rdquo; mechanism weakens, ageing fails to absorb displacement, and institutions are stretched by defence, decoupling, climate, and the war in Ukraine.</p>
+  <p>So we ran an experiment. We scored 36 labour markets &mdash; the EU-27 plus EFTA, the United Kingdom, and four candidate countries &mdash; across five lenses, and stress-tested them under eight <em>what-if</em> scenarios. The results group into three corridors (severity of AI-displacement risk) and four fragility classes (stability under stress).</p>
+</section>
+
+<section class="container prose" role="region" aria-label="Headline finding">
+  <h2><span class="num">2.</span> More than three-quarters of European labour markets sit in uncomfortable territory.</h2>
+  <div class="sm-pyramid">
+    <h3 class="sm-header">&ldquo;Even the safe nine aren&rsquo;t unconditionally safe.&rdquo;</h3>
+    <p class="sm-support">Nine countries look safe under a <em>lenient</em> rule: a country may drift one corridor either way, as long as it never lands in the worst. Those nine are the five Nordics plus Belgium, France, Luxembourg, and the Netherlands. Under a <em>strict</em> rule (no drift at all), the safe count drops to zero &mdash; even Norway and Sweden fail. &ldquo;Safe&rdquo; here is a feature of the rule, not a permanent property of the labour market.</p>
+    <h3 class="sm-header">&ldquo;The two hopes that were supposed to soften this don&rsquo;t hold.&rdquo;</h3>
+    <p class="sm-support">Two &ldquo;buffers&rdquo; are often assumed to make AI displacement manageable: <strong>retirement</strong> and <strong>retraining</strong>.</p>
+    <ul class="sm-support" style="padding-left:1.2em;margin-top:0">
+      <li>The retirement buffer is smaller than the story suggests. Across 32 countries it covers about <strong>26%</strong> of displaceable employment, versus roughly <strong>80%</strong> that would be needed to &ldquo;catch the fall.&rdquo;</li>
+      <li>The retraining buffer is too slow to match the timeline. Europe needs to deeply reskill about <strong>7.55 million</strong> workers by 2035, but current throughput is about <strong>450,000/year</strong> &mdash; a <strong>~15-year backlog</strong> against a <strong>1&ndash;3 year</strong> displacement window.</li>
+    </ul>
+    <h3 class="sm-header">&ldquo;Stability isn&rsquo;t the same as safety.&rdquo;</h3>
+    <p class="sm-support">Eight worker-protection economies look stable on the corridor map under the lenient rule: Belgium, Germany, Denmark, Finland, France, the Netherlands, Norway, and Sweden. But &ldquo;stable&rdquo; can mean the risk moved, not disappeared. The Nordics are more exposed to trade decoupling; the Continental group sits next to a large neighbour (the UK) with weaker worker protections. The bigger danger is not immediate job losses at home, but <strong>AI investment and jobs relocating</strong> to jurisdictions with thinner protections &rarr; stability at the price of capital-flight risk.</p>
+  </div>
+  <h3 style="font-size:18px;font-weight:600;color:var(--foreground);max-width:760px;margin:28px 0 18px;line-height:1.4">Where each country lands depends on how much displacement its training and re-employment systems can absorb. Most cannot absorb it all.</h3>
+  <h3 style="font-size:16px;font-weight:600;color:var(--foreground);margin:28px 0 10px;line-height:1.4">How the 36 markets split</h3>
+  <p style="font-size:14px;color:var(--muted-foreground);max-width:760px;margin-bottom:12px;font-style:italic">Each country sits in one of three corridors (coping / at-risk / already behind) and one of four fragility classes (whether that placement survives stress-testing under six macro shocks).</p>
+  <p>Only nine countries remain resilient under stress: the five Nordics (Denmark, Finland, Iceland, Norway, Sweden) and four Continental peers (Belgium, France, Luxembourg, Netherlands). The other twenty-seven split into three patterns. Nine countries look stable today but <strong>fracture under at least one of six macro shocks</strong> we tested. Fifteen <strong>already sit in the worst corridor under business-as-usual conditions</strong>, before any shock is added. Three more &mdash; North Macedonia, Serbia, Turkey &mdash; show signs of institutional collapse already underway: institutional capacity is already close to saturation.</p>
+  <div class="inline-stack" aria-label="Fragility-class count distribution across 36 markets">
+    <div class="inline-stack-label">36 markets by fragility class &middot; count</div>
+    <div class="stack-bar" role="img" aria-label="Class I 9 markets, Class II 9 markets, Class III 15 markets, Class IV 3 markets, total 36">
+      <div class="stack-seg cls-I" style="flex:9 0 0%"><span class="pct">9</span><span class="n">Class I</span></div>
+      <div class="stack-seg cls-II" style="flex:9 0 0%"><span class="pct">9</span><span class="n">Class II</span></div>
+      <div class="stack-seg cls-III" style="flex:15 0 0%"><span class="pct">15</span><span class="n">Class III</span></div>
+      <div class="stack-seg cls-IV thin" style="flex:3 0 0%"><span class="pct">3</span><span class="n">Class IV</span></div>
+    </div>
+  </div>
+  <p>How quickly that resilient nine collapses as the test tightens is the second uncomfortable finding. We applied two rules. The strict one asks whether a country stays exactly on its baseline corridor under every routine scenario. The softer one allows it to drift one corridor in either direction, but never into the worst corridor under any of the seven routine variants. Under the softer rule, nine countries qualify. Under the strict rule, none do &mdash; even Norway and Sweden fail. <strong>There is no unconditionally safe European labour market at the corrected threshold.</strong></p>
+  <p>That said, no fate is written in stone. Every country (and especially Europe as a whole) has a chance to make the hard decisions needed to improve its population&rsquo;s situation. The fragility class a country sits in today is a read-out of present conditions, not a forecast of inevitability &mdash; job-training capacity, reskilling, EU funding choices, regulation, and fiscal headroom are levers, not constants.</p>
+</section>
+
+<section class="container" role="region" aria-label="Corridor map">
+  <h2><span class="num">3.</span> The 36-Country Corridor Map <span class="subtitle">Traffic-light reading: I = Robust, II = Fragile, III = Pre-Failure Risk, IV = Currently Failing. Hover or tap a country for the mechanism.</span></h2>
+  <p class="section-sub">The map below sorts 36 European labour markets into three corridors based on how well their training and re-employment systems can keep up with AI-driven displacement. Green markets are coping; amber markets are at risk; red markets are already behind.</p>
+
+  <div class="controls-row">
+    <button class="view-toggle" id="view-toggle" type="button" aria-label="Switch to beeswarm view">
+      <span>View:</span><span id="view-toggle-target">Beeswarm</span><span class="arrow">&rarr;</span>
+    </button>
+    <div class="legend" aria-label="Fragility class legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-i)"></span><span>Class I (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-ii)"></span><span>Class II (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iii)"></span><span>Class III (15)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iv)"></span><span>Class IV (3)</span></span>
+    </div>
+  </div>
+
+  <div class="view view-map active" id="view-map">
+    <section class="map-section">
+      <h3>Lens 1 absorption ratio &middot; 36 markets</h3>
+      <p style="font-size:14px;color:var(--muted);margin:0 0 16px;line-height:1.5"><em>Ratio = displacement velocity &divide; absorption capacity. 1.00 means jobs are being lost and replaced at the same pace; 2.80 means displacement runs at 2.8&times; absorption.</em></p>
+      <div class="map-shell">
+        <div class="map-svg-wrap">
+          <svg id="map-svg" role="img" aria-label="Dot map of 36 European countries plus Ukraine reference panel; each country is a cluster of coloured circles, dot colour encodes fragility class. Hover or focus a country for its mechanism, corridor and regime."></svg>
+        </div>
+        <aside class="detail-panel" id="detail-panel" aria-live="polite">
+          <p class="empty-hint">Hover or focus a country to see its mechanism, corridor and regime.</p>
+        </aside>
+      </div>
+      <p class="geo-note">Each cluster of dots is one country. Dot size encodes outline fidelity (smaller dots feather coastlines and narrow regions, larger dots fill country interiors); colour encodes fragility class. Dot <strong>count</strong> per country reflects projected map area, not displacement scale &mdash; colour carries the corridor and class signal. Web Mercator projection, with country geometry from Natural Earth 1:50m. No labels &mdash; identification via hover or click. Ukraine appears as a Class IV reference panel at reduced opacity.</p>
+    </section>
+
+    <div class="filter-bar hidden" id="filter-bar" role="status" aria-live="polite">
+      <span>Showing</span>
+      <span class="badge" id="filter-badge">Class &mdash;</span>
+      <button class="clear-btn" id="clear-btn" type="button" aria-label="Clear filter">Clear filter</button>
+    </div>
+  </div>
+
+  <div class="view view-beeswarm" id="view-beeswarm">
+    <section class="map-section">
+      <h3>Lens 1 absorption ratio &middot; 36 markets</h3>
+      <p style="font-size:14px;color:var(--muted);margin:0 0 16px;line-height:1.5"><em>Ratio = displacement velocity &divide; absorption capacity. 1.00 means jobs are being lost and replaced at the same pace; 2.80 means displacement runs at 2.8&times; absorption.</em></p>
+      <iframe class="beeswarm-frame" src="phase2-explorations/1-corridor-map/B-beeswarm.html" title="Beeswarm view of 36 European labour markets" loading="lazy"></iframe>
+    </section>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Fragility classes population-weighted view">
+  <h2><span class="num">4.</span> Fragility Classes <span class="subtitle">Class distribution by share of working-age population (20&ndash;64). Click or hover a segment to filter the map above.</span></h2>
+  <p class="section-sub">We grouped countries into four fragility classes based on how their corridor placement holds up under stress. The cards below describe each class; the bars further down surface the count-vs-population asymmetry directly. Class I covers about 25.6% of EU-27 working-age pop on 7 markets, Class IV covers about 15.7% of 36-market pop on just 3 markets.</p>
+  <div class="class-panel" id="class-panel" aria-label="Fragility-class detail cards (cross-link the map above)"></div>
+  <div class="stack-box" style="margin-top:18px">
+    <h3>Class distribution &middot; share of working-age population (20&ndash;64)</h3>
+    <div id="stacks"></div>
+    <div class="legend" aria-label="Legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-i)"></span><span>Class I &mdash; Robust</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-ii)"></span><span>Class II &mdash; Fragile</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iii)"></span><span>Class III &mdash; Pre-Failure Risk</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iv)"></span><span>Class IV &mdash; Currently Failing</span></span>
+    </div>
+    <div class="asymmetry-callout" id="asym"></div>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="Five folded findings">
+  <h2><span class="num">5.</span> Why these markets are uncomfortable <span class="subtitle">Five findings beneath the headline &mdash; and one bonus split.</span></h2>
+  <p>The headline above &mdash; that no European labour market is unconditionally safe &mdash; lands hard, but the reasons it lands are five distinct mechanisms operating simultaneously. The first is methodological: when corridor edges are anchored to current theory rather than fitted to historical literature, the count of strictly-robust markets falls to zero. Even the Nordics, which a softer rule restores to robust, do not survive the strict version. Public &ldquo;managed transition&rdquo; narratives have been rounding upward on this point.</p>
+  <p>The second is demographic. A long-running policy hope is that retiring workers will quietly leave the room as AI displaces younger ones; the ageing wave will absorb the shock. The data refuses this. Across all 32 scored countries the share of AI-displaceable employment that retirement could plausibly cover sits well below the threshold required, and this is true uniformly &mdash; no country comes close. Beneath the uniform read, the failure is not symmetric: clerical and admin work loses tasks faster than retirement makes room, while healthcare, trades, and care lose almost no tasks against a wall of retirements that AI cannot help fill. Two opposite mismatches; both painful.</p>
+  <p>The third is a path-of-optimism finding. For three countries (Austria, Luxembourg, and Turkey) only one of the seven routine futures lands them in the safe corridor: the Climate Adaptation Boom (S2). Tech-led reinstatement, the standard policy hope, is closed off for these economies. Their best routine outcome runs through redirecting activity into climate-adaptation work in Zone-C occupations &mdash; healthcare, trades, the green economy.</p>
+  <p>The fourth is the capacity gap behind the 15-country Class III diagnosis. The countries already in the worst corridor are not there because their workers are uniquely vulnerable. They are there because the speed at which their training systems can deep-reskill workers is slower than the speed at which AI displaces them. The arithmetic is unforgiving: even before any shock, the deep-reskilling backlog runs to roughly fifteen years, while AI displaces jobs in one to three. This is the structural reason 15 countries cannot be pulled out of C3 with marginal reform.</p>
+  <p>The fifth is the squeeze cluster &mdash; eight countries that look stable until you notice their stability is paid for in different ways. Four Nordics carry it through trade-decoupling exposure; four Continental peers through proximity to UK regulatory regimes that protect workers less. The squeeze is a capital-flight signal, not a labour-displacement signal &mdash; the risk is that AI investment leaves rather than that workers are pushed out at home.</p>
+  <p>And one bonus split worth surfacing: the high-coordination cluster &mdash; a group whose occupational mix theoretically gives it easy reskilling pathways &mdash; turns out to be two archetypes moving in opposite directions. Education- and admin-heavy economies sit on the safe side; finance- and ICT-heavy economies sit on the exposed side. The cluster average had hidden the split.</p>
+
+  <div class="chart-box" role="img" aria-label="Reskilling-capacity funnel: 7.55M deep-reskilling cohort needed by 2035; 3.34M annual training throughput, of which 2.89M is absorbed by baseline economic churn and 450K is net new capacity per year. Implied 15-year backlog against a 1 to 3 year displacement window.">
+    <h3>Reskilling-capacity arithmetic &middot; EU-27 + UK</h3>
+    <div class="funnel-row">
+      <div class="funnel-label"><strong>Cohort needing reskilling</strong> by 2035</div>
+      <div class="funnel-bar"><div class="funnel-fill cohort" style="width:100%">7.55 M workers</div></div>
+      <div class="funnel-value">7.55 M</div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label"><strong>Annual training throughput</strong></div>
+      <div class="funnel-bar"><div class="funnel-fill throughput" style="width:44.2%">3.34 M / year</div></div>
+      <div class="funnel-value">3.34 M / yr</div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label">&mdash; absorbed by baseline churn</div>
+      <div class="funnel-bar"><div class="funnel-fill churn" style="width:38.3%">2.89 M / year</div></div>
+      <div class="funnel-value">2.89 M / yr</div>
+    </div>
+    <div class="funnel-row">
+      <div class="funnel-label">&mdash; <strong>net new capacity</strong></div>
+      <div class="funnel-bar"><div class="funnel-fill net-new" style="width:5.96%"></div><span class="funnel-tip-label" style="left:5.96%">450 K</span></div>
+      <div class="funnel-value">450 K / yr</div>
+    </div>
+    <div class="funnel-callout">
+      <strong>~15-year backlog</strong> to clear the 7.55 M cohort at 450 K / yr net new capacity &mdash; against a <strong>1&ndash;3 year</strong> AI displacement window. Reskilling-system response time runs <strong>5&ndash;9 years</strong>.
+    </div>
+  </div>
+
+  <details style="margin:24px 0;padding:18px 22px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md);max-width:760px">
+    <summary style="cursor:pointer;font-weight:600;color:var(--ring);font-size:14px;line-height:1.5">For interested readers &mdash; the numbers behind these findings</summary>
+    <div style="margin-top:14px;display:flex;flex-direction:column;gap:14px">
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">1. Strict-zero robustness.</strong>
+        <p style="font-size:14px;margin-top:4px">Replacing the historical-literature corridor edges (1.50 / 3.00) with theory-anchored edges (1.20 / 2.80) drops the Robust count to 0 under the strict &plusmn;0 perturbation rule. The softer rule (within &plusmn;1 corridor of baseline AND no routine variant lands in C3) restores 9 markets.</p>
+      </div>
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">2. Demographic mismatch by zone.</strong>
+        <p style="font-size:14px;margin-top:4px">Maximum retirement-offset reading: ~26 % against a buffer threshold of 80 %. Zone A (clerical / admin): 60&ndash;80 % task substitution by AI against ~3.5 M EU retirements by 2030 &mdash; a 5&ndash;10 M displaced-worker mismatch. Zone C (healthcare, trades, care): 5&ndash;15 % task substitution against ~12 M retirements &mdash; an 8&ndash;12 M unfillable shortage AI cannot help fill.</p>
+      </div>
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">3. S2-only optimism path (AT, LU, TR).</strong>
+        <p style="font-size:14px;margin-top:4px">Under post-growth regimes (AT, LU), S2 Climate Adaptation Boom is the modal routine variant: probability 0.30 against 0.22 for Muddle Through and 0.05 for Reinstatement Revival. All six other routine variants produce C2 or C3 for these countries.</p>
+      </div>
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">4. Reskilling-capacity arithmetic.</strong>
+        <p style="font-size:14px;margin-top:4px">Across EU-27 plus the UK, the deep-reskilling cohort by 2035 is ~7.55 M workers. Annual training throughput is ~3.34 M, but ~2.89 M is consumed by baseline economic churn, leaving ~450 K net new capacity per year. Implied backlog: 15 years; speed gap between AI disruption (1&ndash;3 years) and reskilling-system response (5&ndash;9 years).</p>
+      </div>
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">5. The eight-country squeeze cluster.</strong>
+        <p style="font-size:14px;margin-top:4px">Squeeze-flagged: BE, DE, DK, FI, FR, NL, NO, SE. Nordic sub-cluster (DK, FI, NO, SE): worker-protection &times; trade-decoupling exposure. Continental sub-cluster (BE, DE, FR, NL): worker-protection &times; UK adjacency &times; capital-flow vulnerability. Luxembourg is explicitly not squeeze-flagged.</p>
+      </div>
+      <div>
+        <strong style="font-size:14px;color:var(--foreground)">6. The high-coordination split.</strong>
+        <p style="font-size:14px;margin-top:4px">At 2-digit occupational classification with ESCO weighting, teaching-heavy occupations carry a Klinger coordination weight of 0.582 against 0.157 for ICT &mdash; a 3.7&times; spread the 1-digit average had concealed. Education / admin lift: DK, IS, LU, NO. Finance / tech drag: CH, DE, IE, UK.</p>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section class="container prose" role="region" aria-label="Italy">
+  <div class="italy-block">
+    <p class="italy-lead">The outlier &rarr; Italy, with the workforce shrinking before AI displaces a single worker.</p>
+    <p>Italy is the only major European economy with negative net migration in 2025 (<span class="number">&minus;485,823</span>). It is singled out as an &ldquo;outlier&rdquo; because its workforce is already shrinking and is projected to keep shrinking through 2050 (a &minus;17.5% decline in working-age people, plus negative migration). That leaves less capacity to absorb AI-driven disruption, while the usual buffers, retirement (25.3% offset) and migration, are too small or politically constrained. This means there are already too few people to hire for essential jobs like caregiving, skilled manual work, and medical roles, so these labour gaps worsen disruption instead of helping absorb it.</p>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="Conclusion">
+  <h2><span class="num">6.</span> Conclusion</h2>
+  <p>Forecasts are easy. Stress-tests are uncomfortable because they reveal what comfortable averages conceal. This synthesis shows where European labour markets stand across thirty-six countries, five lenses, and eight scenarios. It concludes that, under the rules we applied, none are unconditionally safe, and most are already beyond the level of disruption they can comfortably absorb.</p>
+  <p>That diagnosis is a snapshot of today. A country&rsquo;s class reflects current policy choices, not a fixed destiny. Job-training capacity, reskilling, EU funding choices, regulation, and fiscal headroom can shift corridor placement and, more importantly, the social, economic, and ecological realities those classes describe. Class I markets can largely focus on preservation, which carries risks of its own. Class II markets face conditional fragilities that can harden or soften depending on the scenario, and need to address them. Class III markets require step-change responses. Class IV markets require containment.</p>
+  <p>The strict-zero finding demands a response, not just a diagnosis. <strong>What to do comes in a separate document: Part 7 of this project, dropping soon.</strong></p>
+</section>
+
+
+<nav class="cta-bar page-pagination container" aria-label="Page navigation">
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-outline" data-direction="back" data-target-page="overview">&larr; Overview</a>
+    <a href="scenarios.html" class="btn btn-primary" data-direction="forward" data-target-page="scenarios">Scenarios &rarr;</a>
+  </div>
+</nav>
+
+</main>
+
+<footer class="footer container" role="contentinfo">
+  Built by <a href="https://www.linkedin.com/in/pmaul/" target="_blank" rel="noopener">Philipp Maul</a> &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a> &middot; License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> (data) + <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a> (code) &middot; Last updated 2026-05-11<br>
+  <a href="findings.html">Findings</a> &middot; <a href="scenarios.html">Scenarios</a> &middot; <a href="europe.html">Europe</a> &middot; <a href="methodology.html">Methodology</a> &middot; <a href="sources.html">Sources</a> &middot; <a href="glossary.html">Glossary</a><br>
+  <span class="cite-as">Cite as: Maul, P. (2026). Part 6 — European AI Labour Market Synthesis. Nexalps. https://synthesis.nexalps.com/</span>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+// ── Burger ──
+const bbtn=document.getElementById('burger-btn');
+const bpan=document.getElementById('burger-panel');
+if(bbtn&&bpan){
+  bbtn.addEventListener('click',()=>{const o=bpan.classList.toggle('open');bbtn.classList.toggle('open',o);bbtn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',e=>{if(!bpan.contains(e.target)&&!bbtn.contains(e.target)&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+}
+
+// ── PostHog: logo ──
+// ── Dot corridor map (Phase 2J) + cross-link state machine + pop stack ──
+// Geometry generated offline by tools/dotmap-gen.py (Web Mercator point-in-polygon
+// against Natural Earth 1:50m). Variable dot radius encodes outline fidelity, not
+// data: large dots fill country interiors, small dots feather coastlines.
+const RULE = {
+  I:'Within ±1 corridor of baseline AND no routine variant lands in C3.',
+  II:'Baseline C2; ≥1 routine variant pushes to C3.',
+  III:'Muddle-Through baseline lands in C3 post-rescaling.',
+  IV:'Candidate-partial-coverage with extreme Lens 5 readings.'
+};
+
+let DATA=null;
+let DOTMAP=null;
+let activeFilter=null;     // null | 'I' | 'II' | 'III' | 'IV'  (shared cross-link state)
+let stickyCode=null;       // mobile sticky-tap state
+
+Promise.all([
+  fetch('./data.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(new Error('data.json HTTP '+r.status))),
+  fetch('./dotmap-data.json',{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject(new Error('dotmap-data.json HTTP '+r.status)))
+])
+  .then(([d,m])=>{DATA=d;DOTMAP=m;render()})
+  .catch(e=>fail('Data fetch failed. Open via a static HTTP server (e.g. python3 -m http.server) so fetch() can resolve.', e));
+
+function fail(msg, err){
+  const svg=document.getElementById('map-svg');
+  if(svg)svg.innerHTML=`<text x="20" y="40" fill="#a1a1aa" font-family="${getComputedStyle(document.body).fontFamily}" font-size="13">${msg}</text>`;
+  if(err) console.error(err);
+}
+
+function render(){
+  if(!DATA)return;
+  renderMap();
+  renderClassPanel();
+  renderStacks();
+  attachInteractions();
+  attachClassFilters();
+  attachViewToggle();
+  attachKeyboard();
+}
+
+function renderMap(){
+  const svg=document.getElementById('map-svg');
+  if(!svg||!DOTMAP)return;
+  const W=DOTMAP.canvas.width, H=DOTMAP.canvas.height;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+  // Country-region groups: each <g class="country-region cls-X" data-code data-class>
+  //   • <path class="hit-area"> — invisible, captures pointer events for the
+  //     full country polygon (so gaps between dots are interactive too).
+  //   • <circle cx cy r> — visible dots; class via parent <g>.
+  // Paint order: groups sorted by polygon area DESCENDING so smallest
+  // countries (LI, LU, MT, CY) render last and sit on top of larger
+  // neighbours (CH/AT/IT/FR), letting their hit-areas catch hover/click.
+  const polys=DOTMAP.polygons||{};
+  const codes=Object.keys(DOTMAP.countries).sort((a,b)=>{
+    const aa=(polys[a]&&polys[a].area_px)||0;
+    const bb=(polys[b]&&polys[b].area_px)||0;
+    return bb-aa;
+  });
+  const groups=codes.map(code=>{
+    const dots=DOTMAP.countries[code];
+    if(!dots||!dots.length)return '';
+    let cls,corridor,name,extra='';
+    if(code==='UA'){
+      // Class IV reference panel; not in DATA.countries.
+      cls='IV';
+      const ua=DATA.ukraine_reference_panel||{};
+      name=ua.name||'Ukraine';
+      corridor=ua.phase3_corridor||'';
+      extra=' is-ukraine';
+    } else {
+      const c=DATA.countries[code];
+      if(!c)return '';
+      cls=c.fragility_class;
+      corridor=c.phase3_corridor||'?';
+      name=c.name;
+    }
+    const aria=`${name}, ${code}. Class ${cls}.${corridor?` Corridor C${corridor}.`:''} ${dots.length} ${dots.length===1?'dot':'dots'}.`;
+    const poly=polys[code];
+    const hitArea=(poly&&poly.path)?`<path class="hit-area" d="${poly.path}" aria-hidden="true"/>`:'';
+    const circles=dots.map(([cx,cy,r])=>`<circle cx="${cx}" cy="${cy}" r="${r}"/>`).join('');
+    return `<g class="country-region cls-${cls}${extra}" data-code="${code}" data-class="${cls}" tabindex="0" role="button" aria-label="${aria}">${hitArea}${circles}</g>`;
+  }).join('');
+  svg.innerHTML=groups;
+}
+
+function renderClassPanel(){
+  const panel=document.getElementById('class-panel');
+  if(!panel||!DATA.fragility_classes)return;
+  const order=['I','II','III','IV'];
+  panel.innerHTML=order.map(k=>{
+    const cl=DATA.fragility_classes[k];
+    if(!cl)return '';
+    return `<button class="class-card c-${k}" data-class="${k}" type="button" aria-pressed="false" aria-label="Filter the corridor map to Class ${k}: ${cl.label}">
+      <div class="class-header">
+        <span class="class-num">Class ${k}</span>
+        <span class="class-count">${cl.n_countries} countries</span>
+      </div>
+      <h4>${cl.label}</h4>
+      <p class="rule">${RULE[k]}</p>
+      <p class="countries">${(cl.countries||[]).join(' · ')}</p>
+    </button>`;
+  }).join('');
+}
+
+function renderStacks(){
+  const el=document.getElementById('stacks');
+  const asym=document.getElementById('asym');
+  if(!el)return;
+  const agg=(DATA.cross_cutting_findings||{}).pan_european_aggregate||{};
+  const eu27=agg.eu_27,e36=agg.european_36;
+  if(!eu27||!e36){el.innerHTML='<p style="color:var(--muted);font-size:13px">Aggregate data missing.</p>';return}
+  el.innerHTML=[
+    renderScope('EU-27 member states','27 markets &middot; 262.5M working-age pop',eu27),
+    renderScope('36 European markets','EU-27 + EFTA-4 + UK + 4 candidates',e36)
+  ].join('');
+  if(asym){
+    const i27=eu27.class_distribution_population_weighted_pct||{};
+    const i36=e36.class_distribution_population_weighted_pct||{};
+    const cd27=eu27.class_distribution||{};
+    const cd36=e36.class_distribution||{};
+    asym.innerHTML=`<strong>Class IV asymmetry.</strong> EU-27: ${cd27.IV||0} markets, ${(i27.IV||0).toFixed(1)}% of working-age pop. 36-market: ${cd36.IV||0} markets, ${(i36.IV||0).toFixed(1)}%. The cascade pressure sits at the EU&rsquo;s borders, not within them. <strong>Class I asymmetry.</strong> EU-27: ${(i27.I||0).toFixed(1)}% of pop on ${cd27.I||0} markets; 36-market: ${(i36.I||0).toFixed(1)}% on ${cd36.I||0}. Adding EFTA-4 + UK + candidates dilutes the share of population sitting in robust markets.`;
+  }
+}
+
+function renderScope(name,meta,data){
+  const cd=data.class_distribution||{};
+  const cdp=data.class_distribution_population_weighted_pct||{};
+  const order=['I','II','III','IV'];
+  const segs=order.map(k=>{
+    const pct=cdp[k]||0;
+    const n=cd[k]||0;
+    const thin=pct<8?' thin':'';
+    return `<button class="stack-seg cls-${k}${thin}" data-class="${k}" data-pct="${pct}" style="flex:${pct} 0 0%" type="button" tabindex="0" aria-label="Class ${k}: ${pct.toFixed(1)}% of working-age population, ${n} markets. Click to filter the corridor map.">
+      <span class="pct">${pct.toFixed(1)}%</span>
+      <span class="n">${n} mkts</span>
+    </button>`;
+  }).join('');
+  return `<div class="scope-row">
+    <div class="scope-label"><span class="scope-name">${name}</span><span class="scope-meta">${meta}</span></div>
+    <div class="stack-bar" role="img" aria-label="${name} class distribution by working-age population">${segs}</div>
+  </div>`;
+}
+
+// ── Cross-link state machine (P3) ──
+function applyFilter(cls){
+  activeFilter=cls;
+  const regions=document.querySelectorAll('.country-region');
+  const cards=document.querySelectorAll('.class-card');
+  const segs=document.querySelectorAll('.stack-seg');
+  const bar=document.getElementById('filter-bar');
+  const badge=document.getElementById('filter-badge');
+  if(!cls){
+    regions.forEach(g=>g.classList.remove('dimmed'));
+    cards.forEach(c=>{c.classList.remove('active');c.setAttribute('aria-pressed','false')});
+    segs.forEach(s=>s.classList.remove('dimmed'));
+    if(bar)bar.classList.add('hidden');
+    return;
+  }
+  let n=0;
+  regions.forEach(g=>{
+    const match=g.getAttribute('data-class')===cls;
+    g.classList.toggle('dimmed',!match);
+    if(match)n++;
+  });
+  cards.forEach(c=>{
+    const on=c.getAttribute('data-class')===cls;
+    c.classList.toggle('active',on);
+    c.setAttribute('aria-pressed',on?'true':'false');
+  });
+  segs.forEach(s=>{
+    const on=s.getAttribute('data-class')===cls;
+    s.classList.toggle('dimmed',!on);
+  });
+  if(badge)badge.textContent=`Class ${cls} — ${n} ${n===1?'country':'countries'}`;
+  if(bar)bar.classList.remove('hidden');
+}
+function ringClass(cls,on){
+  document.querySelectorAll('.country-region').forEach(g=>{
+    const match=g.getAttribute('data-class')===cls;
+    g.classList.toggle('ringed',on&&match);
+  });
+}
+function clearAll(){
+  if(activeFilter)applyFilter(null);
+  if(stickyCode){stickyCode=null;clearDetail()}
+}
+
+function showDetail(code){
+  const panel=document.getElementById('detail-panel');
+  if(!panel)return;
+  // Ukraine renders from the reference panel, not the per-country block.
+  if(code==='UA'){
+    const ua=(DATA.ukraine_reference_panel)||{};
+    const name=ua.name||'Ukraine';
+    const cls='IV';
+    const cor=ua.phase3_corridor||'';
+    const regime=ua.regime||'';
+    const mech=ua.narrative_one_liner||ua.note||'Class IV reference panel — partial coverage; not corridor-mapped in the main 36-market scoring.';
+    panel.innerHTML=`
+      <div class="d-name">${name}<span class="d-code">&middot; ${code}</span></div>
+      <div class="d-row">
+        <span class="chip cls-${cls}">Class ${cls} (reference)</span>
+        ${cor?`<span class="chip corridor">Corridor C${cor}</span>`:''}
+        ${regime?`<span class="chip regime">${String(regime).replace(/_/g,' ')}</span>`:''}
+      </div>
+      <p class="d-mech">${mech}</p>`;
+    return;
+  }
+  const c=DATA.countries[code];
+  if(!c){panel.innerHTML='<p class="empty-hint">Hover or focus a country to see its mechanism, corridor and regime.</p>';return}
+  const cls=c.fragility_class;
+  const cor=c.phase3_corridor;
+  const mech=c.narrative_one_liner||c.scenario_distribution_language||'';
+  const regime=c.regime||'';
+  panel.innerHTML=`
+    <div class="d-name">${c.name}<span class="d-code">&middot; ${code}</span></div>
+    <div class="d-row">
+      <span class="chip cls-${cls}">Class ${cls}</span>
+      ${cor?`<span class="chip corridor">Corridor C${cor}</span>`:''}
+      ${regime?`<span class="chip regime">${regime.replace(/_/g,' ')}</span>`:''}
+    </div>
+    <p class="d-mech">${mech}</p>`;
+}
+function clearDetail(){
+  if(stickyCode)return;
+  const p=document.getElementById('detail-panel');
+  if(p)p.innerHTML='<p class="empty-hint">Hover or focus a country to see its mechanism, corridor and regime.</p>';
+}
+
+function attachInteractions(){
+  const isTouch=matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.country-region').forEach(g=>{
+    const code=g.getAttribute('data-code');
+    if(!isTouch){
+      g.addEventListener('mouseenter',()=>{if(!activeFilter||g.getAttribute('data-class')===activeFilter){showDetail(code);try{posthog.capture('corridor_country_hover',{code})}catch(e){}};g.classList.add('active')});
+      g.addEventListener('mouseleave',()=>{g.classList.remove('active');clearDetail()});
+    }
+    g.addEventListener('focus',()=>{showDetail(code);try{posthog.capture('corridor_country_focus',{code})}catch(e){}});
+    g.addEventListener('blur',()=>{if(!stickyCode)clearDetail()});
+    g.addEventListener('click',e=>{
+      e.preventDefault();
+      if(stickyCode===code){stickyCode=null;clearDetail()}
+      else{stickyCode=code;showDetail(code);try{posthog.capture('corridor_country_click',{code})}catch(e){}}
+    });
+  });
+  document.getElementById('map-svg').addEventListener('click',e=>{
+    // Click on map background (svg root, not a circle inside a country group) clears stickiness.
+    if(e.target.tagName==='svg'||e.target.id==='map-svg'){if(stickyCode){stickyCode=null;clearDetail()}}
+  });
+}
+
+function attachClassFilters(){
+  // §4 class-cards
+  document.querySelectorAll('.class-card').forEach(card=>{
+    const cls=card.getAttribute('data-class');
+    const toggle=()=>{const next=activeFilter===cls?null:cls;applyFilter(next);try{posthog.capture('class_card_filter',{class:cls,active:next!==null})}catch(e){}};
+    card.addEventListener('click',toggle);
+    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+    card.addEventListener('mouseenter',()=>{if(activeFilter!==cls)ringClass(cls,true)});
+    card.addEventListener('mouseleave',()=>ringClass(cls,false));
+    card.addEventListener('focus',()=>{if(activeFilter!==cls)ringClass(cls,true)});
+    card.addEventListener('blur',()=>ringClass(cls,false));
+  });
+  // §4 stack segments
+  document.querySelectorAll('.stack-seg').forEach(seg=>{
+    const cls=seg.getAttribute('data-class');
+    const toggle=()=>{const next=activeFilter===cls?null:cls;applyFilter(next);try{posthog.capture('class_segment_filter',{class:cls,active:next!==null})}catch(e){}};
+    seg.addEventListener('click',toggle);
+    seg.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});
+    seg.addEventListener('mouseenter',()=>{if(activeFilter!==cls){ringClass(cls,true);try{posthog.capture('class_segment_hover',{class:cls})}catch(e){}}});
+    seg.addEventListener('mouseleave',()=>ringClass(cls,false));
+    seg.addEventListener('focus',()=>{if(activeFilter!==cls)ringClass(cls,true)});
+    seg.addEventListener('blur',()=>ringClass(cls,false));
+  });
+  const clearBtn=document.getElementById('clear-btn');
+  if(clearBtn)clearBtn.addEventListener('click',()=>{applyFilter(null);try{posthog.capture('class_filter_clear')}catch(e){}});
+}
+
+function attachKeyboard(){
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape')clearAll();
+  });
+}
+
+function attachViewToggle(){
+  const toggle=document.getElementById('view-toggle');
+  const targetLabel=document.getElementById('view-toggle-target');
+  const mapView=document.getElementById('view-map');
+  const beeView=document.getElementById('view-beeswarm');
+  if(!toggle||!mapView||!beeView)return;
+  let showingMap=true;
+  toggle.addEventListener('click',()=>{
+    showingMap=!showingMap;
+    mapView.classList.toggle('active',showingMap);
+    beeView.classList.toggle('active',!showingMap);
+    targetLabel.textContent=showingMap?'Beeswarm':'Rastered map';
+    toggle.setAttribute('aria-label',showingMap?'Switch to beeswarm view':'Switch to rastered map view');
+    try{posthog.capture('view_toggle',{view:showingMap?'map':'beeswarm'})}catch(e){}
+  });
+}
+
+// ── Pagination ──
+document.querySelectorAll('nav.page-pagination a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    try{posthog.capture('pagination_click',{direction:a.dataset.direction,target_page:a.dataset.targetPage,page:'findings'})}catch(e){}
+  });
+});
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 1 / Alternative A &mdash; Geographic Tile Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+.tile-map{margin:24px 0;padding:24px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.tile-map h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:14px}
+
+.tile-grid-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tile-grid{display:grid;grid-template-columns:repeat(9,minmax(54px,1fr));grid-template-rows:repeat(8,auto);gap:6px;max-width:760px;margin:0 auto;min-width:560px}
+@media(max-width:899px){.tile-grid{max-width:560px;min-width:560px}}
+@media(max-width:580px){.tile-grid{gap:4px}}
+
+.tile{aspect-ratio:1.4/1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;border:1px solid transparent;border-radius:var(--radius-sm);transition:transform .12s,box-shadow .12s;background:transparent;font-family:var(--font);padding:6px 4px;position:relative}
+.tile:hover,.tile:focus-visible{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,0.4);outline:none;border-color:rgba(255,255,255,0.4)}
+.tile .code{font-size:12px;font-weight:700;letter-spacing:0.02em;color:#0a0a0a;text-shadow:0 0 1px rgba(255,255,255,0.4)}
+.tile .scale{font-size:8px;font-weight:600;color:rgba(0,0,0,0.65);text-transform:uppercase;letter-spacing:0.04em}
+.tile.cls-I{background:var(--class-i)}
+.tile.cls-II{background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 4px,rgba(0,0,0,0.10) 4px,rgba(0,0,0,0.10) 5px)}
+.tile.cls-III{background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 3px,rgba(0,0,0,0.18) 3px,rgba(0,0,0,0.18) 5px)}
+.tile.cls-IV{background:var(--class-iv)}
+.tile.cls-IV .code,.tile.cls-IV .scale{color:#fafafa;text-shadow:none}
+.tile.cls-IV .scale{color:rgba(255,255,255,0.7)}
+
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:16px;justify-content:center}
+.legend-item{display:inline-flex;align-items:center;gap:6px}
+.legend-swatch{width:14px;height:14px;border-radius:3px;border:1px solid rgba(255,255,255,0.15)}
+
+.tooltip{position:fixed;z-index:200;pointer-events:none;background:rgba(15,15,18,0.96);border:1px solid rgba(255,255,255,0.18);border-radius:var(--radius-md);padding:10px 14px;font-size:12px;color:#fafafa;line-height:1.55;max-width:280px;box-shadow:0 8px 24px rgba(0,0,0,0.5);opacity:0;transition:opacity .15s}
+.tooltip.show{opacity:1}
+.tooltip .t-code{font-weight:700;color:var(--ring);font-size:13px}
+.tooltip .t-meta{color:var(--muted);font-size:11px;margin-top:2px}
+.tooltip .t-narrative{margin-top:6px;color:#d4d4d8}
+
+.geo-note{font-size:12px;color:var(--muted-foreground);margin-top:12px;text-align:center;line-height:1.5}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 1 / Alternative A</div>
+  <h1>Geographic Tile Cartogram</h1>
+  <p class="note">36 European labour markets laid out in approximate geographic position so that clusters &mdash; Nordic green block, Balkan red block, Continental amber band &mdash; read at a glance. Each tile is a 1.4:1 cell sized equally so small countries (LU, MT, CY) get the same real estate as DE or FR. Hover or focus a tile for the country&rsquo;s mechanism line.</p>
+</header>
+
+<main class="container">
+  <div class="tile-map">
+    <h3>Fragility class &times; corridor &times; scale tag &middot; geographic layout</h3>
+    <div class="tile-grid-wrap"><div class="tile-grid" id="tile-grid" role="img" aria-label="Geographic tile map of 36 European countries colour-coded by fragility class"></div></div>
+    <div class="legend" aria-label="Legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-i)"></span><span>Class I &mdash; Robust (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 4px,rgba(0,0,0,0.20) 4px,rgba(0,0,0,0.20) 5px)"></span><span>Class II &mdash; Fragile (9)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 3px,rgba(0,0,0,0.30) 3px,rgba(0,0,0,0.30) 5px)"></span><span>Class III &mdash; Pre-Failure Risk (15)</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iv)"></span><span>Class IV &mdash; Currently Failing (3)</span></span>
+    </div>
+    <p class="geo-note">Tile-grid cartogram &mdash; positions are geographic-approximate, not topological. Equal cell size by design.</p>
+  </div>
+</main>
+
+<div class="tooltip" id="tooltip" role="tooltip" aria-hidden="true"></div>
+
+<script>
+(function(){
+'use strict';
+
+// Geographic-approximate tile positions (col, row) on a 9x8 grid
+const POS = {
+  IS:[3,1],
+  UK:[3,2], NO:[5,2], SE:[6,2], FI:[7,2],
+  IE:[2,3], DK:[5,3], EE:[7,3], LV:[7,4], LT:[7,5],
+  NL:[4,4], DE:[5,4], PL:[6,4],
+  BE:[3,5], LU:[4,5], CZ:[5,5], SK:[6,5],
+  FR:[3,6], CH:[4,6], LI:[5,6], AT:[5,5+1.0001-0.0001], // safety
+  HU:[6,6], RO:[7,6],
+  PT:[2,7], ES:[3,7], IT:[4,7], SI:[5,7], HR:[6,7], RS:[7,7], BG:[8,7],
+  MT:[4,8], BA:[5,8], MK:[6,8], EL:[7,8], TR:[8,8], CY:[9,8]
+};
+// Fix AT
+POS.AT=[5,6];
+// Adjust collisions on grid: row 6 has CH=4, LI=5, AT=5 collision with LI
+// LI is tiny — place at col 4.5 not possible; instead push LI to its own slot at row 6 col 6's empty? AT at 5,6, LI at 5.5
+// Simpler: LI col 5 row 6, AT col 6 row 6 — but HU is at 6,6. Re-shuffle row 6:
+POS.FR=[2,6]; POS.CH=[4,6]; POS.LI=[5,6]; POS.AT=[6,6]; POS.HU=[7,6]; POS.RO=[8,6];
+// row 5: BE=3, LU=4, CZ=5, SK=6 — keep
+// row 4: NL=4, DE=5, PL=6 — keep
+// row 7: PT=1, ES=2, IT=4, SI=5, HR=6, RS=7, BG=8
+POS.PT=[1,7]; POS.ES=[2,7]; POS.IT=[4,7]; POS.SI=[5,7]; POS.HR=[6,7]; POS.RS=[7,7]; POS.BG=[8,7];
+// row 8: MT=4, BA=5, MK=6, EL=7, TR=8, CY=9
+POS.MT=[4,8]; POS.BA=[5,8]; POS.MK=[6,8]; POS.EL=[7,8]; POS.TR=[8,8]; POS.CY=[9,8];
+
+const tip=document.getElementById('tooltip');
+
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('tile-grid').innerHTML='<p style="color:var(--muted);font-size:13px;grid-column:1/-1">Data fetch failed. Serve via static HTTP (e.g. python3 -m http.server).</p>';
+  console.error(e);
+});
+
+function render(d){
+  const grid=document.getElementById('tile-grid');
+  const codes=Object.keys(POS);
+  const html=codes.map(code=>{
+    const c=d.countries[code];
+    if(!c)return '';
+    const [col,row]=POS[code];
+    const cls='cls-'+c.fragility_class;
+    const scaleAbbr=c.scale_tag==='both'?'A+D':(c.scale_tag||'').slice(0,3);
+    const aria=`${c.name} (${code}). Class ${c.fragility_class}, corridor C${c.phase3_corridor||'?'}, ${c.scale_tag} scale.`;
+    return `<button class="tile ${cls}" data-code="${code}" style="grid-column:${col};grid-row:${row}" aria-label="${aria}">
+      <span class="code">${code}</span>
+      <span class="scale">${scaleAbbr}</span>
+    </button>`;
+  }).join('');
+  grid.innerHTML=html;
+  attachTips(d);
+}
+
+function attachTips(d){
+  function show(btn){
+    const code=btn.getAttribute('data-code');
+    const c=d.countries[code]; if(!c)return;
+    const oneLiner=c.narrative_one_liner||'';
+    tip.innerHTML=`
+      <div class="t-code">${code} &mdash; ${c.name}</div>
+      <div class="t-meta">Class ${c.fragility_class} &middot; Corridor C${c.phase3_corridor||'?'} &middot; ${c.scale_tag} &middot; ${c.regime||''}</div>
+      <div class="t-narrative">${oneLiner}</div>`;
+    const r=btn.getBoundingClientRect();
+    const tw=Math.min(280,window.innerWidth-24);
+    let left=r.left+r.width/2-tw/2;
+    if(left<8)left=8;
+    if(left+tw>window.innerWidth-8)left=window.innerWidth-8-tw;
+    let top=r.bottom+8;
+    if(top+120>window.innerHeight)top=r.top-120-8;
+    tip.style.left=left+'px';
+    tip.style.top=top+'px';
+    tip.style.maxWidth=tw+'px';
+    tip.classList.add('show');
+    tip.setAttribute('aria-hidden','false');
+  }
+  function hide(){tip.classList.remove('show');tip.setAttribute('aria-hidden','true')}
+  document.querySelectorAll('.tile').forEach(btn=>{
+    btn.addEventListener('mouseenter',()=>show(btn));
+    btn.addEventListener('focus',()=>show(btn));
+    btn.addEventListener('mouseleave',hide);
+    btn.addEventListener('blur',hide);
+    btn.addEventListener('click',e=>{e.preventDefault();show(btn);setTimeout(hide,3500)});
+  });
+}
+})();
+</script>
+</body>
+</html>

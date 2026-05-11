@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 4 / Alternative B &mdash; Weather-icon cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+.weather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+@media(max-width:900px){.weather-grid{grid-template-columns:1fr}}
+.weather-card{padding:20px 22px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-left:3px solid var(--ring);position:relative}
+.weather-card .icon-wrap{display:flex;justify-content:flex-end;margin-bottom:6px}
+.weather-card .icon-wrap svg{width:48px;height:48px;opacity:0.85}
+.weather-card .count{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--ring);margin-bottom:4px}
+.weather-card h3{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.3}
+.weather-card p.desc{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 12px}
+
+.weather-card .modal{padding:10px 12px;background:rgba(255,255,255,0.03);border-left:2px solid rgba(255,255,255,0.20);border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin-bottom:12px}
+.weather-card .modal .modal-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:3px}
+.weather-card .modal .modal-name{font-size:13.5px;font-weight:600;color:var(--fg);line-height:1.45}
+.weather-card .modal .modal-prob{font-size:11px;color:var(--muted);margin-top:3px;font-variant-numeric:tabular-nums}
+
+.weather-card .pop-bar{padding:10px 0 0;border-top:1px solid var(--card-border);font-size:11.5px;color:var(--muted);line-height:1.55}
+.weather-card .pop-bar strong{color:var(--fg);font-weight:600}
+
+.weather-card .countries{font-size:11px;color:var(--muted-foreground);line-height:1.6;margin-top:8px;font-family:var(--font);letter-spacing:0.02em}
+
+.weather-card.regime-growth{border-left-color:#86efac}
+.weather-card.regime-secstag{border-left-color:#a1a1aa}
+.weather-card.regime-postgrowth{border-left-color:#fbbf24}
+
+.weather-card.regime-growth svg{color:#fbbf24}
+.weather-card.regime-secstag svg{color:#a1a1aa}
+.weather-card.regime-postgrowth svg{color:#71717a}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 4 / Alternative B</div>
+  <h1>Weather-icon cards (lightweight upgrade)</h1>
+  <p class="note">Keeps the existing 3-card structure. Adds a single inline-SVG weather icon per regime (sun / partly-cloudy / overcast), the modal scenario as an emphasised pull-quote inside the card, and the population share. Low build cost, small visual lift, survives mobile cleanly. The icons are decorative &mdash; data lives in the modal scenario and population share.</p>
+</header>
+
+<main class="container">
+  <div class="weather-grid" id="weather-grid"></div>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-sun" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="9" fill="currentColor"/>
+      <g stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <line x1="24" y1="4" x2="24" y2="10"/>
+        <line x1="24" y1="38" x2="24" y2="44"/>
+        <line x1="4" y1="24" x2="10" y2="24"/>
+        <line x1="38" y1="24" x2="44" y2="24"/>
+        <line x1="9.6" y1="9.6" x2="13.8" y2="13.8"/>
+        <line x1="34.2" y1="34.2" x2="38.4" y2="38.4"/>
+        <line x1="9.6" y1="38.4" x2="13.8" y2="34.2"/>
+        <line x1="34.2" y1="13.8" x2="38.4" y2="9.6"/>
+      </g>
+    </symbol>
+    <symbol id="ic-partly" viewBox="0 0 48 48">
+      <circle cx="16" cy="16" r="6" fill="currentColor" opacity="0.9"/>
+      <g stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.9">
+        <line x1="16" y1="3" x2="16" y2="7"/>
+        <line x1="3" y1="16" x2="7" y2="16"/>
+        <line x1="6.6" y1="6.6" x2="9.4" y2="9.4"/>
+      </g>
+      <path d="M14 32 q0 -8 8 -8 q4 0 6 3 q1 -1 3 -1 q5 0 5 5 q3 0 3 3 q0 4 -4 4 H14 q-5 0 -5 -5 q0 -4 5 -4 z" fill="currentColor" opacity="0.7"/>
+    </symbol>
+    <symbol id="ic-overcast" viewBox="0 0 48 48">
+      <path d="M11 30 q0 -8 8 -8 q5 0 7 4 q2 -2 5 -2 q6 0 6 6 q4 0 4 4 q0 4 -4 4 H11 q-5 0 -5 -4 q0 -4 5 -4 z" fill="currentColor" opacity="0.85"/>
+      <path d="M6 38 q0 -3 4 -3 q2 0 4 2 q1 -1 3 -1 q4 0 4 4 q3 0 3 3 q0 3 -3 3 H6 q-3 0 -3 -3 q0 -3 3 -3 z" fill="currentColor" opacity="0.55"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script>
+(function(){
+'use strict';
+const SCEN_LABEL={S1:'S1 Reinstatement Revival',S2:'S2 Climate Adaptation Boom',S3:'S3 Jobs Transform',S4:'S4 Muddle Through',S5:'S5 Wage Cliff',S6:'S6 Reinstatement Failure',S7:'S7 Bandwidth Fracture'};
+const REGIMES=[
+  {key:'growth_baseline',cls:'regime-growth',icon:'ic-sun',title:'Growth Baseline',desc:'The historical pattern still holds. Reinstatement is the central recovery channel.'},
+  {key:'secular_stagnation_warning',cls:'regime-secstag',icon:'ic-partly',title:'Secular Stagnation',desc:'Mass shifts toward Muddle Through and Reinstatement Failure. The historical pattern is already faltering.'},
+  {key:'post_growth_empirical',cls:'regime-postgrowth',icon:'ic-overcast',title:'Post-Growth Empirical',desc:'Aggregate output has stopped expanding. Reinstatement is structurally weaker; Climate Adaptation rises.'}
+];
+
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('weather-grid').innerHTML='<p style="color:var(--muted);font-size:13px">Data fetch failed.</p>';
+  console.error(e);
+});
+
+function render(d){
+  const scen=d.scenarios||{};
+  const split=(d.cross_cutting_findings||{}).regime_split||{};
+  const agg=(d.cross_cutting_findings||{}).pan_european_aggregate||{};
+  const eu27Pop=(agg.eu_27&&agg.eu_27.regime_mix_population_weighted_pct)||{};
+  const e36Pop=(agg.european_36&&agg.european_36.regime_mix_population_weighted_pct)||{};
+
+  const html=REGIMES.map(reg=>{
+    const list=split[reg.key]||[];
+    // Find modal routine scenario
+    let modal=null;
+    Object.keys(scen).forEach(s=>{
+      if(s==='S8')return;
+      const v=scen[s].probability_per_regime?.[reg.key];
+      if(!v)return;
+      if(!modal||v[1]>modal.mid)modal={s,mid:v[1]};
+    });
+    const eu27Share=eu27Pop[reg.key];
+    const e36Share=e36Pop[reg.key];
+    const popBits=[];
+    if(typeof eu27Share==='number')popBits.push(`<strong>${eu27Share.toFixed(1)}%</strong> EU-27 pop`);
+    if(typeof e36Share==='number')popBits.push(`<strong>${e36Share.toFixed(1)}%</strong> 36-market pop`);
+    return `<article class="weather-card ${reg.cls}">
+      <div class="icon-wrap"><svg aria-hidden="true"><use href="#${reg.icon}"/></svg></div>
+      <div class="count">${list.length} markets</div>
+      <h3>${reg.title}</h3>
+      <p class="desc">${reg.desc}</p>
+      ${modal?`<div class="modal">
+        <div class="modal-label">Most likely routine variant</div>
+        <div class="modal-name">${SCEN_LABEL[modal.s]||modal.s}</div>
+        <div class="modal-prob">${(modal.mid*100).toFixed(0)}% mid-point probability</div>
+      </div>`:''}
+      <div class="pop-bar">${popBits.join(' &middot; ')||'&mdash;'}</div>
+      <div class="countries">${list.join(' · ')}</div>
+    </article>`;
+  }).join('');
+  document.getElementById('weather-grid').innerHTML=html;
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+**Europe's AI Labour Map Experiment — What Survives the Stress Test**
+
+**Prelude**
+
+Forecasts of how AI will reshape European jobs come in three flavours: vendor reports tied to compute spending (often US-centric), macro projections that assume yesterday's patterns repeat, and political messaging anchored to promises that land unevenly. Few ask what happens if the "old jobs disappear, new jobs appear" mechanism weakens, ageing fails to absorb displacement, and institutions are stretched by defence, decoupling, climate, and the war in Ukraine.
+
+So we ran an experiment. We scored 36 labour markets — the EU-27 plus EFTA, the United Kingdom, and four candidate countries — across five lenses, and stress-tested them under eight *what-if* scenarios. The results group into three corridors and four fragility classes. This brief walks through the headline map, lens findings, regime-weighted scenario probabilities, country profiles, and what the framework cannot see.
+
+**What Survives the Stress Test**
+
+The headline result is uncomfortable. Only nine countries remain resilient under stress: the five Nordics (Denmark, Finland, Iceland, Norway, Sweden) and four Continental peers (Belgium, France, Luxembourg, Netherlands). All others either:
+
+- **Fracture under at least one of seven macro shocks** (nine countries), or
+- **Already sit in the worst corridor under business-as-usual conditions** (15 countries).
+
+Three more markets — North Macedonia, Serbia, Turkey — show **currently failing**🛈 signals, with institutional capacity already close to saturation.
+
+How quickly **robustness**🛈 disappears as thresholds tighten is the second uncomfortable finding. Under a strict definition of robustness, even Norway and Sweden fail. Policy briefings typically apply a softer rule: performance stays within ±1 corridor and never lands in the worst corridor under any standard variant. Under the softer rule, nine countries qualify. Under the strict rule, none do. There is no unconditionally safe European labour market at the corrected threshold.
+
+That said, no fate is written in stone. Every country — and especially Europe as a whole — has a chance to make the (sometimes) hard decisions needed to improve its population's situation. The fragility class a country sits in today is a read-out of present conditions, not a forecast of inevitability — job-training capacity, reskilling, (EU) funding choices, regulation, and fiscal headroom are levers, not constants.
+
+This sets the frame. The remainder of the brief explains where each country lands and why.
+
+## §2 The Five Lenses, Briefly
+
+We chose these five lenses because they capture the main forces at play, and Parts 1–4 of this project provide most of the underlying evidence. Other framings would also work.
+
+Lens 1 asks how fast jobs get disrupted versus how well the country can help displaced workers find new work. The ratio defines corridor placement. A ratio of 1.00 means the two are running at the same pace; 2.80 means displacement is running at 2.8× absorption. Norway 1.06 sits well-absorbed; Ireland and the UK at 3.33–3.40 show displacement materially outpacing absorption. Below 1.20: *Managed Transition* (C1). Above 2.80: *Displacement Without Absorption* (C3). Between: *Partial Absorption* (C2) — partial coping, uneven across sectors. Five Nordic markets clear the lower threshold. Fifteen sit above the upper one. The rate at which workers move from clerical into healthcare, trades, or care within five years varies sharply by institutional system — about 10 % a year in Nordic flexicurity, 3 % in Ireland and the UK. The country's regulatory friction (a 0.46–0.68 spread across the 36 markets) is the stronger per-country signal of where corridor placement actually sits.
+
+Lens 2 asks whether retirements create enough openings to absorb workers displaced by AI. The threshold: retirement offset above 80 % of the displaceable cohort. Across 32 scored countries, the highest reading was about 26 %. Zero countries cleared it. The "silver-lining ageing" argument fails empirically across all 36 markets, with little variance between regimes. Beneath the uniform refutation lies a sharper finding: the buffer fails differently across occupational zones. Zone A (clerical/admin) sees AI substitute 60–80 % of tasks against ~3.5 M EU retirements by 2030, a compounding mismatch where 5–10 M mid-career workers are displaced faster than retirement clears their roles. Zone C (healthcare, trades, care) sees AI substitute only 5–15 % of tasks against ~12 M retirements, an 8–12 M unfillable shortage AI cannot help fill. Other 2050 trajectories span Bulgaria −29 % and Latvia −28 % at the steep end, Switzerland +1.8 % at the resilient end.
+
+**The outlier → Italy, with the workforce shrinking before AI displaces a single worker.**
+
+Italy is the only major European economy with negative net migration in 2025 (**−485,823**). It is singled out as an "outlier" because its workforce is already shrinking and is projected to keep shrinking through 2050 (a −17.5% decline in working-age people, plus negative migration). That leaves less capacity to absorb AI-driven disruption, while the usual buffers, retirement (25.3% offset) and migration, are too small or politically constrained. This means there are already too few people to hire for essential jobs like caregiving, skilled manual work, and medical roles, so these labour gaps worsen disruption instead of helping absorb it.
+
+Lens 3 asks whether AI exposure registers as a jobs-volume problem, an inequality problem, or both. Each country is tagged accordingly: *aggregate*, *distributional*, or *both*. The tag points to which kind of policy response fits.
+
+Lens 4 asks whether overlapping crises — defence, climate, decoupling, Ukraine — could cause extra strain on top of the AI exposure base. It also flags a separate signal: a jurisdictional squeeze. Eight countries carry the squeeze flag (BE, DE, DK, FI, FR, NL, NO, SE), splitting into a Nordic sub-cluster and a Continental sub-cluster with distinct mechanisms; full treatment in §4 below.
+
+Lens 5 asks whether the country's industry mix makes coordination harder when AI displaces workers — and tests where institutional capacity starts to break. Twelve countries fail this test: BE, CH, DE, DK, IE, IS, LI, LU, NL, NO, SE, UK. This is the cluster where the two-archetype split in §4 bites hardest. (Methodology: Klinger coordination-share weighting at 2-digit ISCO, with ESCO occupation counts for the aggregation — see Specialist Appendix.) Lens 5 also carries a firm-level interpretive frame from Part 5 (*internal-transition speed versus external turnover*) that explains why two firms with identical reskilling-programme participation rates can produce opposite ROIs. Country-level data is a Phase 5+ acquisition target.
+
+## §3 Eight Scenarios, Three Economic Regimes
+
+Eight ways the next decade could play out, and the most likely one depends on whether the economy is in a growth, secular stagnation, or post-growth stage. Seven routine variants arranged along an optimism-pessimism spectrum — our framing assumption, not a definitive taxonomy — plus one conditional scenario carried orthogonally.
+
+- **Uber-optimistic — Reinstatement Revival** (S1). The historical "old jobs disappear, new jobs appear" pattern fully holds; new jobs replace old at the historical rate.
+- **Optimistic — Climate Adaptation Boom** (S2). Sectoral activity redirects into climate-adaptation work; new demand absorbs displacement, conditional on works-council mediation and procurement-attached social conditionalities (ETUC; IndustriAll Europe).
+- **Slightly optimistic — Jobs Transform** (S3). Within-occupation task augmentation rather than between-occupation displacement; productivity gains land where the worker already sits (Brynjolfsson, Li & Raymond 2023).
+- **Middle — Muddle Through** (S4). Only attrition and partial reabsorption; no sharp pattern either way.
+- **Slightly pessimistic — Wage Cliff** (S5). AI substitutes for mid-skill labour; wages compress.
+- **Pessimistic — Breakdown variants:** *Reinstatement Failure* (S6) — the historical pattern weakens further, per Autor et al. 2024; *Bandwidth Fracture* (S7) — training and re-employment systems collapse under parallel-crisis overstretch.
+
+The eighth — **Polycrisis Drag** (S8) — sits outside this spectrum entirely: defence, EU-budget strain, and migration combine to overwhelm institutional capacity simultaneously.
+
+Three economic *weather patterns* group countries differently. **Growth-baseline** — 24 markets, including the four candidate countries — treats Reinstatement Revival as the central recovery channel; the historical pattern still holds. **Secular-stagnation-warning** — Greece and Italy — assigns more mass to Muddle Through and to Breakdown; the historical pattern is already faltering. **Post-growth-empirical** — Austria, Switzerland, Germany, Finland, France, Liechtenstein, Luxembourg, Norway, Sweden, the United Kingdom — treats Reinstatement Revival as materially weaker because aggregate output is no longer expanding to support reinstatement.
+
+The weather pattern changes which *what-if* future is most likely. Under post-growth, the most probable routine path is not Muddle Through but **Climate Adaptation Boom**: probability 0.30 against 0.25 for Muddle Through and 0.05 for Reinstatement Revival. The optimism path runs through climate-adaptation work, not tech-led job creation. The Polycrisis Drag probability also rises with weather-pattern severity: from 0.05 in growth-baseline to 0.10 in stagnation to 0.15 in post-growth. Probability bands use IPCC AR6 likelihood-scale language. Per-country distribution sentences quote corridor mass ranges rather than single point estimates — the precision stays honest.
+
+A capacity-side number anchors the pessimism side. Across EU-27 plus the UK, the deep-reskilling cohort by 2035 is ~7.55 M workers; annual training throughput is ~3.34 M, but ~2.89 M is consumed by baseline churn, leaving ~450 K net new capacity. That implies a 15-year backlog and a 5–9-year speed gap between AI disruption (1–3 years) and reskilling-system response. This is the quantitative spine of the Class III framing in §4.
+
+## §4 Country Profiles by Class
+
+Think of this as a traffic-light reading of 36 countries. Nine look relatively sturdy — but only under a softer rule. Nine are one shock away from breaking. Fifteen are already in bad shape under business-as-usual. Three show warning signs of cascading institutional overload. Each class profile below names the countries, the mechanism, and the central scenario sensitivity.
+
+**Class I — Robust (9 countries).** Five Nordic markets (Denmark, Finland, Iceland, Norway, Sweden) and four Continental peers (Belgium, France, Luxembourg, Netherlands). The Nordics anchor the cluster on Lens 1: their training and re-employment capacity absorbs displacement at ratios where the corridor edge sits — Nordic A→C transition rates land at 9.9 % derived central (8–12 % institutional band), well above any other system. The four Continental markets reach the *Managed Transition* corridor under three of the seven routine variants and never land in the worst corridor under routine perturbation. Sweden is flagged knife-edge (medium confidence). One caveat: Class I is conditional on the rule applied. Under a literal-strict reading — no scenario produces a worse outcome — the count drops to zero. Robustness is conditional, not unconditional.
+
+**Class II — Fragile (9 countries).** Austria, Bosnia and Herzegovina, Bulgaria, Switzerland, Germany, Spain, Liechtenstein, Latvia, Romania. Baselines sit in C2 (*Partial Absorption*); one or more routine variants push them to C3 (typically S6 or S7). Seven of these — BG, CH, DE, ES, LI, LV, RO — were reclassified out of Class I when the rule tightened: their baseline is stable but a single routine variant pushes them into the worst corridor, which is inconsistent with "Robust." Austria carries an additional flag — *Climate Adaptation Boom-dependent* (S2 in the technical schema) — alongside Luxembourg (Class I) and Turkey (Class IV). For these three, the only routine path to *Managed Transition* runs through S2. All other routine variants yield C2 or worse.
+
+**Class III — Pre-Failure Risk (15 countries).** Cyprus, Czechia, Estonia, Greece, Croatia, Hungary, Ireland, Italy, Lithuania, Malta, Poland, Portugal, Slovenia, Slovakia, United Kingdom. The Muddle-Through baseline puts these markets in C3 (*Displacement Without Absorption*). Two within-corridor sub-clusters: Ireland and the UK form a *Liberal Market high* group at ratios 3.33–3.40 — high knowledge-economy concentration plus weak training capacity (derived A→C transition central 3.2 %, against an 8 % Nordic benchmark). The remaining 13 form a *CEE / Mediterranean weak-ALMP* group at ratios 2.81–2.96. The headline finding: displacement velocity exceeds absorption capacity, and the reskilling pathway is materially insufficient — anchored empirically by a 7.55 M deep-reskilling need across EU-27 plus UK by 2035, against ~450 K net new annual transitions, implying a 15-year backlog and a 5–9-year speed gap between AI displacement and reskilling system response.
+
+A finding worth surfacing: **the average masks a split.** Within the high-coordination cluster (across Class I and Class III), the 1-digit average concealed a 3.7× internal spread — teaching-heavy professionals carry coordination weight 0.582; ICT 0.157. Splitting at 2-digit produces two archetypes moving in opposite directions: *EDUCATION / ADMIN LIFT* (Denmark, Iceland, Luxembourg, Norway) and *FINANCE / TECH DRAG* (Switzerland, Germany, Ireland, UK). The cluster isn't one archetype; it's two.
+
+**Class IV — Currently Failing (3 countries).** North Macedonia, Serbia, Turkey. The cascade signal arrives via Lens 4 and Lens 5 extremes — their corridor baselines sit in C2, but the polycrisis and EEA-vulnerability readings push them outside the routine-perturbation envelope. Turkey carries the *Climate Adaptation Boom-dependent* flag in addition to Class IV, narrowing its optimism path further.
+
+**The squeeze cluster — eight worker-protection economies, two distinct mechanisms.** Lens 4 flags eight countries whose institutional structure produces a jurisdictional squeeze: BE, DE, DK, FI, FR, NL, NO, SE — Continental plus Nordic worker-protection economies. They split into two mechanistically distinct sub-clusters. The *Nordic sub-cluster* (DK, FI, NO, SE) carries the squeeze via worker-protection plus trade-decoupling exposure. The *Continental sub-cluster* (BE, DE, FR, NL) carries it via worker-protection plus UK adjacency — high domestic protection sitting next to weaker UK protection, with Mode 1 capital-flight risk on top. The squeeze is a capital-flight signal, not a labour-displacement signal — quantified in the SOT by Annex III high-risk deployer counts (~40 per country) and PWD post-market duty counts (~29 per country). The conflation worth resisting: squeeze and currently failing are separate signals through separate institutional channels. Luxembourg is explicitly NOT squeeze-flagged in the data (an earlier draft of this brief had named LU among the squeeze countries; that draft drifted from the SOT, which records the eight-country pattern Phase 2 methodology computed).
+
+Read across the four classes. Nine markets in Class I are conditionally robust under the softer rule — and zero are robust under the strict rule. Nine sit one routine variant away from C3. Fifteen are already there at baseline. Three carry currently-failing signals. The distribution itself encodes the structural-bias reading from §1: the centre of gravity of the European map sits inside C2 and C3, not inside C1. The advisory implication is that the policy debate cannot be framed as "how do we keep the Nordic model." It has to be framed as "how do we get the other 27 markets to the Nordic conditional position."
+
+## §5 What the Framework Cannot See
+
+Five honest limits frame this analysis. The framework draws on structured artefacts (CSVs, JSON, methodology notes) but does not pull live external intelligence. Recent moves on Draghi-track competitiveness funding, the latest national budget rounds, and the most recent ALMP reform announcements are out of scope. The MFF mid-cycle reinforcement is treated as an EU-aggregate signal because publicly available Council documentation does not disaggregate the €64.6 B by Member State. That gap is a known limit. The four candidate, partial-coverage markets (BA, MK, RS, TR) are routed to a "central-eastern-European-in-C2" sub-cluster as an analytical convention, not as a confirmed institutional similarity. The capability-floor breach scope is capped at the 2-digit ISCO ceiling.
+
+The 36-market panel itself excludes five other European countries by design. Albania, Montenegro, and Moldova are EU candidates (since 2014, 2010, and 2022 respectively), but Eurostat / Cedefop / ESCO coverage is too thin to score reliably across all five lenses. Kosovo carries a Stabilisation and Association Agreement under partial recognition, but the same data-coverage gap blocks inclusion. Belarus has been under EU sanctions since 2020, with no EU integration path and no comparable data access — excluded on both grounds. When coverage in these five improves to the resolution this framework requires, they can be added without changing the methodology.
+
+### Methodology in four steps (full version: synthesis.nexalps.com/methodology.html)
+
+1. ***Five lenses, chosen because earlier parts of the project had already assembled the evidence.*** AI exposure, demographics, disruption pathways, reskilling capacity, careers data — the lenses we could test rigorously today, with European data, across 36 countries.
+2. ***One calibration choice changes the headline.*** Corridor cut-offs at theory-anchored 1.20 / 2.80 (vs. literature-fitted 1.50 / 3.00). Under the strict rule, theory cut-offs produce zero "Robust" markets; literature cut-offs produce three. The choice is reversible and shown clearly.
+3. ***What we deliberately left open.*** Three known gaps: 2-digit (rather than 3-digit) ISCO occupational detail; per-country breakdown of the EU 2030 adaptation envelope; live employer behaviour signals (hiring, retraining launches, redundancy plans) that sit behind paywalls.
+4. ***We tested three candidate additions. None held up on its own.*** The EU Industrial Accelerator Act runs the same absorption pathway as Climate Adaptation Boom; a Wealth-Fund-Rich regime did not hold cleanly across all five candidates (Switzerland's central-bank reserves do not behave like Norway's sovereign wealth fund); startup-driven absorption in Europe lacks a probability-weighting anchor comparable to Cedefop or the Net-Zero Industry Act €100 B. The takeaway: more than one mechanism likely has to work at the same time. Part 7 looks at what that costs.
+
+## §6 Conclusion
+
+Forecasts are easy. Stress-tests are uncomfortable because they reveal what comfortable averages conceal. This synthesis shows where European labour markets stand across thirty-six countries, five lenses, and eight scenarios. It concludes that, under the rules we applied, none are unconditionally safe, and most are already beyond the level of disruption they can comfortably absorb.
+
+That diagnosis is a snapshot of today. A country's class reflects current policy choices, not a fixed destiny. Job-training capacity, reskilling, EU funding choices, regulation, and fiscal headroom can shift corridor placement and, more importantly, the social, economic, and ecological realities those classes describe. Class I markets can largely focus on preservation, which carries risks of its own. Class II markets face conditional fragilities that can harden or soften depending on the scenario, and need to address them. Class III markets require step-change responses. Class IV markets require containment.
+
+The strict-zero finding demands a response, not just a diagnosis. **What to do comes in a separate document: Part 7 of this project, dropping soon.**
+
+---
+
+## Sources
+
+This brief is built on **59 primary sources** (41 Tier 1 + 18 Tier 2). Inline citations: Autor 2024 (QJE), Autor, Chin, Salomons & Seegmiller 2024 (reinstatement weakening); Cedefop 2025 (per-country employment projections, Zone-A vs Zone-C task-substitution split); Draghi 2024 (European Competitiveness); Brynjolfsson, Li & Raymond 2023 (NBER WP 31161, S3 Jobs Transform anchor); EEA European Climate Risk Assessment 2024; Eurostat EUROPOP2023 (demographic projections); EU Net-Zero Industry Act + Clean Industrial Deal Feb 2025 (€100 B clean-manufacturing envelope); ETUC 2026-03-04 + IndustriAll Europe 2026 Article 1450 (S2 mechanism conditionality); ILO 2025 (Generative AI Occupational Exposure Index); Rhodium / MIT Clean Investment Monitor + Bistline et al. 2024 NBER WP 32168 (IRA labour-outcome anchors); OECD Pension Markets in Focus 2025; SIPRI 2025 + IISS Military Balance 2025 (Lens 5 polycrisis-drag inputs); EU MFF Mid-Term Review 2024.
+
+Full canonical list with brief + "How informs" line per source: [synthesis.nexalps.com/sources.html](https://synthesis.nexalps.com/sources.html).

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 540" width="1280" height="540" font-family="Geist, Inter, system-ui, sans-serif">
+  <style>
+    .bg { fill: #F8F9FA; }
+    .pure-black { fill: #000000; }
+    .granite { fill: #4A5568; }
+    .seg-i { fill: #087569; }
+    .seg-ii { fill: #F59E0B; }
+    .seg-iii { fill: #C41E3A; }
+    .seg-iv { fill: #4A5568; }
+    .overline { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; fill: #4A5568; }
+    .title { font-size: 28px; font-weight: 500; letter-spacing: -0.5px; fill: #000000; }
+    .row-label { font-size: 16px; font-weight: 500; fill: #000000; }
+    .row-sub { font-size: 13px; fill: #4A5568; }
+    .seg-text { font-size: 14px; font-weight: 600; fill: #F8F9FA; }
+    .seg-text-dark { font-size: 14px; font-weight: 600; fill: #000000; }
+    .legend { font-size: 13px; fill: #4A5568; }
+    .legend-bold { font-size: 13px; font-weight: 600; fill: #000000; }
+    .caption { font-size: 13px; fill: #4A5568; font-style: italic; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1280" height="540"/>
+
+  <!-- Header -->
+  <text class="overline" x="80" y="60">Fragility-class distribution · 36 markets</text>
+  <text class="title" x="80" y="100">9 / 9 / 15 / 3 by count, 25.6% / 15.7% by population</text>
+
+  <!-- Row 1: count -->
+  <text class="row-label" x="80" y="170">By count</text>
+  <text class="row-sub" x="180" y="170">36 markets · 9 / 9 / 15 / 3</text>
+
+  <!-- count bar geometry: total = 36 segments. start x=80 width=1120 -->
+  <!-- I=9 (25%), II=9 (25%), III=15 (41.67%), IV=3 (8.33%) -->
+  <g transform="translate(80,190)">
+    <rect class="seg-i" x="0" y="0" width="280" height="60"/>
+    <rect class="seg-ii" x="280" y="0" width="280" height="60"/>
+    <rect class="seg-iii" x="560" y="0" width="466.67" height="60"/>
+    <rect class="seg-iv" x="1026.67" y="0" width="93.33" height="60"/>
+    <text class="seg-text" x="140" y="36" text-anchor="middle">9 · Class I</text>
+    <text class="seg-text" x="420" y="36" text-anchor="middle">9 · Class II</text>
+    <text class="seg-text" x="793.33" y="36" text-anchor="middle">15 · Class III</text>
+    <text class="seg-text" x="1073.33" y="36" text-anchor="middle">3 · IV</text>
+  </g>
+
+  <!-- Row 2: population-weighted EU-27 + 36-market -->
+  <text class="row-label" x="80" y="320">By share of working-age population</text>
+  <text class="row-sub" x="80" y="345">EU-27: Class I 25.6% (7 markets) · 36-market: Class IV 15.7% (3 markets)</text>
+
+  <!-- Population-weighted EU-27 stack — sourced from data.json pan_european_aggregate.eu_27.class_distribution_population_weighted_pct -->
+  <!-- EU-27 distribution: I=25.6%, II=38.1%, III=36.3%, IV=0.0% -->
+  <g transform="translate(80,365)">
+    <rect class="seg-i" x="0" y="0" width="286.72" height="60"/>
+    <rect class="seg-ii" x="286.72" y="0" width="426.72" height="60"/>
+    <rect class="seg-iii" x="713.44" y="0" width="406.56" height="60"/>
+    <text class="seg-text" x="143.36" y="36" text-anchor="middle">25.6% · EU-27 Class I</text>
+    <text class="seg-text" x="500.08" y="36" text-anchor="middle">38.1% · Class II</text>
+    <text class="seg-text" x="916.72" y="36" text-anchor="middle">36.3% · Class III</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(80,470)">
+    <rect class="seg-i" x="0" y="0" width="14" height="14"/>
+    <text class="legend" x="22" y="12">Class I — Robust</text>
+    <rect class="seg-ii" x="180" y="0" width="14" height="14"/>
+    <text class="legend" x="202" y="12">Class II — Fragile</text>
+    <rect class="seg-iii" x="370" y="0" width="14" height="14"/>
+    <text class="legend" x="392" y="12">Class III — Pre-Failure Risk</text>
+    <rect class="seg-iv" x="610" y="0" width="14" height="14"/>
+    <text class="legend" x="632" y="12">Class IV — Currently Failing</text>
+  </g>
+  <text class="caption" x="80" y="510">Cascade pressure (Class IV) sits at the EU's borders — three candidate markets (MK, RS, TR), absent in the EU-27 sum.</text>
+</svg>

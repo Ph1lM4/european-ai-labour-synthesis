@@ -1,0 +1,80 @@
+# European AI Labour Market Synthesis — What Survives the Stress Test
+> https://synthesis.nexalps.com/
+
+## What this is
+Part 6 of 7 in the Nexalps European AI Labour Market suite. A corridor map across all 36 European labour markets — EU-27 plus EFTA, the United Kingdom, and four candidate countries — scored across five lenses, stress-tested under eight scenarios, bracketed into four fragility classes.
+
+## Author + publication
+Philipp Maul, Nexalps (https://nexalps.com). Published April 2026.
+
+## Headline finding
+Of 36 European labour markets, only 9 remain conditionally resilient under stress: Belgium, Denmark, Finland, France, Iceland, Luxembourg, Netherlands, Norway, Sweden. Under the strict-zero rule applied to the corrected thresholds (1.20 / 2.80), zero countries qualify — even Norway and Sweden fail strict robustness. There is no unconditionally safe European labour market at the corrected threshold.
+
+## Key findings
+1. Strict-zero Class I — published "managed transition" base rates over-state robustness. Under the strict (b) ±0 rule applied to corrected thresholds (1.20 / 2.80), Class I count drops to 0.
+2. Demographic ageing does not absorb displacement. Maximum retirement-offset reading across 32 scored countries is ~26% against the 80% buffer threshold; zero countries clear. Italy is the standout demographic case: 2025 net migration −485,823.
+3. The optimism path narrows to Climate Zone-C. Three countries (Austria, Luxembourg, Türkiye) reach C1 only under S2 Climate Adaptation Boom; all other routine variants land them in C2 or C3.
+4. Averages hide a split in the high-coordination cluster. At 2-digit ISCO, teaching-heavy weight (0.582) is 3.7× ICT weight (0.157). Education / admin lift (DK, IS, LU, NO) versus finance / tech drag (CH, DE, IE, UK).
+5. The squeeze cluster is eight worker-protection economies, two distinct mechanisms. Nordic sub-cluster (DK, FI, NO, SE): worker-protection × trade-decoupling. Continental sub-cluster (BE, DE, FR, NL): worker-protection × UK adjacency × Mode 1 capital-flow vulnerability.
+6. Pan-European aggregate. No single European corridor — the centre of gravity sits in C2 + C3, with 9 markets resilient, 9 fragile, 15 already in trouble, and 3 in currently failing. Within the EU-27 specifically: 7 / 6 / 14 / 0 across Class I / II / III / IV.
+7. Reskilling capacity gap. Across EU-27 + UK: deep-reskilling cohort by 2035 ~7.55 M; ~450 K net new annual transition capacity; 15-year backlog; 5–9-year speed gap between AI disruption (1–3 years) and reskilling-system response.
+8. Capability-floor breach. 12 countries fall below the institutional adaptive-capacity floor at the 2-digit ESCO-weighted ceiling.
+
+## Eight scenarios (seven routine + one conditional)
+- S1 Reinstatement Revival — uber-optimistic. Historical base rate is biased upward (Autor 2024 reinstatement-effect weakening); bounded above. Under post-growth, requires expanding output, weaker.
+- S2 Climate Adaptation Boom (Zone-C) — optimistic. Cedefop 2025 + EU Net-Zero Industry Act €100 B clean-manufacturing envelope; the only routine path to C1 for AT, LU, TR.
+- S3 Jobs Transform — slightly optimistic. AI substitutes for routine sub-tasks within existing occupations; reinstatement effect operates within-occupation. Anchored on Brynjolfsson 2025 (OpenAI productivity RCT), Dell'Acqua 2024 (BCG consultants), historical ATM/teller and spreadsheet analogues.
+- S4 Muddle Through — middle baseline. Mixed reinstatement and absorption; partial-coverage outcome.
+- S5 Wage Cliff — slightly pessimistic. Mid-skill wage compression with absorption gap; substitution-dominated dynamics.
+- S6 Reinstatement Failure — pessimistic. Autor 2024 weakening of new-work creation; primary anchor for the corrected corridor edges.
+- S7 Bandwidth Fracture — pessimistic. Institutional bandwidth tax from defence + climate + migration commitments crowds out ALMP capacity.
+- S8 Polycrisis Drag — parallel cascade, conditional, orthogonal to S1–S7. Compounding climate × geopolitics × fiscal stress; carried as conditional.
+
+## Three corridors
+- C1 Managed Transition (ratio < 1.20). 5 countries: DK, FI, IS, NO, SE. Displacement velocity well-absorbed by ALMP capacity.
+- C2 Partial Absorption (1.20–2.80). 16 countries. ALMP partially absorbs displacement; sectoral and regional reabsorption uneven.
+- C3 Displacement Without Absorption (≥ 2.80). 15 countries. ALMP capacity insufficient; lifetime-earnings deficits expected (El-Sahli & Upward 2017).
+
+## Four fragility classes
+- Class I — Robust (relative-stable, C3-guarded). 9 countries: BE, DK, FI, FR, IS, LU, NL, NO, SE.
+- Class II — Fragile. 9 countries: AT, BA, BG, CH, DE, ES, LI, LV, RO. Baseline stable but at least one routine variant lands C3.
+- Class III — Pre-Failure Risk. 15 countries: CY, CZ, EE, EL, HR, HU, IE, IT, LT, MT, PL, PT, SI, SK, UK. S4 Muddle Through baseline lands in C3 post-rescaling.
+- Class IV — Currently Failing. 3 countries: MK, RS, TR. Candidate-partial-coverage with extreme Lens 5 readings.
+
+## Three economic regimes
+- growth-baseline — 24 markets.
+- secular-stagnation-warning — 2 markets: Greece, Italy.
+- post-growth-empirical — 10 markets: AT, CH, DE, FI, FR, LI, LU, NO, SE, UK.
+
+## Reskilling capacity anchor
+Across EU-27 + UK: deep-reskilling cohort by 2035 ~7.55 M; gross high-exposure ~38.72 M; annual throughput ~3.34 M of which ~2.89 M is consumed by baseline economic churn (Eurostat lfsa_etpgan tenure-under-1yr proxy), leaving ~450 K net new annual transition capacity. Implied backlog: 15 years. Speed gap between AI disruption (1–3 years) and reskilling-system response (5–9 years).
+
+## Class distributions
+- 36-market scope: Class I / II / III / IV = 9 / 9 / 15 / 3.
+- EU-27 only: Class I / II / III / IV = 7 / 6 / 14 / 0.
+
+## Sources
+59 primary sources (41 Tier 1 + 18 Tier 2) plus a sister-layer source-base footer linking out to all five upstream layers (https://synthesis.nexalps.com/sources.html). Tier 1: Autor, Chin, Salomons & Seegmiller 2024 (QJE); El-Sahli & Upward 2017; Cedefop 2025 (European Skills and Jobs Survey + Skills Forecast); EU Net-Zero Industry Act + Clean Industrial Deal 2025; EEA European Climate Risk Assessment 2024; Munich Re NatCat 2025; IISS Military Balance 2025; SIPRI Trends in World Military Expenditure 2025; EU MFF Mid-Term Review 2024; NATO Hague Summit Declaration 2025 / ReArm Europe / Readiness 2030; Eurostat EUROPOP2023 + lfsa_etpgan; Mario Draghi 2024 (Future of European Competitiveness); Anthropic Economic Index (Handa et al. 2025); Massenkoff & McCrory 2026; Microsoft Working with AI (Tomlinson et al. 2025); OpenAI GPTs are GPTs (Eloundou et al. 2023); Eurostat isoc_eb_ai (Enterprise AI adoption); Eurostat isoc_sks_itspt (ICT specialists); Eurostat lfsa_egai2d (Employment by ISCO 2-digit); OECD EPL Database; Brynjolfsson, Chandar & Chen 2025 (Canaries in the Coal Mine); Brynjolfsson, Li & Raymond 2023 (Generative AI at Work, NBER WP 31161); Acemoglu & Restrepo 2020 (Robots and Jobs); Acemoglu & Restrepo 2019 (Automation and New Tasks); Feigenbaum & Gross 2024 (Telephone Operation, QJE); Card, Kluve & Weber 2018 (ALMP meta-analysis); Dauth, Findeisen, Südekum & Wößner 2021 (German Robots, JEEA); Jacobson, LaLonde & Sullivan 1993 (Earnings Losses); European Commission 2024 Ageing Report; OECD Old-age dependency ratio; UN Population Division WPP 2024; IMF WEO 2026; OECD Economic Surveys EU 2025; Bertheau et al. 2022 (IZA DP 15033); OECD SOCX ALMP; Eurostat trng_aes_100 (Adult Education Survey); Eurostat older-worker employment rate 55–64; ILO 2025 (Generative AI Occupational Exposure Index); Rhodium / MIT Clean Investment Monitor (IRA tracker); Bistline et al. 2024 (NBER WP 32168 / Brookings); OECD Pension Markets in Focus 2025. Tier 2: Klinger 2-digit ISCO coordination-share weighting; Tooze (Chartbook 130 + 407); Cooke 1991 expert-elicitation framework; IPCC AR6 likelihood scale; EU AI Act (Regulation 2024/1689); Hall & Soskice 2001 (Varieties of Capitalism); Acemoglu & Johnson 2023 (Power and Progress); Brynjolfsson, Rock & Syverson 2021 (Productivity J-Curve); Frey 2019 (Technology Trap); Feigenbaum & Gross 2025 (AT&T, Management Science); Autor, Dorn & Hanson 2013 (China Syndrome); Bruegel 2025 (Demographic Divide); OECD Pensions at a Glance 2023; Allianz Research 2024 (Migration matters); European Parliament 2025 (Displaced Ukrainians); EURES / European Labour Authority 2024 (Labour Shortages and Surpluses); ETUC 2026-03-04 press release (Industrial Accelerator Act); IndustriAll Europe 2026 Article 1450 (Made in Europe 2.0).
+
+## Pages
+- https://synthesis.nexalps.com/ — landing: headline corridor map, fragility classes, five findings (Executive register).
+- https://synthesis.nexalps.com/findings.html — five mechanism findings + the corridor map + class panel + Italy demographic case.
+- https://synthesis.nexalps.com/scenarios.html — spectrum framing, sparkline, scenario × regime probability table, capability-floor breach.
+- https://synthesis.nexalps.com/europe.html — pan-European aggregate: 36-market vs EU-27 deltas, variation guard, working-age weights.
+- https://synthesis.nexalps.com/methodology.html — five lenses, three corridors, four fragility classes, three regimes, threshold-locking ladder, ninth scenario considered but excluded for empirical-anchor reasons.
+- https://synthesis.nexalps.com/sources.html — provenance, source bundles, license, contact.
+- https://synthesis.nexalps.com/glossary.html — 43-term reference.
+
+## Data file
+- https://synthesis.nexalps.com/data.json — machine-readable SOT JSON (schema v1.0).
+
+## Connection to the suite
+- ai-exposure.nexalps.com — which jobs AI hits.
+- disruptions.nexalps.com — what happened every other time.
+- demographics.nexalps.com — population trajectories.
+- reskilling.nexalps.com — institutional retraining capacity.
+- job-market.nexalps.com — where demand is going.
+- synthesis.nexalps.com — corridor map across all 36 markets (this site).
+
+## Contact
+Philipp Maul, Nexalps. LinkedIn: https://www.linkedin.com/in/pmaul/. Site: https://nexalps.com. Data: CC-BY 4.0. Code: MIT.

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 2 / Alternative B &mdash; Population-weighted stack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+.stack-box{margin:24px 0;padding:24px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.stack-box h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:14px}
+
+.scope-row{margin-bottom:24px}
+.scope-row:last-child{margin-bottom:0}
+.scope-row .scope-label{font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline}
+.scope-row .scope-label .scope-name{color:var(--fg);font-weight:700;font-size:14px}
+.scope-row .scope-label .scope-meta{font-size:11px;color:var(--muted-foreground);font-weight:500}
+
+.stack-bar{display:flex;height:44px;border-radius:var(--radius-sm);overflow:hidden;border:1px solid var(--card-border)}
+.stack-seg{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0a0a0a;font-weight:700;font-size:12px;line-height:1.2;padding:0 6px;min-width:0;position:relative}
+.stack-seg .pct{font-size:13px;letter-spacing:-0.01em}
+.stack-seg .n{font-size:10px;font-weight:600;opacity:0.75;letter-spacing:0.04em;text-transform:uppercase}
+.stack-seg.cls-I{background:var(--class-i)}
+.stack-seg.cls-II{background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 5px,rgba(0,0,0,0.10) 5px,rgba(0,0,0,0.10) 6px)}
+.stack-seg.cls-III{background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 4px,rgba(0,0,0,0.18) 4px,rgba(0,0,0,0.18) 6px);color:#fafafa}
+.stack-seg.cls-IV{background:var(--class-iv);color:#fafafa}
+.stack-seg[data-pct="0"]{display:none}
+.stack-seg.thin{font-size:10px}
+.stack-seg.thin .pct{font-size:10px}
+.stack-seg.thin .n{display:none}
+
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:18px;justify-content:center}
+.legend-item{display:inline-flex;align-items:center;gap:6px}
+.legend-swatch{width:14px;height:14px;border-radius:3px;border:1px solid rgba(255,255,255,0.15)}
+
+.asymmetry-callout{margin-top:18px;padding:14px 18px;background:rgba(249,115,22,0.06);border-left:3px solid var(--ring);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:12.5px;color:#d4d4d8;line-height:1.7}
+.asymmetry-callout strong{color:var(--fg)}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 2 / Alternative B</div>
+  <h1>Population-weighted stack &mdash; EU-27 vs 36-market</h1>
+  <p class="note">Two horizontal stacked bars, each segment&rsquo;s width = the population-weighted share of European working-age population sitting in that class. Country counts appear inline. The bar surfaces the count-vs-population asymmetry directly: Class I covers 25.6% of EU-27 working-age pop on 7 markets, Class IV covers 15.7% of 36-market pop on just 3 markets. This view ties to the Bundle X aggregates already on europe.html.</p>
+</header>
+
+<main class="container">
+  <div class="stack-box">
+    <h3>Class distribution &middot; share of working-age population (20&ndash;64)</h3>
+    <div id="stacks"></div>
+    <div class="legend" aria-label="Legend">
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-i)"></span><span>Class I &mdash; Robust</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-ii)"></span><span>Class II &mdash; Fragile</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iii)"></span><span>Class III &mdash; Pre-Failure Risk</span></span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--class-iv)"></span><span>Class IV &mdash; Currently Failing</span></span>
+    </div>
+    <div class="asymmetry-callout" id="asym"></div>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('stacks').innerHTML='<p style="color:var(--muted);font-size:13px">Data fetch failed.</p>';
+  console.error(e);
+});
+
+function render(d){
+  const agg=(d.cross_cutting_findings||{}).pan_european_aggregate||{};
+  const eu27=agg.eu_27, e36=agg.european_36;
+  if(!eu27||!e36){document.getElementById('stacks').innerHTML='<p style="color:var(--muted)">Aggregate data missing.</p>';return}
+  const html=[
+    renderScope('EU-27 member states','27 markets &middot; 262.5M working-age pop',eu27),
+    renderScope('36 European markets','EU-27 + EFTA-4 + UK + 4 candidates',e36)
+  ].join('');
+  document.getElementById('stacks').innerHTML=html;
+
+  // Asymmetry callout
+  const i27=eu27.class_distribution_population_weighted_pct||{};
+  const i36=e36.class_distribution_population_weighted_pct||{};
+  const cd27=eu27.class_distribution||{};
+  const cd36=e36.class_distribution||{};
+  const txt=`<strong>Class IV asymmetry.</strong> EU-27: ${cd27.IV||0} markets, ${(i27.IV||0).toFixed(1)}% of working-age pop. 36-market: ${cd36.IV||0} markets, ${(i36.IV||0).toFixed(1)}%. The cascade pressure sits at the EU&rsquo;s borders, not within them. <strong>Class I asymmetry.</strong> EU-27: ${(i27.I||0).toFixed(1)}% of pop on ${cd27.I||0} markets; 36-market: ${(i36.I||0).toFixed(1)}% on ${cd36.I||0}. Adding EFTA-4 + UK + candidates dilutes the share of population sitting in robust markets.`;
+  document.getElementById('asym').innerHTML=txt;
+}
+
+function renderScope(name,meta,data){
+  const cd=data.class_distribution||{};
+  const cdp=data.class_distribution_population_weighted_pct||{};
+  const order=['I','II','III','IV'];
+  const segs=order.map(k=>{
+    const pct=cdp[k]||0;
+    const n=cd[k]||0;
+    const thin=pct<8?' thin':'';
+    return `<div class="stack-seg cls-${k}${thin}" data-pct="${pct}" style="flex:${pct} 0 0%" title="Class ${k}: ${pct.toFixed(1)}% of pop, ${n} markets">
+      <div class="pct">${pct.toFixed(1)}%</div>
+      <div class="n">${n} mkts</div>
+    </div>`;
+  }).join('');
+  return `<div class="scope-row">
+    <div class="scope-label"><span class="scope-name">${name}</span><span class="scope-meta">${meta}</span></div>
+    <div class="stack-bar" role="img" aria-label="${name} class distribution by working-age population">${segs}</div>
+  </div>`;
+}
+})();
+</script>
+</body>
+</html>

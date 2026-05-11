@@ -1,0 +1,1338 @@
+{
+  "metadata": {
+    "fetch_date": "2026-04-29",
+    "owner_session": "Bundle E session 2 v3 (ESCO-derived via skill-hierarchy transitive closure)",
+    "br21_compliant": true,
+    "br19_no_fabrication": true,
+    "isco_version": "ISCO-08",
+    "isco_3digit_count": 130,
+    "derivation_summary": {
+      "derived_from_esco": 125,
+      "default_fallback": 5,
+      "coordination_skill_count_after_closure": 3121,
+      "esco_occupations_total": 3039,
+      "coordination_root_uris": [
+        "http://data.europa.eu/esco/skill/6889a21c-837b-49a2-be61-bb6010ab63f4",
+        "http://data.europa.eu/esco/skill/24ad2ffb-dece-4704-8155-63ea9428d038",
+        "http://data.europa.eu/esco/skill/869fc2ce-478f-4420-8766-e1f02cec4fb2",
+        "http://data.europa.eu/esco/skill/85b379e7-e0b7-48b8-baa7-631f50a7cdd5",
+        "http://data.europa.eu/esco/skill/548c3fbe-9eb1-4035-bc54-027fd5bc5315",
+        "http://data.europa.eu/esco/skill/5770f630-9b25-49f3-9d37-e93ec1799749",
+        "http://data.europa.eu/esco/skill/323b3684-86ec-40fa-81b4-bc52694ef168",
+        "http://data.europa.eu/esco/skill/3f641516-9846-4a7f-a7f4-e1274eef6688",
+        "http://data.europa.eu/esco/skill/b76cd1e5-d5e7-464a-b7bb-4164d3616452"
+      ]
+    },
+    "methodology": "Built coordination skill set via transitive closure on ESCO broaderRelationsSkillPillar from {L1 'management skills', L1 'social and communication skills', L2 'advising and consulting', L2 'negotiating', L2 'presenting information', L2 'working with others', L2 'teaching and training', L2 'obtaining information verbally', L2 'liaising and networking', L2 'communication, collaboration and creativity'}. For each ESCO occupation, coordination-share = (essential skills in coordination cluster) / (total essential skills). Aggregated to ISCO-3-digit by arithmetic mean across occupations under each ISCO group.",
+    "uncertainty_band": "±0.05 on derived cells (uncertainty: choice of L2 under 'communication, collaboration and creativity' to include — I excluded 'writing and composing' / 'designing systems' / 'creating artistic' / 'performing' / 'solving problems' / 'using more than one language' as not-clearly-coordinative, but other reasonable choices exist). Default-fallback cells retain ±0.15 uncertainty.",
+    "applies_uniformly_across_countries": true,
+    "country_scope_note": "Coefficients are occupation-level (ISCO-3-digit), apply uniformly across all 36 countries.",
+    "previous_versions": {
+      "v1": "Spec-authorised default-fallback only (U-confidence)",
+      "v2": "Attempted ESCO derivation but matched only top-level transversal-skill labels (zero hits because occupations link to leaf skills, not labels)",
+      "v3": "Transitive-closure approach — descend skill hierarchy from coordination roots to leaf skills, then match"
+    }
+  },
+  "coordination_share_by_isco_3digit": {
+    "111": {
+      "label": "Legislators and Senior Officials",
+      "major_group": 1,
+      "coordination_share_derived": 0.4855,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 17,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 17 ESCO occupations under ISCO group 111; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "112": {
+      "label": "Managing Directors and Chief Executives",
+      "major_group": 1,
+      "coordination_share_derived": 0.5604,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 6,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 6 ESCO occupations under ISCO group 112; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "121": {
+      "label": "Business Services and Administration Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.4673,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 38,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 38 ESCO occupations under ISCO group 121; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "122": {
+      "label": "Sales, Marketing and Development Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.3998,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 31,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 31 ESCO occupations under ISCO group 122; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "131": {
+      "label": "Production Managers in Agriculture, Forestry and Fisheries",
+      "major_group": 1,
+      "coordination_share_derived": 0.1957,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 131; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "132": {
+      "label": "Manufacturing, Mining, Construction, and Distribution Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.3541,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 118,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 118 ESCO occupations under ISCO group 132; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "133": {
+      "label": "Information and Communications Technology Service Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.3374,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 13,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 13 ESCO occupations under ISCO group 133; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "134": {
+      "label": "Professional Services Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.4668,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 51,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 51 ESCO occupations under ISCO group 134; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "141": {
+      "label": "Hotel and Restaurant Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.4889,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 141; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "142": {
+      "label": "Retail and Wholesale Trade Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.4952,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 49,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 49 ESCO occupations under ISCO group 142; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "143": {
+      "label": "Other Services Managers",
+      "major_group": 1,
+      "coordination_share_derived": 0.6104,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 19,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 19 ESCO occupations under ISCO group 143; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "211": {
+      "label": "Physical and Earth Science Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.2422,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 29,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 29 ESCO occupations under ISCO group 211; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "212": {
+      "label": "Mathematicians, Actuaries and Statisticians",
+      "major_group": 2,
+      "coordination_share_derived": 0.2141,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 7,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 7 ESCO occupations under ISCO group 212; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "213": {
+      "label": "Life Science Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.2042,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 40,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 40 ESCO occupations under ISCO group 213; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "214": {
+      "label": "Engineering Professionals (excluding Electrotechnology)",
+      "major_group": 2,
+      "coordination_share_derived": 0.1544,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 124,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 124 ESCO occupations under ISCO group 214; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "215": {
+      "label": "Electrotechnology Engineers",
+      "major_group": 2,
+      "coordination_share_derived": 0.1086,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 29,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 29 ESCO occupations under ISCO group 215; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "216": {
+      "label": "Architects, Planners, Surveyors and Designers",
+      "major_group": 2,
+      "coordination_share_derived": 0.1556,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 46,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 46 ESCO occupations under ISCO group 216; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "221": {
+      "label": "Medical Doctors",
+      "major_group": 2,
+      "coordination_share_derived": 0.2065,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 2,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 2 ESCO occupations under ISCO group 221; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "222": {
+      "label": "Nursing and Midwifery Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.3737,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 222; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "223": {
+      "label": "Traditional and Complementary Medicine Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.4144,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 5,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 5 ESCO occupations under ISCO group 223; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "224": {
+      "label": "Paramedical Practitioners",
+      "major_group": 2,
+      "coordination_share_derived": null,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 0,
+      "confidence": "U",
+      "derivation_method": "Default-fallback (no ESCO occupations mapped to this ISCO-3-digit group; e.g., subsistence-farmer codes have no ESCO equivalents).",
+      "source": "Spec-authorised default coefficient by ISCO major group"
+    },
+    "225": {
+      "label": "Veterinarians",
+      "major_group": 2,
+      "coordination_share_derived": 0.1697,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 11,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 11 ESCO occupations under ISCO group 225; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "226": {
+      "label": "Other Health Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.2809,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 46,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 46 ESCO occupations under ISCO group 226; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "231": {
+      "label": "University and Higher Education Teachers",
+      "major_group": 2,
+      "coordination_share_derived": 0.6011,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 45,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 45 ESCO occupations under ISCO group 231; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "232": {
+      "label": "Vocational Education Teachers",
+      "major_group": 2,
+      "coordination_share_derived": 0.5389,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 25,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 25 ESCO occupations under ISCO group 232; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "233": {
+      "label": "Secondary Education Teachers",
+      "major_group": 2,
+      "coordination_share_derived": 0.6459,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 19,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 19 ESCO occupations under ISCO group 233; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "234": {
+      "label": "Primary School and Early Childhood Teachers",
+      "major_group": 2,
+      "coordination_share_derived": 0.633,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 5,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 5 ESCO occupations under ISCO group 234; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "235": {
+      "label": "Other Teaching Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.5493,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 37,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 37 ESCO occupations under ISCO group 235; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "241": {
+      "label": "Finance Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.2858,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 35,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 35 ESCO occupations under ISCO group 241; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "242": {
+      "label": "Administration Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.4516,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 49,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 49 ESCO occupations under ISCO group 242; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "243": {
+      "label": "Sales, Marketing and Public Relations Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.3994,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 49,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 49 ESCO occupations under ISCO group 243; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "251": {
+      "label": "Software and Applications Developers and Analysts",
+      "major_group": 2,
+      "coordination_share_derived": 0.1686,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 55,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 55 ESCO occupations under ISCO group 251; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "252": {
+      "label": "Database and Network Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.1263,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 20,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 20 ESCO occupations under ISCO group 252; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "261": {
+      "label": "Legal Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.4218,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 17,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 17 ESCO occupations under ISCO group 261; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "262": {
+      "label": "Librarians, Archivists and Curators",
+      "major_group": 2,
+      "coordination_share_derived": 0.3406,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 11,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 11 ESCO occupations under ISCO group 262; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "263": {
+      "label": "Social and Religious Professionals",
+      "major_group": 2,
+      "coordination_share_derived": 0.4069,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 66,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 66 ESCO occupations under ISCO group 263; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "264": {
+      "label": "Authors, Journalists and Linguists",
+      "major_group": 2,
+      "coordination_share_derived": 0.2254,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 36,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 36 ESCO occupations under ISCO group 264; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "265": {
+      "label": "Creative and Performing Artists",
+      "major_group": 2,
+      "coordination_share_derived": 0.3322,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 56,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 56 ESCO occupations under ISCO group 265; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "311": {
+      "label": "Physical and Engineering Science Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.1305,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 133,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 133 ESCO occupations under ISCO group 311; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "312": {
+      "label": "Mining, Manufacturing and Construction Supervisors",
+      "major_group": 3,
+      "coordination_share_derived": 0.4682,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 59,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 59 ESCO occupations under ISCO group 312; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "313": {
+      "label": "Process Control Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.1332,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 35,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 35 ESCO occupations under ISCO group 313; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "314": {
+      "label": "Life Science Technicians and Related Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.1291,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 12,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 12 ESCO occupations under ISCO group 314; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "315": {
+      "label": "Ship and Aircraft Controllers and Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.2188,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 28,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 28 ESCO occupations under ISCO group 315; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "321": {
+      "label": "Medical and Pharmaceutical Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.1738,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 7,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 7 ESCO occupations under ISCO group 321; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "322": {
+      "label": "Nursing and Midwifery Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.375,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 322; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "323": {
+      "label": "Traditional and Complementary Medicine Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.4231,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 323; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "324": {
+      "label": "Veterinary Technicians and Assistants",
+      "major_group": 3,
+      "coordination_share_derived": 0.1281,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 6,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 6 ESCO occupations under ISCO group 324; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "325": {
+      "label": "Other Health Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.2643,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 34,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 34 ESCO occupations under ISCO group 325; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "331": {
+      "label": "Financial and Mathematical Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.2241,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 35,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 35 ESCO occupations under ISCO group 331; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "332": {
+      "label": "Sales and Purchasing Agents and Brokers",
+      "major_group": 3,
+      "coordination_share_derived": 0.4415,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 57,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 57 ESCO occupations under ISCO group 332; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "333": {
+      "label": "Business Services Agents",
+      "major_group": 3,
+      "coordination_share_derived": 0.4278,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 62,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 62 ESCO occupations under ISCO group 333; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "334": {
+      "label": "Administrative and Specialised Secretaries",
+      "major_group": 3,
+      "coordination_share_derived": 0.3908,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 24,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 24 ESCO occupations under ISCO group 334; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "335": {
+      "label": "Regulatory Government Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.2353,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 22,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 22 ESCO occupations under ISCO group 335; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "341": {
+      "label": "Legal, Social and Religious Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.3735,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 30,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 30 ESCO occupations under ISCO group 341; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "342": {
+      "label": "Sports and Fitness Workers",
+      "major_group": 3,
+      "coordination_share_derived": 0.5789,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 28,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 28 ESCO occupations under ISCO group 342; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "343": {
+      "label": "Artistic, Cultural and Culinary Associate Professionals",
+      "major_group": 3,
+      "coordination_share_derived": 0.3239,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 50,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 50 ESCO occupations under ISCO group 343; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "351": {
+      "label": "ICT Operations and User Support Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.1616,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 8,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 8 ESCO occupations under ISCO group 351; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "352": {
+      "label": "Telecommunications and Broadcasting Technicians",
+      "major_group": 3,
+      "coordination_share_derived": 0.1875,
+      "coordination_share_default_fallback": 0.2,
+      "esco_occupations_aggregated": 14,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 14 ESCO occupations under ISCO group 352; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "411": {
+      "label": "General Office Clerks",
+      "major_group": 4,
+      "coordination_share_derived": 0.5874,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 2,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 2 ESCO occupations under ISCO group 411; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "412": {
+      "label": "Secretaries (general)",
+      "major_group": 4,
+      "coordination_share_derived": 0.5455,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 412; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "413": {
+      "label": "Keyboard Operators",
+      "major_group": 4,
+      "coordination_share_derived": 0.1654,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 2,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 2 ESCO occupations under ISCO group 413; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "421": {
+      "label": "Tellers, Money Collectors and Related Clerks",
+      "major_group": 4,
+      "coordination_share_derived": 0.3387,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 14,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 14 ESCO occupations under ISCO group 421; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "422": {
+      "label": "Client Information Workers",
+      "major_group": 4,
+      "coordination_share_derived": 0.3683,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 23,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 23 ESCO occupations under ISCO group 422; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "431": {
+      "label": "Numerical Clerks",
+      "major_group": 4,
+      "coordination_share_derived": 0.4887,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 11,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 11 ESCO occupations under ISCO group 431; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "432": {
+      "label": "Material-Recording and Transport Clerks",
+      "major_group": 4,
+      "coordination_share_derived": 0.388,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 28,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 28 ESCO occupations under ISCO group 432; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "441": {
+      "label": "Other Clerical Support Workers",
+      "major_group": 4,
+      "coordination_share_derived": 0.3055,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 8,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 8 ESCO occupations under ISCO group 441; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "511": {
+      "label": "Travel Attendants, Conductors and Guides",
+      "major_group": 5,
+      "coordination_share_derived": 0.335,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 13,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 13 ESCO occupations under ISCO group 511; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "512": {
+      "label": "Cooks",
+      "major_group": 5,
+      "coordination_share_derived": 0.166,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 5,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 5 ESCO occupations under ISCO group 512; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "513": {
+      "label": "Waiters and Bartenders",
+      "major_group": 5,
+      "coordination_share_derived": 0.2681,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 10,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 10 ESCO occupations under ISCO group 513; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "514": {
+      "label": "Hairdressers, Beauticians and Related Workers",
+      "major_group": 5,
+      "coordination_share_derived": 0.3079,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 17,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 17 ESCO occupations under ISCO group 514; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "515": {
+      "label": "Building and Housekeeping Supervisors",
+      "major_group": 5,
+      "coordination_share_derived": 0.4397,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 8,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 8 ESCO occupations under ISCO group 515; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "516": {
+      "label": "Other Personal Services Workers",
+      "major_group": 5,
+      "coordination_share_derived": 0.28,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 33,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 33 ESCO occupations under ISCO group 516; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "521": {
+      "label": "Street and Market Salespersons",
+      "major_group": 5,
+      "coordination_share_derived": 0.1576,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 2,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 2 ESCO occupations under ISCO group 521; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "522": {
+      "label": "Shop Salespersons",
+      "major_group": 5,
+      "coordination_share_derived": 0.3453,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 47,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 47 ESCO occupations under ISCO group 522; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "523": {
+      "label": "Cashiers and Ticket Clerks",
+      "major_group": 5,
+      "coordination_share_derived": 0.398,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 3,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 3 ESCO occupations under ISCO group 523; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "524": {
+      "label": "Other Sales Workers",
+      "major_group": 5,
+      "coordination_share_derived": 0.3761,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 22,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 22 ESCO occupations under ISCO group 524; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "531": {
+      "label": "Child Care Workers and Teachers' Aides",
+      "major_group": 5,
+      "coordination_share_derived": 0.4269,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 10,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 10 ESCO occupations under ISCO group 531; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "532": {
+      "label": "Personal Care Workers in Health Services",
+      "major_group": 5,
+      "coordination_share_derived": 0.2639,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 6,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 6 ESCO occupations under ISCO group 532; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "541": {
+      "label": "Protective Services Workers",
+      "major_group": 5,
+      "coordination_share_derived": 0.1839,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 28,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 28 ESCO occupations under ISCO group 541; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "611": {
+      "label": "Market Gardeners and Crop Growers",
+      "major_group": 6,
+      "coordination_share_derived": 0.1299,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 15,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 15 ESCO occupations under ISCO group 611; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "612": {
+      "label": "Animal Producers",
+      "major_group": 6,
+      "coordination_share_derived": 0.0533,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 10,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 10 ESCO occupations under ISCO group 612; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "613": {
+      "label": "Mixed Crop and Animal Producers",
+      "major_group": 6,
+      "coordination_share_derived": 0.2889,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 2,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 2 ESCO occupations under ISCO group 613; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "621": {
+      "label": "Forestry and Related Workers",
+      "major_group": 6,
+      "coordination_share_derived": 0.2105,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 621; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "622": {
+      "label": "Fishery Workers, Hunters and Trappers",
+      "major_group": 6,
+      "coordination_share_derived": 0.1008,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 16,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 16 ESCO occupations under ISCO group 622; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "631": {
+      "label": "Subsistence Crop Farmers",
+      "major_group": 6,
+      "coordination_share_derived": null,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 0,
+      "confidence": "U",
+      "derivation_method": "Default-fallback (no ESCO occupations mapped to this ISCO-3-digit group; e.g., subsistence-farmer codes have no ESCO equivalents).",
+      "source": "Spec-authorised default coefficient by ISCO major group"
+    },
+    "632": {
+      "label": "Subsistence Livestock Farmers",
+      "major_group": 6,
+      "coordination_share_derived": null,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 0,
+      "confidence": "U",
+      "derivation_method": "Default-fallback (no ESCO occupations mapped to this ISCO-3-digit group; e.g., subsistence-farmer codes have no ESCO equivalents).",
+      "source": "Spec-authorised default coefficient by ISCO major group"
+    },
+    "633": {
+      "label": "Subsistence Mixed Crop and Livestock Farmers",
+      "major_group": 6,
+      "coordination_share_derived": null,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 0,
+      "confidence": "U",
+      "derivation_method": "Default-fallback (no ESCO occupations mapped to this ISCO-3-digit group; e.g., subsistence-farmer codes have no ESCO equivalents).",
+      "source": "Spec-authorised default coefficient by ISCO major group"
+    },
+    "634": {
+      "label": "Subsistence Fishers, Hunters, Trappers and Gatherers",
+      "major_group": 6,
+      "coordination_share_derived": null,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 0,
+      "confidence": "U",
+      "derivation_method": "Default-fallback (no ESCO occupations mapped to this ISCO-3-digit group; e.g., subsistence-farmer codes have no ESCO equivalents).",
+      "source": "Spec-authorised default coefficient by ISCO major group"
+    },
+    "711": {
+      "label": "Building Frame and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0849,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 18,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 18 ESCO occupations under ISCO group 711; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "712": {
+      "label": "Building Finishers and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.1014,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 25,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 25 ESCO occupations under ISCO group 712; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "713": {
+      "label": "Painters, Building Structure Cleaners and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0769,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 11,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 11 ESCO occupations under ISCO group 713; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "721": {
+      "label": "Sheet and Structural Metal Workers, Moulders and Welders",
+      "major_group": 7,
+      "coordination_share_derived": 0.1025,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 27,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 27 ESCO occupations under ISCO group 721; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "722": {
+      "label": "Blacksmiths, Toolmakers and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0628,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 46,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 46 ESCO occupations under ISCO group 722; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "723": {
+      "label": "Machinery Mechanics and Repairers",
+      "major_group": 7,
+      "coordination_share_derived": 0.1209,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 33,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 33 ESCO occupations under ISCO group 723; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "731": {
+      "label": "Handicraft Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0399,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 56,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 56 ESCO occupations under ISCO group 731; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "732": {
+      "label": "Printing Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0819,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 21,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 21 ESCO occupations under ISCO group 732; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "741": {
+      "label": "Electrical Equipment Installers and Repairers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0867,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 24,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 24 ESCO occupations under ISCO group 741; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "742": {
+      "label": "Electronics and Telecommunications Installers and Repairers",
+      "major_group": 7,
+      "coordination_share_derived": 0.1132,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 18,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 18 ESCO occupations under ISCO group 742; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "751": {
+      "label": "Food Processing and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0604,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 27,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 27 ESCO occupations under ISCO group 751; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "752": {
+      "label": "Wood Treaters, Cabinet-Makers and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0231,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 14,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 14 ESCO occupations under ISCO group 752; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "753": {
+      "label": "Garment and Related Trades Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.0846,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 40,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 40 ESCO occupations under ISCO group 753; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "754": {
+      "label": "Other Craft and Related Workers",
+      "major_group": 7,
+      "coordination_share_derived": 0.1378,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 34,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 34 ESCO occupations under ISCO group 754; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "811": {
+      "label": "Mining and Mineral Processing Plant Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.098,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 26,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 26 ESCO occupations under ISCO group 811; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "812": {
+      "label": "Metal Processing and Finishing Plant Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0731,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 19,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 19 ESCO occupations under ISCO group 812; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "813": {
+      "label": "Chemical and Photographic Products Plant and Machine Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0767,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 32,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 32 ESCO occupations under ISCO group 813; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "814": {
+      "label": "Rubber, Plastic and Paper Products Machine Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0161,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 35,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 35 ESCO occupations under ISCO group 814; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "815": {
+      "label": "Textile, Fur and Leather Products Machine Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.1192,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 50,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 50 ESCO occupations under ISCO group 815; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "816": {
+      "label": "Food and Related Products Machine Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0828,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 55,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 55 ESCO occupations under ISCO group 816; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "817": {
+      "label": "Wood Processing and Papermaking Plant Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0247,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 19,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 19 ESCO occupations under ISCO group 817; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "818": {
+      "label": "Other Stationary Plant and Machine Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.0239,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 23,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 23 ESCO occupations under ISCO group 818; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "821": {
+      "label": "Assemblers",
+      "major_group": 8,
+      "coordination_share_derived": 0.07,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 36,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 36 ESCO occupations under ISCO group 821; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "831": {
+      "label": "Locomotive Engine Drivers and Related Workers",
+      "major_group": 8,
+      "coordination_share_derived": 0.2581,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 6,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 6 ESCO occupations under ISCO group 831; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "832": {
+      "label": "Car, Van and Motorcycle Drivers",
+      "major_group": 8,
+      "coordination_share_derived": 0.2527,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 8,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 8 ESCO occupations under ISCO group 832; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "833": {
+      "label": "Heavy Truck and Bus Drivers",
+      "major_group": 8,
+      "coordination_share_derived": 0.153,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 12,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 12 ESCO occupations under ISCO group 833; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "834": {
+      "label": "Mobile Plant Operators",
+      "major_group": 8,
+      "coordination_share_derived": 0.167,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 19,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 19 ESCO occupations under ISCO group 834; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "835": {
+      "label": "Ships' Deck Crews and Related Workers",
+      "major_group": 8,
+      "coordination_share_derived": 0.1104,
+      "coordination_share_default_fallback": 0.1,
+      "esco_occupations_aggregated": 7,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 7 ESCO occupations under ISCO group 835; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "911": {
+      "label": "Domestic, Hotel and Office Cleaners and Helpers",
+      "major_group": 9,
+      "coordination_share_derived": 0.1106,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 7,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 7 ESCO occupations under ISCO group 911; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "912": {
+      "label": "Vehicle, Window, Laundry and Other Hand Cleaning Workers",
+      "major_group": 9,
+      "coordination_share_derived": 0.1639,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 8,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 8 ESCO occupations under ISCO group 912; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "921": {
+      "label": "Agricultural, Forestry and Fishery Labourers",
+      "major_group": 9,
+      "coordination_share_derived": 0.0331,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 14,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 14 ESCO occupations under ISCO group 921; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "931": {
+      "label": "Mining and Construction Labourers",
+      "major_group": 9,
+      "coordination_share_derived": 0.1108,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 9,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 9 ESCO occupations under ISCO group 931; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "932": {
+      "label": "Manufacturing Labourers",
+      "major_group": 9,
+      "coordination_share_derived": 0.075,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 932; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "933": {
+      "label": "Transport and Storage Labourers",
+      "major_group": 9,
+      "coordination_share_derived": 0.2176,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 12,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 12 ESCO occupations under ISCO group 933; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "941": {
+      "label": "Food Preparation Assistants",
+      "major_group": 9,
+      "coordination_share_derived": 0.2126,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 941; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "951": {
+      "label": "Street and Related Service Workers",
+      "major_group": 9,
+      "coordination_share_derived": 0.1667,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 951; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "952": {
+      "label": "Street Vendors (excluding Food)",
+      "major_group": 9,
+      "coordination_share_derived": 0.3158,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 1,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 1 ESCO occupations under ISCO group 952; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "961": {
+      "label": "Refuse Workers",
+      "major_group": 9,
+      "coordination_share_derived": 0.0509,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 961; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "962": {
+      "label": "Other Elementary Workers",
+      "major_group": 9,
+      "coordination_share_derived": 0.1014,
+      "coordination_share_default_fallback": 0.05,
+      "esco_occupations_aggregated": 12,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 12 ESCO occupations under ISCO group 962; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "011": {
+      "label": "Commissioned Armed Forces Officers",
+      "major_group": 0,
+      "coordination_share_derived": 0.4833,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 12,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 12 ESCO occupations under ISCO group 011; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "021": {
+      "label": "Non-commissioned Armed Forces Officers",
+      "major_group": 0,
+      "coordination_share_derived": 0.3352,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 4,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 4 ESCO occupations under ISCO group 021; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    },
+    "031": {
+      "label": "Armed Forces Occupations, Other Ranks",
+      "major_group": 0,
+      "coordination_share_derived": 0.1463,
+      "coordination_share_default_fallback": 0.4,
+      "esco_occupations_aggregated": 5,
+      "confidence": "M",
+      "derivation_method": "ESCO-derived: arithmetic mean across 5 ESCO occupations under ISCO group 031; per occupation, share = (essential skills in coordination cluster) / (total essential skills); coordination cluster = 3121 skills via transitive closure on ESCO skill hierarchy from L1 'management skills' + L1 'social and communication skills' + selected L2 under 'communication, collaboration and creativity' (advising/negotiating/presenting/working-with-others/teaching/liaising).",
+      "source": "ESCO local extract (european-ai-exposure-map/data/esco/) — skillsHierarchy_en.csv + broaderRelationsSkillPillar_en.csv + occupationSkillRelations_en.csv + occupations_en.csv"
+    }
+  }
+}

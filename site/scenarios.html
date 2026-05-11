@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scenarios &amp; Probabilities &mdash; European AI Labour Market Synthesis | Nexalps</title>
+<meta name="description" content="Eight ways the next decade could play out — and the most likely one depends on whether your economy is still growing.">
+<link rel="canonical" href="https://synthesis.nexalps.com/scenarios.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scenarios — European AI Labour Market Synthesis">
+<meta property="og:description" content="Eight ways the next decade could play out — and the most likely one depends on whether your economy is still growing.">
+<meta property="og:url" content="https://synthesis.nexalps.com/scenarios.html">
+<meta property="og:site_name" content="Nexalps">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://synthesis.nexalps.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:title" content="Scenarios — European AI Labour Market Synthesis">
+<meta name="twitter:description" content="Eight ways the next decade could play out — and the most likely one depends on whether your economy is still growing.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"European AI Labour Market Synthesis — Scenarios","description":"Eight scenarios (S1 Reinstatement Revival, S2 Climate Adaptation Boom, S3 Jobs Transform, S4 Muddle Through, S5 Wage Cliff, S6 Reinstatement Failure, S7 Bandwidth Fracture, S8 Polycrisis Drag) crossed against three economic regimes (growth-baseline, secular-stagnation-warning, post-growth-empirical) with per-regime probability vectors.","url":"https://synthesis.nexalps.com/scenarios.html","creator":{"@type":"Person","name":"Philipp Maul","url":"https://www.linkedin.com/in/pmaul/","affiliation":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"}},"publisher":{"@type":"Organization","name":"Nexalps","url":"https://nexalps.com"},"license":"https://creativecommons.org/licenses/by/4.0/","datePublished":"2026-04-30","spatialCoverage":"Europe","temporalCoverage":"2026/2035","variableMeasured":["scenario probability per regime","corridor mass distribution","capability-floor breach"],"keywords":["scenarios","economic regimes","Climate Adaptation Boom","Reinstatement Failure","Polycrisis Drag","IPCC AR6 likelihood","Cooke 1991"],"isPartOf":{"@type":"Dataset","name":"European AI Labour Market Synthesis (Part 6)","url":"https://synthesis.nexalps.com/"}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])}}(document,window.posthog||[]);
+posthog.init('phc_bjax6jdRxYJAaExodvALjRru8AQzUSbYFNlWlXiJM8A',{api_host:'https://eu.i.posthog.com',person_profiles:'identified_only'});
+setTimeout(function(){
+  if(typeof posthog==='undefined') return;
+  var thresholds=[25,50,75,100], fired={};
+  window.addEventListener('scroll', function(){
+    var pct=Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100);
+    thresholds.forEach(function(t){
+      if(pct>=t && !fired[t]){ fired[t]=true; posthog.capture('scroll_depth',{percent:t,page:'scenarios'}); }
+    });
+  }, {passive:true});
+  document.querySelectorAll('a[target="_blank"]').forEach(function(a){
+    a.addEventListener('click', function(){ posthog.capture('outbound_click',{url:a.href, page:'scenarios'}); });
+  });
+}, 500);
+</script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --background:#09090b;--foreground:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --accent:#27272a;--border:rgba(255,255,255,0.12);--input-border:rgba(255,255,255,0.15);
+  --ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+  --transition:150ms cubic-bezier(0.4,0,0.2,1);
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--background);color:var(--foreground);line-height:1.5;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100px;left:8px;background:var(--ring);color:#000;padding:8px 16px;border-radius:0 0 var(--radius-sm) var(--radius-sm);font-weight:700;z-index:200;text-decoration:none}
+.skip-link:focus{top:0}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+.container-narrow{max-width:760px;margin:0 auto;padding:0 32px}
+.site-nav{position:fixed;top:0;right:0;left:0;z-index:9999;display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:12px 20px;pointer-events:none}
+
+.site-nav-links{display:flex;gap:18px;align-items:center;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:8px 14px}
+.site-nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .15s}
+.site-nav-links a:hover{color:var(--foreground)}
+.site-nav-links a[aria-current="page"]{color:var(--ring)}
+.nav-sep{width:1px;background:var(--border);margin:0 4px;align-self:stretch}
+
+.burger{display:none;pointer-events:auto;background:rgba(9,9,11,0.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--card-border);border-radius:var(--radius-md);min-width:44px;min-height:44px;padding:13px 12px;cursor:pointer;flex-direction:column;justify-content:center;gap:4px}
+.burger span{display:block;width:18px;height:2px;background:var(--foreground);border-radius:1px;transition:transform .2s,opacity .2s}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.burger-panel{display:none;position:fixed;top:0;left:0;right:0;z-index:9998;background:rgba(9,9,11,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:72px 24px 32px;flex-direction:column;gap:24px}
+.burger-panel.open{display:flex}
+.burger-panel a{font-size:20px;font-weight:600;color:var(--muted);text-decoration:none}
+.burger-panel a:hover{color:var(--foreground)}
+.burger-panel a[aria-current="page"]{color:var(--ring)}
+.burger-sep{height:1px;background:var(--border);margin:4px 0}
+@media(max-width:1100px){.site-nav-links{display:none}.burger{display:flex}}
+
+.einfache-banner{background:rgba(249,115,22,0.10);border:1px solid rgba(249,115,22,0.25);border-radius:var(--radius-md);padding:14px 18px;margin:24px 0;font-size:13px;line-height:1.6;color:#d4d4d8}
+.einfache-banner strong{color:var(--ring);font-weight:700}
+.coming-soon{padding:48px 32px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);max-width:560px;margin:48px auto;text-align:left}
+.coming-soon h2{font-size:22px;font-weight:700;margin-bottom:12px}
+.coming-soon p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.coming-soon button{background:var(--ring);color:#000;border:1px solid var(--ring);border-radius:var(--radius-md);padding:10px 18px;font-family:var(--font);font-size:14px;font-weight:600;cursor:pointer}
+
+.hero{padding:80px 32px 24px}
+.hero h1{font-size:36px;font-weight:700;letter-spacing:-0.03em;line-height:1.15;margin-bottom:12px;max-width:820px}
+.hero .lede{font-size:18px;color:var(--muted);line-height:1.7;max-width:680px;margin-bottom:20px;font-weight:400}
+.hero .byline{font-size:12px;color:var(--muted-foreground);line-height:1.6}
+.hero .byline a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.hero .byline a:hover{color:var(--foreground)}
+.hero .byline + .byline{margin-top:4px}
+@media(max-width:640px){.hero h1{font-size:24px;padding-right:60px}.hero .lede{font-size:16px}.hero{padding:64px 20px 20px}}
+
+h2{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin:48px 0 8px;line-height:1.3}
+h2 .num{color:var(--ring);font-weight:700}
+h2 .subtitle{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:4px}
+.section-sub{font-size:14px;color:var(--muted);margin-bottom:20px;line-height:1.5;max-width:760px}
+p{font-size:16px;color:#d4d4d8;line-height:1.8}
+.prose p{margin-bottom:14px;max-width:760px}
+.prose strong{color:var(--foreground);font-weight:600}
+
+.spectrum-bar{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:24px 0}
+@media(max-width:1024px){.spectrum-bar{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:640px){.spectrum-bar{grid-template-columns:1fr 1fr}}
+.spectrum-cell{padding:14px 16px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-md);border-top:3px solid;font-size:13px;color:var(--muted);line-height:1.55}
+.spectrum-cell .label{font-size:11px;text-transform:uppercase;letter-spacing:0.05em;font-weight:600;color:var(--muted-foreground);margin-bottom:4px}
+.spectrum-cell .name{font-size:14px;font-weight:600;color:var(--foreground);margin-bottom:4px}
+.spectrum-cell.s-uo{border-top-color:#22c55e}
+.spectrum-cell.s-o{border-top-color:#86efac}
+.spectrum-cell.s-so{border-top-color:#bbf7d0}
+.spectrum-cell.s-m{border-top-color:#a1a1aa}
+.spectrum-cell.s-sp{border-top-color:#fbbf24}
+.spectrum-cell.s-p{border-top-color:#f59e0b}
+.spectrum-cell.s-pp{border-top-color:#ef4444}
+.s5-aside{margin-top:14px;padding:12px 16px;background:rgba(127,29,29,0.18);border:1px solid rgba(127,29,29,0.4);border-radius:var(--radius-md);font-size:13px;color:#fca5a5;line-height:1.55}
+.s5-aside strong{color:#fecaca}
+
+.weather-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+@media(max-width:900px){.weather-grid{grid-template-columns:1fr}}
+.weather-card{padding:18px 20px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-left:3px solid var(--ring);transition:border-color .12s,transform .12s}
+.weather-card:hover,.weather-card:focus-within{border-color:rgba(255,255,255,0.18)}
+.weather-card .count{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;color:var(--ring);margin-bottom:4px}
+.weather-card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.weather-card .pop{font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5}
+.weather-card .pop strong{color:var(--foreground);font-weight:600}
+.scenario-row{display:grid;grid-template-columns:60px 1fr 38px;gap:8px;align-items:center;margin-bottom:5px;font-size:11px;cursor:default;padding:2px 4px;border-radius:3px;transition:background .12s}
+.scenario-row:hover{background:rgba(255,255,255,0.04)}
+.scenario-row .s-code{color:var(--muted);font-weight:600;font-family:var(--font);font-variant-numeric:tabular-nums}
+.scenario-row .bar-wrap{height:14px;background:rgba(255,255,255,0.04);border-radius:3px;overflow:hidden;position:relative}
+.scenario-row .bar{height:100%;border-radius:3px;transition:width .12s}
+.scenario-row .pct{font-size:11px;color:var(--foreground);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.scenario-row.rank-1 .pct{color:#86efac}
+.scenario-row.rank-7 .pct{color:#fca5a5}
+.scen-S1-bar{background:#22c55e}
+.scen-S2-bar{background:#86efac}
+.scen-S3-bar{background:#bbf7d0}
+.scen-S4-bar{background:#a1a1aa}
+.scen-S5-bar{background:#fbbf24}
+.scen-S6-bar{background:#f59e0b}
+.scen-S7-bar{background:#ef4444}
+.weather-cluster-caption{margin-bottom:18px;padding:12px 16px;background:rgba(249,115,22,0.06);border-left:3px solid var(--ring);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:13px;color:#d4d4d8;line-height:1.7}
+.weather-cluster-caption strong{color:var(--foreground)}
+.weather-legend-mini{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--muted);margin-top:14px}
+.weather-legend-mini .item{display:inline-flex;align-items:center;gap:5px}
+.weather-legend-mini .swatch{width:10px;height:10px;border-radius:2px}
+
+.chart-box{margin:24px 0;padding:20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md);overflow-x:auto}
+.chart-box h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:12px}
+.chart-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.chart-controls label{font-size:12px;color:var(--muted-foreground)}
+.chart-controls select,.chart-controls button{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:6px 10px;color:var(--foreground);font-family:var(--font);font-size:12px;font-weight:500;cursor:pointer}
+.chart-controls select{padding-right:28px}
+.chart-controls button{cursor:pointer;transition:all .12s}
+.chart-controls button:hover{border-color:rgba(255,255,255,0.25)}
+.chart-controls button.active{background:var(--ring);color:#000;border-color:var(--ring)}
+.chart-box svg text{font-family:var(--font)}
+.chart-legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:11px;color:var(--muted)}
+.chart-legend .item{display:inline-flex;align-items:center;gap:6px;cursor:pointer;padding:2px 6px;border-radius:4px;transition:background .12s}
+.chart-legend .item:hover{background:rgba(255,255,255,0.04)}
+.chart-legend .item.dim{opacity:0.4}
+.chart-legend .swatch{width:12px;height:3px;border-radius:1px}
+
+.data-table{width:100%;border-collapse:collapse;font-size:14px}
+.data-table th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;padding:8px 12px;border-bottom:1px solid var(--border);color:var(--muted-foreground)}
+.data-table td{padding:10px 12px;color:#d4d4d8;border-bottom:1px solid var(--card-border);font-variant-numeric:tabular-nums}
+.data-table th[scope="row"]{font-weight:600;color:var(--foreground);text-align:left}
+.data-table td .ci{font-size:11px;color:var(--muted-foreground);margin-left:4px}
+.data-table tr.hl td,.data-table tr.hl th{background:rgba(249,115,22,0.07)}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:24px}
+
+.plain-block{margin:24px 0;max-width:760px}
+.plain-block h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--foreground);line-height:1.4}
+.plain-block p{font-size:15px;color:#d4d4d8;line-height:1.75;margin:0 0 10px}
+.plain-block p:last-child{margin-bottom:0}
+.plain-block .number{font-weight:700;color:var(--ring)}
+
+.country-chip-grid{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 16px}
+.chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:9999px;font-size:11px;font-weight:600;background:var(--card);border:1px solid var(--card-border);color:var(--muted)}
+.chip.cluster-nordic{background:rgba(34,197,94,0.10);color:#86efac;border-color:rgba(34,197,94,0.3)}
+.chip.cluster-cont{background:rgba(245,158,11,0.10);color:#fbbf24;border-color:rgba(245,158,11,0.3)}
+.chip.cluster-breach{background:rgba(239,68,68,0.10);color:#fca5a5;border-color:rgba(239,68,68,0.3)}
+.chip.cluster-s2{background:rgba(34,197,94,0.10);color:#86efac;border-color:rgba(34,197,94,0.3)}
+
+.subcluster-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media(max-width:768px){.subcluster-row{grid-template-columns:1fr}}
+.subcluster-card{padding:16px 20px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);border-left:3px solid}
+.subcluster-card.nordic{border-left-color:#22c55e}
+.subcluster-card.cont{border-left-color:#f59e0b}
+.subcluster-card h4{font-size:13px;font-weight:600;margin-bottom:6px;color:var(--foreground)}
+.subcluster-card p{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 8px}
+
+.sm-pyramid{margin:24px 0 32px;padding:0;max-width:760px}
+.sm-pyramid .sm-header{font-style:italic;font-size:18px;font-weight:600;margin:20px 0 8px;color:var(--foreground);line-height:1.4}
+.sm-pyramid .sm-header:first-child{margin-top:0}
+.sm-pyramid .sm-support{font-size:16px;line-height:1.7;margin:0 0 12px;max-width:760px;color:#d4d4d8}
+.sm-pyramid .sm-support:last-child{margin-bottom:0}
+
+/* S8 prominent block (item 12) */
+.s8-prominent{margin:28px 0;padding:18px 0;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);max-width:760px}
+.s8-prominent .s8-name{font-size:13px;font-weight:700;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.s8-prominent h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--foreground);line-height:1.4}
+.s8-prominent p{font-size:15px;color:#d4d4d8;line-height:1.75;margin:0 0 10px}
+.s8-prominent p:last-child{margin-bottom:0}
+
+/* Country pills under regime weather cards (item 21) */
+.regime-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;padding-top:10px;border-top:1px solid var(--card-border)}
+.regime-pill{display:inline-flex;align-items:center;padding:3px 9px;border-radius:9999px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.04);border:1px solid var(--card-border);color:var(--muted)}
+
+.footer{padding:24px 0 40px;font-size:12px;color:var(--muted-foreground);line-height:1.7;border-top:1px solid var(--card-border);margin-top:48px}
+.footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+.footer a:hover{color:var(--foreground)}
+.footer .cite-as{margin-top:8px;font-style:italic;color:var(--muted)}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+@media(max-width:768px){.container,.container-narrow{padding:0 16px}h2{padding-right:60px}}
+/* ── Pagination ── */
+.cta-bar{max-width:760px;margin:48px auto;padding:32px 24px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-lg);text-align:center}
+.btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 24px;border-radius:var(--radius-md);font-family:var(--font);font-size:14px;font-weight:600;text-decoration:none;transition:all var(--transition);line-height:1.5}
+.btn-primary{background:var(--ring);color:#000}.btn-primary:hover{background:#fb923c}
+.btn-outline{background:transparent;color:var(--muted);border:1px solid var(--border)}.btn-outline:hover{border-color:rgba(255,255,255,0.25);color:var(--foreground)}
+@media(max-width:640px){.btn-row{flex-direction:column;align-items:stretch}.btn{padding:14px 24px;min-height:44px;display:flex;align-items:center;justify-content:center}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="site-nav-links">
+    <a href="index.html">Overview</a>
+    <a href="findings.html">Findings</a>
+    <a href="scenarios.html" aria-current="page">Scenarios</a>
+    <a href="europe.html">Europe</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="sources.html">Sources</a>
+    <a href="glossary.html">Glossary</a>
+    <span class="nav-sep"></span>
+    <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+    <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+    <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+    <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+    <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+  </div>
+  <button class="burger" id="burger-btn" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="burger-panel" id="burger-panel" role="dialog" aria-label="Navigation menu">
+  <a href="index.html">Overview</a>
+  <a href="findings.html">Findings</a>
+  <a href="scenarios.html" aria-current="page">Scenarios</a>
+  <a href="europe.html">Europe</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="sources.html">Sources</a>
+  <a href="glossary.html">Glossary</a>
+  <div class="burger-sep"></div>
+  <a href="https://ai-exposure.nexalps.com/" target="_blank" rel="noopener">AI Exposure &#8599;</a>
+  <a href="https://demographics.nexalps.com/" target="_blank" rel="noopener">Demographics &#8599;</a>
+  <a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">Disruptions &#8599;</a>
+  <a href="https://reskilling.nexalps.com/" target="_blank" rel="noopener">Reskilling &#8599;</a>
+  <a href="https://job-market.nexalps.com/" target="_blank" rel="noopener">Job Market &#8599;</a>
+</div>
+
+<main id="main" role="main">
+
+<!-- ─────────── STANDARD MODE ─────────── -->
+<div data-lang="standard">
+
+<header class="hero container">
+  <h1>Eight storylines for the next decade, with the odds shaped by each country&rsquo;s economic regime.</h1>
+  <p class="lede">An optimism-pessimism spectrum from full reinstatement to a parallel-cascade collapse, three economic regimes that change which future is most likely, and the country-level trajectories underneath.</p>
+  <p class="byline">Part 6 of 7 &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a></p>
+  <p class="byline">Based on <a href="sources.html">59 primary sources</a> including Autor 2024 (QJE), Cedefop 2025, Draghi 2024, the European Climate Risk Assessment, Eurostat EUROPOP2023, the Rhodium / MIT Clean Investment Monitor, and OECD Pension Markets in Focus 2025.</p>
+</header>
+
+<section class="container" role="region" aria-label="Scenarios within-section Minto">
+  <div class="sm-pyramid">
+    <h3 class="sm-header">&ldquo;Three economic regimes, three different sets of odds.&rdquo;</h3>
+    <p class="sm-support">The same seven &ldquo;routine&rdquo; futures exist for every country, but the probabilities attached to them change by economic regime &mdash; because what&rsquo;s plausible in a growing economy is often not plausible when output isn&rsquo;t expanding. We separate <em>growth</em>, <em>secular stagnation</em>, and <em>post-growth</em>. In post-growth, the standard tech-led recovery path drops from about <strong>20%</strong> probability to about <strong>13%</strong>, while <strong>Climate Adaptation Boom</strong> rises from about <strong>20%</strong> to about <strong>30%</strong>. Same menu of futures; different odds.</p>
+    <h3 class="sm-header">&ldquo;The optimism path narrows the further you push the regime.&rdquo;</h3>
+    <p class="sm-support">For Austria, Luxembourg, and Turkey, only one of the routine futures consistently lands them in the safe corridor &mdash; and it is not the one most policy speeches assume. A tech-led reinstatement path is effectively closed off. Their best routine outcome runs through redirecting workers into climate-adaptation demand: healthcare, trades, and the green economy. Optimism remains possible. It just runs through climate, not conventional tech.</p>
+    <h3 class="sm-header">&ldquo;S8 sits outside the spectrum on purpose.&rdquo;</h3>
+    <p class="sm-support">Seven scenarios sit on an optimism&harr;pessimism spectrum, and their probabilities sum to <strong>100%</strong> within each regime. The eighth &mdash; <strong>Polycrisis Drag</strong> &mdash; is intentionally different: it assumes overlapping shocks (AI displacement plus decoupling pressure, demographic decline, climate stress, and fiscal strain), not a single dominant driver. Because there is no clean historical analogue for that combination, we treat it as a conditional &ldquo;parallel risk,&rdquo; not simply the worst point on the routine spectrum.</p>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="Spectrum framing">
+  <h2><span class="num">1.</span> The Spectrum <span class="subtitle">Seven routine futures along an optimism-pessimism axis, plus one parallel-cascade scenario that sits outside it. The framing is ours, not a definitive taxonomy.</span></h2>
+  <p>How the next decade plays out for European labour markets isn&rsquo;t one question, it&rsquo;s at least eight. Each scenario below is a self-contained <em>what-if</em>: a coherent story of how AI, demographics, and institutions interact over ten years. The seven routine variants are mutually exclusive and span an optimism-pessimism axis; the eighth is a parallel-cascade pattern that can be triggered in addition to any routine variant. Other plausible futures would land between these, or outside this spectrum entirely.</p>
+  <div class="spectrum-bar">
+    <div class="spectrum-cell s-uo">
+      <div class="label">Uber-optimistic</div>
+      <div class="name">S1 Reinstatement Revival</div>
+      <div>The historical &ldquo;old jobs disappear, new jobs appear&rdquo; pattern fully holds; new occupations absorb displaced workers at the historical rate.</div>
+    </div>
+    <div class="spectrum-cell s-o">
+      <div class="label">Optimistic</div>
+      <div class="name">S2 Climate Adaptation Boom</div>
+      <div>Sectoral activity redirects into climate-adaptation work; new demand in healthcare, trades, and the green economy absorbs displacement.</div>
+    </div>
+    <div class="spectrum-cell s-so">
+      <div class="label">Slightly optimistic</div>
+      <div class="name">S3 Jobs Transform</div>
+      <div>AI substitutes for routine <em>tasks</em> within existing occupations. Wages stay stable or rise modestly. Jobs reshape &mdash; workers spend less time on routine sub-tasks, more on judgment, coordination, and non-routine cognitive-social work. Empirical anchors: Brynjolfsson 2025 (call-centre productivity RCT), Dell&rsquo;Acqua 2023 (BCG consultants +40&nbsp;% inside the frontier), the Nielsen forklift framing.</div>
+    </div>
+    <div class="spectrum-cell s-m">
+      <div class="label">Middle</div>
+      <div class="name">S4 Muddle Through</div>
+      <div>Only attrition and partial reabsorption; no sharp pattern either way.</div>
+    </div>
+    <div class="spectrum-cell s-sp">
+      <div class="label">Slightly pessimistic</div>
+      <div class="name">S5 Wage Cliff</div>
+      <div>AI substitutes for mid-skill labour. Wages compress because reinstatement creates fewer or lower-paid jobs.</div>
+    </div>
+    <div class="spectrum-cell s-p">
+      <div class="label">Pessimistic</div>
+      <div class="name">S6 Reinstatement Failure</div>
+      <div>The historical reinstatement mechanism weakens (Autor 2024); new occupations form, but at a rate too slow to absorb displacement.</div>
+    </div>
+    <div class="spectrum-cell s-pp">
+      <div class="label">Pessimistic</div>
+      <div class="name">S7 Bandwidth Fracture</div>
+      <div>Training and re-employment systems collapse under parallel-crisis overstretch; reskilling capacity drops below what displacement requires.</div>
+    </div>
+  </div>
+  <div class="s8-prominent">
+    <div class="s8-name">S8 Polycrisis Drag &mdash; outside the spectrum</div>
+    <h3>The eighth scenario sits off the optimism-pessimism line on purpose.</h3>
+    <p>S8 Polycrisis Drag is a &ldquo;pick-your-poison&rdquo; parallel-cascade pattern, not a point on the routine spectrum. War and defence spending, budget stress, climate adaptation costs, global decoupling, political turmoil, social division, and Ukraine reconstruction combine to overwhelm institutional capacity at the same time. It is carried as a conditional that can be triggered on top of any routine variant, not folded into the spectrum.</p>
+    <p>This combination has no analogue in the 580 years of historical disruptions reviewed earlier in this analysis project (<a href="https://disruptions.nexalps.com/" target="_blank" rel="noopener">link to part 3</a>). There is no clean historical case base to ground these joint dynamics. That is why it is treated as a conditional &ldquo;parallel risk,&rdquo; rather than as the worst point on the routine spectrum.</p>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Three weather patterns">
+  <h2><span class="num">2.</span> Three Weather Patterns <span class="subtitle">Economic regimes that change which future is most likely.</span></h2>
+  <p>Two countries can face the same AI &ldquo;story,&rdquo; but if one economy is growing and the other is stuck or shrinking, the same shock will land differently. That is why the project groups countries into three &ldquo;weather patterns&rdquo; (growth, stagnation, post-growth) to adjust which futures are more likely.</p>
+  <div class="weather-cluster-caption">Note: &ldquo;tech-led recovery&rdquo; here refers to <strong>S1 Reinstatement Revival + S3 Jobs Transform</strong>, both tech-led optimistic scenarios. Their combined probability under growth is around 20%; under post-growth, around 13%.</div>
+  <div class="weather-grid" id="weather-grid"></div>
+  <div class="weather-legend-mini" aria-label="Scenario legend">
+    <span class="item"><span class="swatch scen-S1-bar"></span>S1 Reinstatement Revival</span>
+    <span class="item"><span class="swatch scen-S2-bar"></span>S2 Climate Adaptation Boom</span>
+    <span class="item"><span class="swatch scen-S3-bar"></span>S3 Jobs Transform</span>
+    <span class="item"><span class="swatch scen-S4-bar"></span>S4 Muddle Through</span>
+    <span class="item"><span class="swatch scen-S5-bar"></span>S5 Wage Cliff</span>
+    <span class="item"><span class="swatch scen-S6-bar"></span>S6 Reinstatement Failure</span>
+    <span class="item"><span class="swatch scen-S7-bar"></span>S7 Bandwidth Fracture</span>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Sparkline visual">
+  <h2><span class="num">3.</span> Per-Country Trajectories <span class="subtitle">Seven routine scenarios, baseline (2026) interpolated to scenario corridor (2035). Use selectors to pick country and emphasise one scenario.</span></h2>
+  <p>Each line on the chart shows how one country moves from its 2026 starting &ldquo;corridor&rdquo; (how safe or stressed its labour market is) to where it ends up in 2035 under a specific scenario, with upward bends meaning improvement and downward bends meaning getting worse.</p>
+  <div class="chart-box">
+    <div class="chart-controls">
+      <label for="country-select">Country</label>
+      <select id="country-select" aria-label="Choose country"></select>
+      <label style="margin-left:14px">Emphasise</label>
+      <button data-emp="all" class="active">All</button>
+      <button data-emp="S1">S1</button>
+      <button data-emp="S2">S2</button>
+      <button data-emp="S3">S3</button>
+      <button data-emp="S4">S4</button>
+      <button data-emp="S5">S5</button>
+      <button data-emp="S6">S6</button>
+      <button data-emp="S7">S7</button>
+    </div>
+    <h3>Scenario corridor trajectory, 2026 baseline &rarr; 2035 scenario corridor (C1 at top &mdash; safer outcome; C3 at bottom &mdash; worse outcome)</h3>
+    <div id="sparkline" role="img" aria-label="Per-country scenario trajectory"></div>
+    <div class="chart-legend" id="sparkline-legend"></div>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Probability table">
+  <h2><span class="num">4.</span> Scenario &times; Regime Probability Table <span class="subtitle">Mid-points with 80 % CI. IPCC AR6 likelihood-scale anchors; seven routine variants sum to 1.0 per regime; S8 carried as conditional, orthogonal.</span></h2>
+  <p>These probabilities are our best estimate of how likely each scenario is, given the country&rsquo;s economic regime. The &ldquo;80% confidence interval (CI)&rdquo; is the range in which the probability falls in 8 out of 10 runs of our calculations.</p>
+  <div class="table-wrap">
+    <table class="data-table" id="prob-table" aria-label="Scenario probabilities by regime">
+      <caption class="sr-only">Probability mass per scenario across three economic regimes.</caption>
+    </table>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="Reskilling-capacity gap">
+  <div class="plain-block">
+    <h3>The reskilling-capacity gap</h3>
+    <p>Europe needs to retrain about <strong>7.55 million</strong> people by 2035 due to AI effects. At first glance, the basic annual training throughput of ~3.34 M makes that seem doable. But after subtracting statistical retraining churn (~2.89 M), there is only room to retrain about <strong>450,000 extra people per year</strong>. At that pace, the 7.55 M cohort would take roughly <strong>15 years</strong> to clear. That is far slower than how quickly AI could change jobs, and it does not even count the training already needed for normal job turnover.</p>
+    <p>On top of that, European vocational training and university systems currently take <strong>5&ndash;9 years</strong> to respond to a major skill shift &mdash; to retool curricula, accredit new programmes, and run cohorts through to graduation. AI disrupts the affected jobs in 1&ndash;3 years, creating a several-year gap in which people are displaced before training can catch up.</p>
+    <p>This anchors the pessimism side and serves as the quantitative spine of the 15-country Class III diagnosis. Even allocating disproportionately to Class III would absorb only a marginal share of the deficit without channel expansion.</p>
+  </div>
+</section>
+
+<section class="container prose" role="region" aria-label="S2-dependent optimism path">
+  <div class="plain-block">
+    <h3>The optimism path narrows to climate Zone-C</h3>
+    <p>For three countries &mdash; <strong>Austria, Luxembourg, Turkey</strong> &mdash; the only realistic &ldquo;good outcome&rdquo; left in the model is the &ldquo;Climate Adaptation Boom&rdquo; scenario where lots of new work comes from climate adaptation. The usual &ldquo;tech boom brings jobs back&rdquo; path does not work for them. All six other routine variants produce a corridor 2 or 3 outcome. Anchored on Cedefop 2025 country-level employment projections plus the EU Net-Zero Industry Act &euro;100 B clean-manufacturing envelope.</p>
+    <div class="country-chip-grid">
+      <span class="chip cluster-s2">AT</span>
+      <span class="chip cluster-s2">LU</span>
+      <span class="chip cluster-s2">TR</span>
+    </div>
+  </div>
+</section>
+
+<section class="container" role="region" aria-label="Capability floor breach">
+  <h2><span class="num">5.</span> Capability-Floor Breach</h2>
+  <p>12 countries breach the institutional adaptive-capacity floor at the 2-digit ESCO level. This result should be read as a conservative estimate at this level of aggregation. Finer-grained data would likely surface 1&ndash;2 more.</p>
+  <p>A capability-floor breach means the country&rsquo;s institutions cannot routinely absorb the kind of labour-market shocks the scenarios describe.</p>
+  <div class="country-chip-grid" id="breach-chips"></div>
+  <details class="s5-detail">
+    <summary>How the 12-country count was reached</summary>
+    <p>Denmark is the marginal entrant. As the job classification sharpened, the breach list grew: 3 countries at the coarsest resolution &rarr; 11 at 1-digit ISCO &rarr; 12 at 2-digit. Finer aggregation tends to surface additional breach signals, which is why the 12-country result is read as a conservative estimate.</p>
+    <p>Ranked by probability, 7 are marked <strong>high</strong>, 4 <strong>medium</strong>, and 1 <strong>low</strong> for chain-reaction (cascade) risk. The 3 Class IV countries are labeled <strong>currently failing</strong> rather than &ldquo;at risk.&rdquo;</p>
+  </details>
+</section>
+
+<section class="container" role="region" aria-label="Squeeze cluster">
+  <h2><span class="num">6.</span> The Squeeze Cluster <span class="subtitle">Eight worker-protection economies, two distinct mechanisms. Luxembourg is explicitly NOT squeeze-flagged.</span></h2>
+  <p>The squeeze flag is a capital-flight signal, not a labour-displacement signal. The risk is that AI investment leaves rather than that workers are displaced at home. Quantification rests on per-country counts of approximately 40 high-risk EU AI Act Annex III deployer occupations and approximately 29 Product Liability Directive post-market duty occupations. Two distinct mechanisms warrant two distinct mitigations.</p>
+  <div class="subcluster-row">
+    <article class="subcluster-card nordic">
+      <h4>Nordic sub-cluster (4) &middot; trade-decoupling</h4>
+      <p>Worker-protection plus trade-decoupling exposure (no UK adjacency); squeeze arrives via decoupling, not via cross-border capital flight.</p>
+      <div class="country-chip-grid">
+        <span class="chip cluster-nordic">DK</span>
+        <span class="chip cluster-nordic">FI</span>
+        <span class="chip cluster-nordic">NO</span>
+        <span class="chip cluster-nordic">SE</span>
+      </div>
+    </article>
+    <article class="subcluster-card cont">
+      <h4>Continental sub-cluster (4) &middot; UK adjacency</h4>
+      <p>Worker-protection plus UK adjacency plus Mode 1 capital-flow vulnerability &mdash; the canonical jurisdictional-buffering profile.</p>
+      <div class="country-chip-grid">
+        <span class="chip cluster-cont">BE</span>
+        <span class="chip cluster-cont">DE</span>
+        <span class="chip cluster-cont">FR</span>
+        <span class="chip cluster-cont">NL</span>
+      </div>
+    </article>
+  </div>
+  <div class="plain-block" style="margin-top:18px">
+    <p><strong>LU correction.</strong> An earlier draft had named only five squeeze countries (BE / DE / FR / LU / NL). The corrected reading is the eight-country pattern above, decomposed into the two sub-clusters. Luxembourg&rsquo;s Class I status rests on its standalone Continental Corporatist profile plus its S2-dependent optimism path, not on any squeeze designation.</p>
+  </div>
+</section>
+
+</div><!-- /standard -->
+
+<!-- ─────────── EINFACHE MODE — STUB ─────────── -->
+<div data-lang="einfache" hidden>
+<section class="container">
+  <div class="einfache-banner">
+    <strong>Status: Erstentwurf &mdash; vor Veröffentlichung muss eine Einfache-Sprache-Fachperson den Text prüfen.</strong><br>
+    First draft. Before public release this text needs review by a certified Einfache-Sprache editor.
+  </div>
+</section>
+<div class="coming-soon">
+  <h2>Einfache Sprache &mdash; coming soon</h2>
+  <p>This page is being prepared in Einfache Sprache. The standard version is available; click <strong>Standard</strong> to read it.</p>
+  <p>Diese Seite wird in Einfacher Sprache vorbereitet. Die Standard-Version ist verfügbar.</p>
+  <button onclick="document.querySelectorAll('.lang-toggle').forEach(b=>b.click())">&larr; Back to Standard</button>
+</div>
+</div>
+
+<nav class="cta-bar page-pagination container" aria-label="Page navigation">
+  <div class="btn-row">
+    <a href="index.html" class="btn btn-outline" data-direction="back" data-target-page="overview">&larr; Overview</a>
+    <a href="europe.html" class="btn btn-primary" data-direction="forward" data-target-page="europe">Europe &rarr;</a>
+  </div>
+</nav>
+
+</main>
+
+<footer class="footer container" role="contentinfo">
+  Built by <a href="https://www.linkedin.com/in/pmaul/" target="_blank" rel="noopener">Philipp Maul</a> &middot; <a href="https://nexalps.com" target="_blank" rel="noopener">Nexalps</a> &middot; License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a> (data) + <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a> (code) &middot; Last updated 2026-05-11<br>
+  <a href="findings.html">Findings</a> &middot; <a href="scenarios.html">Scenarios</a> &middot; <a href="europe.html">Europe</a> &middot; <a href="methodology.html">Methodology</a> &middot; <a href="sources.html">Sources</a> &middot; <a href="glossary.html">Glossary</a><br>
+  <span class="cite-as">Cite as: Maul, P. (2026). Part 6 — European AI Labour Market Synthesis. Nexalps. https://synthesis.nexalps.com/</span>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+// ── Einfache toggle ──
+const LANG_KEY='synthesis-nexalps-language-mode';
+function getLangMode(){return localStorage.getItem(LANG_KEY)||'standard'}
+function applyLang(){
+  const mode=getLangMode();
+  document.querySelectorAll('[data-lang="standard"]').forEach(el=>{el.hidden=(mode!=='standard')});
+  document.querySelectorAll('[data-lang="einfache"]').forEach(el=>{el.hidden=(mode!=='einfache')});
+  document.querySelectorAll('.lang-toggle').forEach(b=>{
+    const on=mode==='einfache';
+    b.classList.toggle('active',on);
+    b.setAttribute('aria-pressed',on?'true':'false');
+    b.textContent=on?'Standard':'Einfache Sprache';
+  });
+  document.dispatchEvent(new CustomEvent('langchange',{detail:{mode}}));
+}
+document.querySelectorAll('.lang-toggle').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const cur=getLangMode();
+    localStorage.setItem(LANG_KEY,cur==='einfache'?'standard':'einfache');
+    applyLang();
+  });
+});
+applyLang();
+
+// ── Burger ──
+const bbtn=document.getElementById('burger-btn');
+const bpan=document.getElementById('burger-panel');
+if(bbtn&&bpan){
+  bbtn.addEventListener('click',()=>{const o=bpan.classList.toggle('open');bbtn.classList.toggle('open',o);bbtn.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',e=>{if(!bpan.contains(e.target)&&!bbtn.contains(e.target)&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&bpan.classList.contains('open')){bpan.classList.remove('open');bbtn.classList.remove('open');bbtn.setAttribute('aria-expanded','false')}});
+}
+// ── Data ──
+let DATA=null;
+let emphasis='all';
+fetch('./data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{DATA=d;render()}).catch(e=>console.error('Data load failed:',e));
+
+const SCEN_ORDER=['S1','S2','S3','S4','S5','S6','S7'];
+const SCEN_LABEL={S1:'S1 Reinstatement Revival',S2:'S2 Climate Adaptation Boom',S3:'S3 Jobs Transform',S4:'S4 Muddle Through',S5:'S5 Wage Cliff',S6:'S6 Reinstatement Failure',S7:'S7 Bandwidth Fracture'};
+const SCEN_COLOR={S1:'#22c55e',S2:'#86efac',S3:'#bbf7d0',S4:'#a1a1aa',S5:'#fbbf24',S6:'#f59e0b',S7:'#ef4444'};
+const REGIME_LABEL={growth_baseline:'Growth Baseline',secular_stagnation_warning:'Secular Stagnation',post_growth_empirical:'Post-Growth Empirical'};
+
+function render(){
+  if(!DATA)return;
+  renderWeatherGrid();
+  renderProbTable();
+  renderBreachChips();
+  initSparkline();
+}
+
+function renderWeatherGrid(){
+  const el=document.getElementById('weather-grid');
+  if(!el||!DATA.scenarios||!DATA.cross_cutting_findings)return;
+  const scen=DATA.scenarios;
+  const split=DATA.cross_cutting_findings.regime_split||{};
+  const agg=(DATA.cross_cutting_findings.pan_european_aggregate||{});
+  const eu27Pop=(agg.eu_27&&agg.eu_27.regime_mix_population_weighted_pct)||{};
+  const e36Pop=(agg.european_36&&agg.european_36.regime_mix_population_weighted_pct)||{};
+  const REGIMES=[
+    {key:'growth_baseline',title:'Growth Baseline',desc:'Reinstatement is the central recovery channel.'},
+    {key:'secular_stagnation_warning',title:'Secular Stagnation',desc:'Historical pattern is faltering.'},
+    {key:'post_growth_empirical',title:'Post-Growth Empirical',desc:'Reinstatement materially weaker.'}
+  ];
+  el.innerHTML=REGIMES.map(reg=>{
+    const probs=SCEN_ORDER.map(s=>{
+      const v=scen[s]&&scen[s].probability_per_regime&&scen[s].probability_per_regime[reg.key];
+      return {s,mid:v?v[1]:0};
+    }).sort((a,b)=>b.mid-a.mid);
+    const rows=probs.map((p,i)=>{
+      const w=Math.max(2,(p.mid*100));
+      const rankCls=i===0?'rank-1':(i===probs.length-1?'rank-7':'');
+      return `<div class="scenario-row ${rankCls}" data-scen="${p.s}" data-regime="${reg.key}" tabindex="0" role="group" aria-label="${p.s} under ${reg.title}: ${(p.mid*100).toFixed(0)}%">
+        <span class="s-code">${p.s}</span>
+        <div class="bar-wrap"><div class="bar scen-${p.s}-bar" style="width:${w}%"></div></div>
+        <span class="pct">${(p.mid*100).toFixed(0)}%</span>
+      </div>`;
+    }).join('');
+    const list=split[reg.key]||[];
+    const eu27Share=eu27Pop[reg.key];
+    const e36Share=e36Pop[reg.key];
+    const popBits=[];
+    if(typeof eu27Share==='number')popBits.push(`<strong>${eu27Share.toFixed(1)}%</strong> of EU-27 working-age pop`);
+    if(typeof e36Share==='number')popBits.push(`<strong>${e36Share.toFixed(1)}%</strong> of 36-market pop`);
+    const pills=list.length
+      ? `<div class="regime-pills" aria-label="Countries in ${reg.title} regime">${list.map(c=>`<span class="regime-pill">${c}</span>`).join('')}</div>`
+      : '';
+    return `<article class="weather-card" data-regime="${reg.key}" tabindex="0" role="group" aria-label="${reg.title} regime: ${list.length} markets">
+      <div class="count">${list.length} markets</div>
+      <h3>${reg.title}</h3>
+      <p class="pop">${popBits.join(' &middot; ')||'&mdash;'}<br/>${reg.desc}</p>
+      ${rows}
+      ${pills}
+    </article>`;
+  }).join('');
+  // PostHog tracking
+  el.querySelectorAll('.weather-card').forEach(c=>{
+    const regime=c.getAttribute('data-regime');
+    const fire=()=>{try{posthog.capture('regime_card_hover',{regime})}catch(e){}};
+    c.addEventListener('mouseenter',fire);
+    c.addEventListener('focus',fire);
+  });
+  el.querySelectorAll('.scenario-row').forEach(r=>{
+    const scenario=r.getAttribute('data-scen');
+    const regime=r.getAttribute('data-regime');
+    const fire=()=>{try{posthog.capture('scenario_bar_hover',{scenario,regime})}catch(e){}};
+    r.addEventListener('mouseenter',fire);
+    r.addEventListener('focus',fire);
+  });
+}
+
+function renderProbTable(){
+  const el=document.getElementById('prob-table');
+  if(!el||!DATA.scenarios)return;
+  // SOT vector order is [low, mid, high]
+  const rows=['growth_baseline','secular_stagnation_warning','post_growth_empirical'];
+  const head='<thead><tr><th scope="col">Regime</th>'+SCEN_ORDER.map(s=>`<th scope="col">${s}</th>`).join('')+'<th scope="col">S8 cond.</th></tr></thead>';
+  const body=rows.map(r=>{
+    const tds=SCEN_ORDER.map(s=>{
+      const v=DATA.scenarios[s].probability_per_regime[r]; // [low, mid, high]
+      const mid=v[1].toFixed(2);
+      const lo=v[0].toFixed(2);
+      const hi=v[2].toFixed(2);
+      const hl=(r==='post_growth_empirical'&&(s==='S1'||s==='S2'))?' style="color:'+(s==='S2'?'#86efac':'#fca5a5')+';font-weight:700"':'';
+      return `<td${hl}>${mid}<span class="ci">[${lo}–${hi}]</span></td>`;
+    }).join('');
+    const s8src=DATA.scenarios.S8&&DATA.scenarios.S8.probability_conditional_per_regime?.[r];
+    let s8cell='—';
+    if(s8src){
+      if(Array.isArray(s8src))s8cell=s8src[1].toFixed(2);
+      else if(typeof s8src==='number')s8cell=s8src.toFixed(2);
+      else if(s8src.mid!=null)s8cell=Number(s8src.mid).toFixed(2);
+    }
+    const trCls=r==='post_growth_empirical'?'hl':'';
+    return `<tr class="${trCls}"><th scope="row">${REGIME_LABEL[r]}</th>${tds}<td>${s8cell}</td></tr>`;
+  }).join('');
+  el.innerHTML=head+'<tbody>'+body+'</tbody>';
+}
+
+function renderBreachChips(){
+  const el=document.getElementById('breach-chips');
+  if(!el)return;
+  const list=(DATA.cross_cutting_findings.capability_floor_breach&&DATA.cross_cutting_findings.capability_floor_breach.list)||[];
+  el.innerHTML=list.map(c=>`<span class="chip cluster-breach">${c}</span>`).join('');
+}
+
+// ── Sparkline ──
+let chartCache={};
+function initSparkline(){
+  const sel=document.getElementById('country-select');
+  if(!sel)return;
+  const codes=Object.keys(DATA.countries).sort();
+  sel.innerHTML=codes.map(c=>{
+    const cn=DATA.countries[c];
+    return `<option value="${c}">${c} — ${cn.name}</option>`;
+  }).join('');
+  // default to DE
+  sel.value=codes.includes('DE')?'DE':codes[0];
+  sel.addEventListener('change',drawSparkline);
+  document.querySelectorAll('.chart-controls button[data-emp]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      emphasis=btn.getAttribute('data-emp');
+      document.querySelectorAll('.chart-controls button[data-emp]').forEach(b=>b.classList.toggle('active',b===btn));
+      drawSparkline();
+    });
+  });
+  // Legend (clickable to emphasise)
+  const leg=document.getElementById('sparkline-legend');
+  leg.innerHTML='<span class="item" data-emp="all"><span class="swatch" style="background:#fafafa"></span>All</span>'+
+    SCEN_ORDER.map(s=>`<span class="item" data-emp="${s}"><span class="swatch" style="background:${SCEN_COLOR[s]}"></span>${s}</span>`).join('');
+  leg.querySelectorAll('.item').forEach(it=>{
+    it.addEventListener('click',()=>{
+      emphasis=it.getAttribute('data-emp');
+      document.querySelectorAll('.chart-controls button[data-emp]').forEach(b=>b.classList.toggle('active',b.getAttribute('data-emp')===emphasis));
+      drawSparkline();
+    });
+  });
+  drawSparkline();
+}
+
+function drawSparkline(){
+  const sel=document.getElementById('country-select');
+  const code=sel.value;
+  const c=DATA.countries[code];
+  if(!c||!c.scenarios)return;
+  const el=document.getElementById('sparkline');
+  el.innerHTML='';
+  const W=Math.min(el.clientWidth||900,1100);
+  const isMobile=window.innerWidth<640;
+  const H=isMobile?280:340;
+  const m={t:24,r:120,b:40,l:48};
+  const iw=W-m.l-m.r, ih=H-m.t-m.b;
+  const svg=d3.select(el).append('svg').attr('width',W).attr('height',H).attr('role','img')
+    .attr('aria-label','Seven-scenario corridor trajectory for '+c.name+'. C1 (safe) at top; C3 (worst) at bottom.');
+  const g=svg.append('g').attr('transform',`translate(${m.l},${m.t})`);
+
+  const x=d3.scaleLinear().domain([2026,2035]).range([0,iw]);
+  // Y-axis flipped: C1 at top (safer), C3 at bottom (worse).
+  const y=d3.scaleLinear().domain([0.5,3.5]).range([0,ih]);
+
+  // y gridlines at 1, 2, 3
+  [1,2,3].forEach(yv=>{
+    g.append('line').attr('x1',0).attr('x2',iw).attr('y1',y(yv)).attr('y2',y(yv))
+      .attr('stroke','rgba(255,255,255,0.06)').attr('stroke-dasharray','3,3');
+    g.append('text').attr('x',-8).attr('y',y(yv)).attr('text-anchor','end').attr('dominant-baseline','middle')
+      .attr('fill','#71717a').attr('font-size',11).text('C'+yv);
+  });
+  // x axis
+  g.append('g').attr('transform',`translate(0,${ih})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format('d')).tickSize(-ih))
+    .selectAll('text').attr('fill','#71717a').attr('font-size',11);
+  g.selectAll('.domain').attr('stroke','none');
+  g.selectAll('.tick line').attr('stroke','rgba(255,255,255,0.05)');
+
+  // baseline corridor at x=2026
+  const baseline=c.phase3_corridor||2;
+  const line=d3.line().x(d=>x(d.year)).y(d=>y(d.cor));
+
+  SCEN_ORDER.forEach(s=>{
+    const sc=c.scenarios[s];
+    if(!sc||sc.corridor==null)return;
+    const data=[{year:2026,cor:baseline},{year:2035,cor:sc.corridor}];
+    const isEmph=(emphasis==='all'||emphasis===s);
+    const color=SCEN_COLOR[s];
+    g.append('path').datum(data).attr('d',line).attr('stroke',color).attr('fill','none')
+      .attr('stroke-width',isEmph?(emphasis===s?3:2):1.5).attr('opacity',isEmph?(emphasis===s?1:0.85):0.18)
+      .attr('stroke-linecap','round');
+    // endpoint dot + label
+    g.append('circle').attr('cx',x(2035)).attr('cy',y(sc.corridor)).attr('r',isEmph?4:2.5)
+      .attr('fill',color).attr('opacity',isEmph?(emphasis===s?1:0.85):0.18);
+  });
+
+  // Right-edge labels with vertical offsets to avoid stacking
+  const ends=SCEN_ORDER.map(s=>{
+    const sc=c.scenarios[s];
+    return sc?{s,cor:sc.corridor}:null;
+  }).filter(Boolean);
+  // Group by corridor value, offset within group
+  const grouped={};
+  ends.forEach(e=>{(grouped[e.cor]=grouped[e.cor]||[]).push(e)});
+  Object.values(grouped).forEach(grp=>{
+    grp.forEach((e,i)=>{
+      const isEmph=(emphasis==='all'||emphasis===e.s);
+      g.append('text').attr('x',x(2035)+8).attr('y',y(e.cor)+(i*12)-((grp.length-1)*6)+3)
+        .attr('fill',SCEN_COLOR[e.s]).attr('font-size',11).attr('font-weight',600)
+        .attr('opacity',isEmph?(emphasis===e.s?1:0.95):0.30)
+        .text(e.s);
+    });
+  });
+
+  // Header inside chart
+  g.append('text').attr('x',0).attr('y',-8).attr('fill','#fafafa').attr('font-size',13).attr('font-weight',600)
+    .text(`${c.code} — ${c.name} · Class ${c.fragility_class} · regime: ${(c.regime||'').replace(/_/g,' ')}`);
+}
+
+// Re-draw on resize
+let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(DATA)drawSparkline()},200)});
+
+// ── Pagination ──
+document.querySelectorAll('nav.page-pagination a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    try{posthog.capture('pagination_click',{direction:a.dataset.direction,target_page:a.dataset.targetPage,page:'scenarios'})}catch(e){}
+  });
+});
+
+})();
+</script>
+</body>
+</html>

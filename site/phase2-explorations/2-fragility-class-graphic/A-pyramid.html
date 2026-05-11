@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Problem 2 / Alternative A &mdash; Fragility distribution funnel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090b;--fg:#fafafa;--card:#0a0a0c;
+  --card-border:rgba(255,255,255,0.08);--muted:#a1a1aa;--muted-foreground:#71717a;
+  --border:rgba(255,255,255,0.12);--ring:#f97316;
+  --class-i:#22c55e;--class-ii:#f59e0b;--class-iii:#ef4444;--class-iv:#7f1d1d;
+  --radius-sm:6px;--radius-md:8px;--radius-lg:12px;
+  --font:'Geist',system-ui,-apple-system,sans-serif;
+}
+html,body{overflow-x:hidden}
+body{font-family:var(--font);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+
+.mock-header{padding:32px 24px 18px;border-bottom:1px solid var(--card-border);max-width:1200px;margin:0 auto}
+.mock-header .label{font-size:11px;font-weight:600;color:var(--ring);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px}
+.mock-header h1{font-size:22px;font-weight:700;letter-spacing:-0.02em;line-height:1.3}
+.mock-header p.note{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6;max-width:760px}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+
+.distribution{margin:24px 0;padding:24px 20px;background:rgba(255,255,255,0.02);border:1px solid var(--card-border);border-radius:var(--radius-md)}
+.distribution h3{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted-foreground);margin-bottom:18px}
+
+.tier{display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:start;margin-bottom:14px}
+@media(max-width:640px){.tier{grid-template-columns:1fr;gap:6px}}
+.tier-label{padding-top:14px}
+.tier-label .num{font-size:18px;font-weight:700;letter-spacing:-0.02em}
+.tier.cls-I .tier-label .num{color:var(--class-i)}
+.tier.cls-II .tier-label .num{color:var(--class-ii)}
+.tier.cls-III .tier-label .num{color:var(--class-iii)}
+.tier.cls-IV .tier-label .num{color:#fca5a5}
+.tier-label .name{font-size:13px;font-weight:600;color:var(--fg);margin-top:2px}
+.tier-label .count{font-size:11px;color:var(--muted-foreground);margin-top:4px;text-transform:uppercase;letter-spacing:0.04em;font-weight:600}
+
+.tier-bar{position:relative;height:48px;border-radius:var(--radius-sm);display:flex;align-items:center;padding:0 14px;color:#0a0a0a;font-size:12.5px;font-weight:600;line-height:1.45;overflow:hidden}
+.tier.cls-I .tier-bar{background:var(--class-i);width:60%}
+.tier.cls-II .tier-bar{background:var(--class-ii);background-image:repeating-linear-gradient(45deg,transparent 0,transparent 5px,rgba(0,0,0,0.10) 5px,rgba(0,0,0,0.10) 6px);width:60%}
+.tier.cls-III .tier-bar{background:var(--class-iii);background-image:repeating-linear-gradient(135deg,transparent 0,transparent 4px,rgba(0,0,0,0.18) 4px,rgba(0,0,0,0.18) 6px);width:100%;color:#fafafa}
+.tier.cls-IV .tier-bar{background:var(--class-iv);width:20%;color:#fafafa}
+.tier-bar .rule{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.tier-countries{font-size:11px;color:var(--muted-foreground);margin-top:8px;line-height:1.55;font-family:var(--font)}
+
+.qualitative-divider{margin:8px 0 4px;padding:8px 14px;font-size:11px;color:var(--muted-foreground);font-style:italic;border-top:1px dashed var(--card-border)}
+
+.iv-note{margin-top:14px;padding:14px 18px;background:rgba(127,29,29,0.10);border-left:3px solid var(--class-iv);border-radius:0 var(--radius-md) var(--radius-md) 0;font-size:12px;color:#fca5a5;line-height:1.6}
+</style>
+</head>
+<body>
+<header class="mock-header">
+  <div class="label">Phase 2A &middot; Problem 2 / Alternative A</div>
+  <h1>Distribution funnel &mdash; Class III is the bulge</h1>
+  <p class="note">Four horizontal bars, widths proportional to country count: Class I (9), Class II (9), Class III (15, widest), Class IV (3, narrowest but visually separated as qualitatively distinct). The Class III bulge is the visual punchline. Each bar carries the rule that places countries in that class plus its country list. Class IV sits below a dashed divider because cascade is not a linear extension of "worse" but a qualitative break.</p>
+</header>
+
+<main class="container">
+  <div class="distribution">
+    <h3>Country count by fragility class &middot; 36-market scope</h3>
+    <div id="tiers"></div>
+    <div class="iv-note">Class IV is visually separated. It is not the bottom of a linear scale &mdash; it is a qualitatively different state where institutional capacity sits at saturation. Treat it as a parallel category, not the worst point on a continuum.</div>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+fetch('../../data.json',{cache:'no-store'}).then(r=>r.json()).then(render).catch(e=>{
+  document.getElementById('tiers').innerHTML='<p style="color:var(--muted);font-size:13px">Data fetch failed.</p>';
+  console.error(e);
+});
+
+const RULE={
+  I:'Within ±1 corridor of baseline AND no routine variant lands in C3.',
+  II:'Baseline stable in C2; one or more routine variants push to C3 (typically S6 / S7).',
+  III:'Muddle-Through baseline lands in C3 post-rescaling. Reskilling pathway structurally insufficient.',
+  IV:'Candidate-partial-coverage with extreme Lens 5 readings (poly ≥0.55, eea_vuln ≥0.60, or Gini extreme).'
+};
+
+function render(d){
+  const fc=d.fragility_classes||{};
+  const order=['I','II','III'];
+  const html=order.map(k=>{
+    const cl=fc[k]; if(!cl)return '';
+    return `<div class="tier cls-${k}">
+      <div class="tier-label">
+        <div class="num">Class ${k}</div>
+        <div class="name">${cl.label||''}</div>
+        <div class="count">${cl.n_countries||0} markets</div>
+      </div>
+      <div>
+        <div class="tier-bar"><div class="rule">${RULE[k]}</div></div>
+        <div class="tier-countries">${(cl.countries||[]).join(' &middot; ')}</div>
+      </div>
+    </div>`;
+  }).join('');
+  const ivCl=fc.IV;
+  const ivHtml=ivCl?`<div class="qualitative-divider">Below: qualitatively distinct &mdash; not a linear extension of Class III</div>
+    <div class="tier cls-IV">
+      <div class="tier-label">
+        <div class="num">Class IV</div>
+        <div class="name">${ivCl.label||''}</div>
+        <div class="count">${ivCl.n_countries||0} markets</div>
+      </div>
+      <div>
+        <div class="tier-bar"><div class="rule">${RULE.IV}</div></div>
+        <div class="tier-countries">${(ivCl.countries||[]).join(' &middot; ')}</div>
+      </div>
+    </div>`:'';
+  document.getElementById('tiers').innerHTML=html+ivHtml;
+}
+})();
+</script>
+</body>
+</html>

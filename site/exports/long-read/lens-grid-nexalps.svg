@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Geist, Inter, system-ui, sans-serif">
+  <style>
+    .bg { fill: #F8F9FA; }
+    .card { fill: #FFFFFF; }
+    .accent-bar { fill: #087569; }
+    .overline { font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; fill: #4A5568; }
+    .title { font-size: 28px; font-weight: 500; letter-spacing: -0.5px; fill: #000000; }
+    .lens-num { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; fill: #087569; }
+    .lens-name { font-size: 18px; font-weight: 600; fill: #000000; }
+    .lens-body { font-size: 13px; fill: #4A5568; }
+    .lens-anchor { font-size: 12px; font-weight: 600; fill: #000000; }
+    .lens-source { font-size: 11px; font-style: italic; fill: #718096; }
+    .caption { font-size: 13px; fill: #4A5568; font-style: italic; }
+  </style>
+  <rect class="bg" x="0" y="0" width="1280" height="720"/>
+
+  <!-- Header -->
+  <text class="overline" x="80" y="60">The five-lens diagnostic</text>
+  <text class="title" x="80" y="100">What we measured, why those measures</text>
+
+  <!-- Card 1: Lens 1 — Displacement velocity -->
+  <g transform="translate(80,140)">
+    <rect class="card" x="0" y="0" width="560" height="170" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="170"/>
+    <text class="lens-num" x="24" y="32">Lens 1</text>
+    <text class="lens-name" x="24" y="58">Displacement velocity vs absorption capacity</text>
+    <text class="lens-body" x="24" y="86">Corridor-defining ratio. Active labour-market policy capacity</text>
+    <text class="lens-body" x="24" y="106">scored against AI displacement velocity at the country level.</text>
+    <text class="lens-body" x="24" y="126">Threshold ladder locked Bundle J: C1 &lt; 1.20 / C3 ≥ 2.80.</text>
+    <text class="lens-anchor" x="24" y="150">Anchor: Phase 1 sub-clusters · Autor 2024 · El-Sahli &amp; Upward 2017</text>
+  </g>
+
+  <!-- Card 2: Lens 2 — Demographic buffer -->
+  <g transform="translate(660,140)">
+    <rect class="card" x="0" y="0" width="540" height="170" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="170"/>
+    <text class="lens-num" x="24" y="32">Lens 2</text>
+    <text class="lens-name" x="24" y="58">Demographic buffer test</text>
+    <text class="lens-body" x="24" y="86">Retirement offset as share of AI-displaceable employment.</text>
+    <text class="lens-body" x="24" y="106">Threshold: 80%. Maximum reading observed: ~26%.</text>
+    <text class="lens-body" x="24" y="126">Zero countries hold the buffer. Refuted at 32-country scope.</text>
+    <text class="lens-anchor" x="24" y="150">Anchor: Eurostat EUROPOP2023 · OECD old-age dependency</text>
+  </g>
+
+  <!-- Card 3: Lens 3 — Distributional fold -->
+  <g transform="translate(80,330)">
+    <rect class="card" x="0" y="0" width="370" height="170" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="170"/>
+    <text class="lens-num" x="24" y="32">Lens 3</text>
+    <text class="lens-name" x="24" y="58">Distributional fold</text>
+    <text class="lens-body" x="24" y="86">Folded into scale tag (aggregate /</text>
+    <text class="lens-body" x="24" y="106">distributional / both) rather than carried</text>
+    <text class="lens-body" x="24" y="126">as a separate dimension.</text>
+    <text class="lens-anchor" x="24" y="150">Anchor: ILO 2025 · Eurostat lfsa_egai2d</text>
+  </g>
+
+  <!-- Card 4: Lens 4 — Jurisdictional buffering -->
+  <g transform="translate(470,330)">
+    <rect class="card" x="0" y="0" width="370" height="170" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="170"/>
+    <text class="lens-num" x="24" y="32">Lens 4</text>
+    <text class="lens-name" x="24" y="58">Jurisdictional buffering</text>
+    <text class="lens-body" x="24" y="86">Compounding-crisis shock count plus</text>
+    <text class="lens-body" x="24" y="106">squeeze flag: 8 worker-protection economies,</text>
+    <text class="lens-body" x="24" y="126">two distinct mechanisms (Nordic, Continental).</text>
+    <text class="lens-anchor" x="24" y="150">Anchor: EU AI Act · Hall &amp; Soskice 2001</text>
+  </g>
+
+  <!-- Card 5: Lens 5 — Polycrisis drag -->
+  <g transform="translate(860,330)">
+    <rect class="card" x="0" y="0" width="340" height="170" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="170"/>
+    <text class="lens-num" x="24" y="32">Lens 5</text>
+    <text class="lens-name" x="24" y="58">Polycrisis drag composite</text>
+    <text class="lens-body" x="24" y="86">2-digit ESCO-weighted ISCO with Klinger</text>
+    <text class="lens-body" x="24" y="106">coordination-share. Capability-floor breach</text>
+    <text class="lens-body" x="24" y="126">test: 12 countries at 2-digit (lower bound).</text>
+    <text class="lens-anchor" x="24" y="150">Anchor: Klinger ISCO · Eurostat isoc_eb_ai</text>
+  </g>
+
+  <!-- Synthesis box -->
+  <g transform="translate(80,540)">
+    <rect class="card" x="0" y="0" width="1120" height="120" rx="6"/>
+    <rect class="accent-bar" x="0" y="0" width="4" height="120"/>
+    <text class="lens-num" x="24" y="32">Synthesis</text>
+    <text class="lens-name" x="24" y="60">Three corridors · four fragility classes · eight scenarios</text>
+    <text class="lens-body" x="24" y="86">Lens 1 ratio sets the corridor (C1 / C2 / C3). Lens 2 + 4 + 5 set the fragility class (Robust / Fragile / Pre-Failure Risk / Currently Failing).</text>
+    <text class="lens-body" x="24" y="106">Seven routine scenarios sum to 1.0 per regime; S8 Polycrisis Drag is conditional and orthogonal. Probability bands quoted on the IPCC AR6 likelihood scale.</text>
+  </g>
+
+  <text class="caption" x="80" y="700">Lens 3 was folded into the scale tag rather than carried as a standalone scoring dimension. The four remaining lenses score independently.</text>
+</svg>

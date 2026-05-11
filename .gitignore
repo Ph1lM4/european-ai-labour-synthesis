@@ -1,0 +1,16 @@
+# Generator data — large CC0 GeoJSON blobs, regenerable from upstream.
+# tools/cellmap-gen.py header documents the download URL.
+tools/data/
+
+# Python
+__pycache__/
+*.pyc
+tools/__pycache__/
+
+# Ephemeral one-off scripts (defensive; do not commit)
+_*.py
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
