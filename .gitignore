@@ -9,6 +9,12 @@ internal/
 # Einfache (DE/EN). Held out of the public repo pending separate decisions.
 docs/
 
+# ───── Analysis-pipeline intermediate data (held for now) ─────
+# Phase 1/2/3 scoring CSV + JSON pairs plus the Klinger ISCO coordination-
+# share data. Methodology trail; superseded by layer-6-deliverable-data.json
+# (root SOT). Reproducible from upstream Eurostat / Cedefop / OECD via tools/.
+analysis-data/
+
 # Generator data — large CC0 GeoJSON blobs, regenerable from upstream.
 # tools/cellmap-gen.py header documents the download URL.
 tools/data/
