@@ -88,13 +88,6 @@ This is Part 6 of 7 in the European AI Labour Market suite:
 
 ISCO-08 codes bridge all six products. Shared design system (shadcn dark, Geist font, `#f97316` orange accent).
 
-## Preview Locally
-
-```bash
-cd site && python3 -m http.server 3006
-# Open http://localhost:3006
-```
-
 ## Data Sources
 
 **Source-of-truth:** `layer-6-deliverable-data.json` (canonical) + `site/data.json` (render mirror, lockstep). 59 primary sources (41 Tier 1, 18 Tier 2). Full list at [sources.html](https://synthesis.nexalps.com/sources.html).
