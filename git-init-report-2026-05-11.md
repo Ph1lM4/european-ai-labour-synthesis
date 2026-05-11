@@ -59,10 +59,10 @@ _*.py
 | Item | Value |
 |------|--------|
 | Branch | `main` |
-| Initial commit (short) | `40547f4` |
-| Initial commit (full SHA) | `40547f468603184eb1ce1565e4c6e98123e58994` |
+| Initial commit (short) | `7d19320` |
+| Initial commit (full SHA) | `7d193201e74fe86811e978255a7de9fb12eece88` |
 | Remote | `https://github.com/Ph1lM4/european-ai-labour-synthesis.git` |
-| `git push` | **Succeeded** (`main` → `origin/main`). No `--force`; hooks not bypassed (`--no-verify` not used). |
+| `git push` | **Succeeded** (`main` → `origin/main`). Hooks not bypassed (`--no-verify` not used). A later history edit removed automation trailers from commit messages; updating `main` on GitHub required `--force-with-lease` once. |
 
 ---
 
