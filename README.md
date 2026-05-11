@@ -1,0 +1,130 @@
+# Is Any European Labour Market Safe From AI?
+
+No European labour market is fully safe from AI-driven job displacement. We stress-tested 36 markets across five lenses and eight scenarios. Under the strict version of our test, **none** are unconditionally robust. Under the softer version (within ±1 corridor of baseline and no routine variant reaches the worst corridor), only **nine** hold up. Part 6 of 7 in the European AI Labour Market suite. Companion to the [AI Exposure Map](https://github.com/Ph1lM4/ai-job-impact-europe), [Job Market](https://github.com/Ph1lM4/job-market-europe), [Disruptions Map](https://github.com/Ph1lM4/european-disruptions-map), [Demographics Map](https://github.com/Ph1lM4/european-demographics-map), and [Reskilling Map](https://github.com/Ph1lM4/european-reskilling-map).
+
+**What makes this different:** Most European AI labour-market projections circulate in three registers that never meet: vendor reports keyed to compute spend, macro forecasters working from historical reinstatement base rates, and political communications keyed to ALMP commitments. None take seriously, at the same time, that the historical reinstatement effect has weakened (Autor 2024 QJE), that demographic buffering is empirically too thin to absorb mid-skill displacement, that institutional bandwidth is contested by concurrent crises (defence, climate, Ukraine, EU budget mid-cycle reinforcement), and that coordination-share heterogeneity inside the "high-coord" economies cuts in opposite directions once you go past 1-digit averages. This synthesis ties them together — five lenses folded into three corridors, bracketed by four fragility classes, stress-tested against eight scenarios — and surfaces the strict-zero structural-bias finding that "managed transition" base rates have been rounding upward.
+
+## Live Site
+
+**[synthesis.nexalps.com →](https://synthesis.nexalps.com)** *(static site, no backend)*
+
+## What's Included
+
+| Page | Description |
+|------|-------------|
+| [Overview](https://synthesis.nexalps.com/) | Landing page — the strict-zero headline, the four drill-down summaries, the Part-of-7 framing |
+| [Findings](https://synthesis.nexalps.com/findings.html) | Six findings: strict-zero result, demographic refutation, S2-dependent optimism path for AT/LU/TR, 15-country Class III capacity gap, eight-country squeeze cluster, Italy as outlier (−485,823 net migration 2025). Dot map + beeswarm switchable view. |
+| [Scenarios](https://synthesis.nexalps.com/scenarios.html) | Eight scenarios (S1 Reinstatement Revival, S2 Climate Adaptation Boom, S3 Jobs Transform, S4 Muddle Through, S5 Wage Cliff, S6 Reinstatement Failure, S7 Bandwidth Fracture, S8 Polycrisis Drag). Per-regime probability vectors with 80% CI bands. Reskilling-capacity gap (7.55M need / ~450K/yr / 15-year clearance), capability-floor breach (12 markets), squeeze-cluster mechanism split. |
+| [Europe](https://synthesis.nexalps.com/europe.html) | Pan-European aggregate — 36-market panel as primary read; delta strip showing what shifts under EU-27 restriction. Class distribution 9/9/15/3 (36 markets) vs 7/6/14/0 (EU-27). Three SMs: no single European corridor, spillover at the EU's borders, optimism through climate for ~40% of EU-27 workers. |
+| [Methodology](https://synthesis.nexalps.com/methodology.html) | Five lenses, three corridors, four fragility classes, eight scenarios. Threshold-locking ladder (1.50/3.00 literature-fitted → 1.20/2.80 theory-anchored). What we deliberately left open + missing-countries section (Albania, Montenegro, Moldova, Kosovo, Belarus). Ninth-scenario tests (Industrial Reconstruction, Wealth-Fund-Rich regime, Startup-Driven Absorption — all declined). |
+| [Sources](https://synthesis.nexalps.com/sources.html) | 59 primary sources (41 Tier 1, 18 Tier 2) sorted by tier then A-Z. Cross-references to all five upstream sister-site source bases. |
+| [Glossary](https://synthesis.nexalps.com/glossary.html) | 43 terms used across the synthesis. Search and letter-jump. |
+| [llms.txt](https://synthesis.nexalps.com/llms.txt) | Machine-readable project summary |
+
+## Key Findings
+
+- **No unconditionally robust labour market at the corrected threshold.** Under the strict ±0 rule with theory-anchored cut-offs (1.20 / 2.80), Class I = **0**. Even the Nordics fail. The published rule is the softer one (±1 of baseline AND no routine variant reaches C3); under it, Class I = **9** (DK, FI, IS, NO, SE plus BE, FR, LU, NL).
+- **The Lens 1 ratio measures displacement velocity ÷ absorption capacity.** Norway sits at **1.06** (well-absorbed); Ireland and the UK at **3.33–3.40** (displacement materially outpaces absorption).
+- **Corridor distribution (36-market panel):** 5 in C1 Managed Transition, 16 in C2 Partial Absorption, 15 in C3 Displacement Without Absorption.
+- **Fragility class distribution:** 9 Class I (Robust), 9 Class II (Fragile), 15 Class III (Pre-Failure Risk), 3 Class IV (Currently Failing — MK, RS, TR). EU-27 only: 7 / 6 / 14 / 0. **The cascade pressure sits at the EU's borders, not within them.**
+- **Demographic orthogonality is decisive.** Maximum retirement-offset reading is ~26% against a buffer threshold of 80%. **Zero** of 36 markets meet `buffer_holds`. The "silver-lining ageing" argument fails empirically.
+- **The reskilling-capacity gap is 15 years.** Europe needs to retrain ~7.55M people by 2035 due to AI effects. Annual training throughput is ~3.34M; subtracting statistical churn (~2.89M), the net new capacity is only **450K/year**. The 7.55M cohort would take ~15 years to clear at that pace.
+- **The speed gap is 3–5 years.** AI disrupts in 1–3 years; European VET + university systems take 5–9 years to retool curricula, accredit new programmes, and run cohorts through to graduation.
+- **For three countries (AT, LU, TR), the optimism path runs only through climate-adaptation work** — S2 Climate Adaptation Boom is the sole routine scenario landing them in C1. Tech-led reinstatement is structurally closed for these economies.
+- **For ~40% of EU-27 workers, the post-growth regime breaks the comforting story.** DE, FR, AT, SE, FI, LU sit in post-growth-empirical; the optimism path runs through climate, not conventional tech.
+- **The squeeze cluster is 8 worker-protection economies, 2 mechanisms.** Nordic sub-cluster (DK, FI, NO, SE — trade-decoupling exposure). Continental sub-cluster (BE, DE, FR, NL — UK-adjacency capital-flight risk). The squeeze flag is a **capital-flight signal**, not a labour-displacement signal.
+- **12 markets breach the capability floor at 2-digit ESCO** (BE, CH, DE, DK, IE, IS, LI, LU, NL, NO, SE, UK). Denmark is the marginal entrant. Cascade priority distribution: HIGH = 7, MEDIUM = 4, LOW = 1.
+- **Italy is the outlier.** Only major European economy with negative net migration in 2025 (**−485,823**). Working-age population trajectory: −17.5% to 2050. The workforce shrinks before AI displaces a single worker.
+
+## The Three Corridors (Theory-Anchored)
+
+| Corridor | Lens 1 ratio | Plain meaning | n |
+|----------|--------------|----------------|---|
+| **C1 Managed Transition** | < 1.20 | Displacement well-matched by absorption capacity | 5 (DK, FI, IS, NO, SE) |
+| **C2 Partial Absorption** | 1.20–2.80 | Mid-skill displacement partially absorbed; uneven sectoral and regional reabsorption | 16 |
+| **C3 Displacement Without Absorption** | ≥ 2.80 | Displacement materially exceeds absorption; reskilling pathway insufficient | 15 |
+
+C2 carries four within-corridor sub-clusters (Continental Corporatist, Germanic Dual, Southern European, CEE-in-C2). C3 carries two (Liberal Market high at 3.33–3.40, CEE / Mediterranean weak-ALMP at 2.81–2.96).
+
+## The Four Fragility Classes
+
+| Class | Rule | n | Members |
+|-------|------|---|---------|
+| **I Robust** | ±1 of baseline AND no routine variant reaches C3 | 9 | BE, DK, FI, FR, IS, LU, NL, NO, SE |
+| **II Fragile** | Baseline stable, but at least one routine variant lands in C3 (typically S6 or S7) | 9 | AT, BA, BG, CH, DE, ES, LI, LV, RO |
+| **III Pre-Failure Risk** | Muddle-Through baseline lands in C3 after rescaling | 15 | CY, CZ, EE, EL, HR, HU, IE, IT, LT, MT, PL, PT, SI, SK, UK |
+| **IV Currently Failing** | Candidate-partial-coverage with extreme Lens 5 readings | 3 | MK, RS, TR |
+
+Ukraine carried as Class IV reference panel (institutional bandwidth saturated, capability floor breached by definition; corridor classification does not apply).
+
+## Tech Stack
+
+- **Pure HTML/CSS/JavaScript** — no framework, no build step
+- **D3.js v7** for the scenario probability visualisations (only on `scenarios.html`)
+- **PostHog** for privacy-friendly analytics (EU-hosted)
+- **Netlify** for hosting with security headers and caching (`netlify.toml`)
+- **Geist** font from Google Fonts
+- **Natural Earth Vector 1:50m** for the corridor dot-map projection
+
+## The Suite
+
+This is Part 6 of 7 in the European AI Labour Market suite:
+
+1. **[AI Exposure Map](https://ai-exposure.nexalps.com)** — AI exposure scores for ~130 occupation groups × 36 countries (*which jobs AI hits*)
+2. **[Job Market](https://job-market.nexalps.com)** — Hiring trends and career intelligence across 9 roles × 34 countries (*where demand is going*)
+3. **[Disruptions](https://disruptions.nexalps.com)** — 580 years of technology shocks, 20 case studies, 5 disruption patterns (*what happened every other time*)
+4. **[Demographics](https://demographics.nexalps.com)** — Population × AI substitution through 2050 (*the structural constraint*)
+5. **[Reskilling](https://reskilling.nexalps.com)** — Capacity vs need, the bridge nobody can walk
+6. **[Synthesis](https://synthesis.nexalps.com)** — The corridor map across 36 markets, 5 lenses, 8 scenarios *(this repo)*
+7. *Coming soon — the prescriptive companion (what to do about it)*
+
+**How Part 6 ties the suite together:**
+
+- Part 1 (AI Exposure) supplies the **displacement velocity** input to Lens 1
+- Part 2 (Job Market) supplies the **hiring-side signals** that anchor the scenario probability calibration
+- Part 3 (Disruptions) supplies the **historical base-rate evidence** behind the Autor 2024 reinstatement-effect weakening that drives the theory-anchored 2.80 floor
+- Part 4 (Demographics) supplies the **retirement-offset readings** for Lens 2 (uniformly refuted at scale)
+- Part 5 (Reskilling) supplies the **absorption capacity** denominator in Lens 1 and the 15-year clearance arithmetic anchoring the pessimism side
+
+ISCO-08 codes bridge all six products. Shared design system (shadcn dark, Geist font, `#f97316` orange accent).
+
+## Preview Locally
+
+```bash
+cd site && python3 -m http.server 3006
+# Open http://localhost:3006
+```
+
+## Data Sources
+
+**Source-of-truth:** `layer-6-deliverable-data.json` (canonical) + `site/data.json` (render mirror, lockstep). 59 primary sources (41 Tier 1, 18 Tier 2). Full list at [sources.html](https://synthesis.nexalps.com/sources.html).
+
+**Tier 1 anchors include:** Autor, Chin, Salomons & Seegmiller (2024) QJE; El-Sahli & Upward (2017) NDLS; Cedefop (2025) Skills Forecast; Mario Draghi (2024) Future of European Competitiveness; EEA European Climate Risk Assessment (2024); Eurostat EUROPOP2023 + EU AI adoption series; OECD EPL Database + SOCX ALMP + Pension Markets in Focus 2025; ILO (2025) Generative AI and Jobs index; IMF World Economic Outlook 2026; Anthropic Economic Index (2025); Microsoft Working with AI (Tomlinson, Jaffe et al. 2025); OpenAI / Eloundou et al. (2023) GPTs are GPTs; Brynjolfsson, Chandar & Chen (2025) Canaries in the Coal Mine; Acemoglu & Restrepo (2019, 2020); Card, Kluve & Weber (2018) ALMP meta-analysis; Bertheau et al. (2022) IZA DP 15033; SIPRI + IISS Military Balance + NATO Hague Summit; EU Net-Zero Industry Act + EU MFF Mid-Term Review; Rhodium / MIT Clean Investment Monitor.
+
+## Methodology
+
+Full methodology at [methodology.html](https://synthesis.nexalps.com/methodology.html). Highlights:
+
+- **Lens 1** — displacement velocity ÷ absorption capacity; the corridor-defining ratio. Absorption decomposed via Zone-A-to-Zone-C transition rates derived from institutional system type.
+- **Lens 2** — demographic buffer tested against the 80% retirement-offset threshold; per-country reading. Uniformly refuted across the 36-market panel.
+- **Lens 3** — distributional fold (aggregate / distributional / both); carried as a scale tag rather than a separate dimension.
+- **Lens 4** — compounding-crisis shock count + jurisdictional-buffering squeeze flag; EU AI-Act overlay counts (Annex III ~40, PLD ~29–31).
+- **Lens 5** — polycrisis drag composite at 2-digit ESCO weighted by Klinger coordination-share; capability-floor breach test.
+- **Threshold-locking trail:** Phase 1 literature-fitted (1.50 / 3.00) → Phase 3 theory-anchored (1.20 / 2.80). The 1.20 cap sits inside the empirically empty band between the Nordic edge (1.10) and the next sub-cluster (1.59).
+- **Probabilities** quoted as IPCC AR6 likelihood-scale bands, not point estimates. 80% CI bands per scenario × regime via Cooke (1991) structured elicitation.
+
+## License
+
+Dual-licensed:
+- **Code** (HTML/CSS/JS in `site/`, Python tooling in `tools/`): [MIT License](LICENSE-CODE)
+- **Data and analysis** (`layer-6-deliverable-data.json`, `site/data.json`, page narratives, lens framework, scenario taxonomy, corridor cut-offs, fragility class definitions, deliverable documents): [CC-BY 4.0](LICENSE-DATA)
+
+You may share, adapt, and build on the data and analysis with attribution. **Cite as:** Maul, P. (2026). *Part 6 — European AI Labour Market Synthesis.* Nexalps. https://synthesis.nexalps.com/
+
+## Author
+
+Built by [Philipp Maul](https://www.linkedin.com/in/pmaul/) at [Nexalps](https://nexalps.com).
+
+## Contributing
+
+Found a methodological issue, a miscoded country, or an obviously missing source? Open an issue or reach out via LinkedIn.

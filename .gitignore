@@ -1,3 +1,14 @@
+# ───── Internal project documents (NOT for public repo) ─────
+# Handover docs, phase findings, bundle briefs, sub-session reports,
+# methodology notes, scoping memos. Reproducibility material kept locally
+# but not deployed to GitHub for now.
+internal/
+
+# ───── Deliverable documents (held for now) ─────
+# One-Pager, Long-Read .md + .pdf, Executive Edition, Specialist document,
+# Einfache (DE/EN). Held out of the public repo pending separate decisions.
+docs/
+
 # Generator data — large CC0 GeoJSON blobs, regenerable from upstream.
 # tools/cellmap-gen.py header documents the download URL.
 tools/data/
@@ -14,3 +25,10 @@ _*.py
 .DS_Store
 .vscode/
 .idea/
+
+# Local secrets (defensive — none expected)
+.env
+.env.*
+*.key
+*.pem
+secrets/
