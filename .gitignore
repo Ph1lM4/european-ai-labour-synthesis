@@ -29,3 +29,10 @@ secrets/
 
 # Local Netlify folder
 .netlify
+
+# Node
+node_modules/
+
+# Local git/session reports kept outside `internal/` for historical reasons
+git-*-commit-report-*.md
+git-*-report-*.md
