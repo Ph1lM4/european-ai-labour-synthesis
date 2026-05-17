@@ -22,6 +22,10 @@ layer-6-glossary-draft.tsv
 .idea/
 .env
 .env.*
+!.env.example
 *.key
 *.pem
 secrets/
+
+# Local Netlify folder
+.netlify

@@ -29,7 +29,7 @@ NEX = {
     "C1": "#087569",  # deep-teal-text — Class I (Robust)
     "C2": "#F59E0B",  # alpine-gold — Class II (Fragile)
     "C3": "#C41E3A",  # alpine-red — Class III (Pre-Failure Risk)
-    "C4": "#4A5568",  # granite-gray — Class IV (Active Cascade)
+    "C4": "#7F1D1D",  # wine-red — Class IV (Currently Failing)
 }
 CLS_TO_NEX = {"I": "C1", "II": "C2", "III": "C3", "IV": "C4"}
 
@@ -110,6 +110,10 @@ def main():
     png_path = OUT_DIR / "corridor-map-nexalps.png"
     render_png(svg_text, png_path, target_w=2400)
     print(f"Written {png_path} ({png_path.stat().st_size:,} bytes)")
+
+    print_path = OUT_DIR / "corridor-map-nexalps-print.png"
+    render_png(svg_text, print_path, target_w=1400)
+    print(f"Written {print_path} ({print_path.stat().st_size:,} bytes)")
 
     # Coverage check.
     countries_with_dots = sum(1 for v in dotmap["countries"].values() if v)

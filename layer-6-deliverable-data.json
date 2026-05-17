@@ -168,12 +168,12 @@
       "ingested_date": "2026-04-30",
       "rationale": "Existing scenario set conflated two analytical readings into S2a (Wage Cliff): (1) AI substitutes for mid-skill labour → wage compression; (2) AI substitutes for routine tasks → wages stable, jobs reshape (Brynjolfsson jagged-frontier / Nielsen forklift / BCG +40%/-19pp). Bundle V adds reading (2) as separate scenario S3 Jobs Transform and renumbers full set linearly in spectrum order S1–S8. The S2-family naming convention (a/b/c) is retired.",
       "renumbering_map": {
-        "S1 → S1": "Reinstatement Revival (uber-optimistic)",
+        "S1 → S1": "New Jobs Replace Old (uber-optimistic)",
         "S2b → S2": "Climate Adaptation Boom (optimistic)",
         "NEW → S3": "Jobs Transform (slightly optimistic, ADDED)",
         "old S3 → S4": "Muddle Through (middle)",
         "S2a → S5": "Wage Cliff (slightly pessimistic)",
-        "S4a → S6": "Reinstatement Failure (pessimistic)",
+        "S4a → S6": "New Jobs Fail to Appear (pessimistic)",
         "S4b → S7": "Bandwidth Fracture (pessimistic)",
         "S5_cascade → S8": "Polycrisis Drag (conditional, orthogonal)"
       },
@@ -561,7 +561,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": true
+      "s2_dependent": true,
+      "corridor_volatility_rms": 1.964
     },
     "BA": {
       "code": "BA",
@@ -744,7 +745,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "BE": {
       "code": "BE",
@@ -935,7 +937,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.5119
     },
     "BG": {
       "code": "BG",
@@ -1116,7 +1119,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "CH": {
       "code": "CH",
@@ -1306,7 +1310,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.2361
     },
     "CY": {
       "code": "CY",
@@ -1488,7 +1493,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "CZ": {
       "code": "CZ",
@@ -1670,7 +1676,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "DE": {
       "code": "DE",
@@ -1869,7 +1876,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.2361
     },
     "DK": {
       "code": "DK",
@@ -2060,7 +2068,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.3628
     },
     "EE": {
       "code": "EE",
@@ -2242,7 +2251,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "EL": {
       "code": "EL",
@@ -2424,7 +2434,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "ES": {
       "code": "ES",
@@ -2605,7 +2616,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "FI": {
       "code": "FI",
@@ -2796,7 +2808,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.3628
     },
     "FR": {
       "code": "FR",
@@ -2986,7 +2999,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.5119
     },
     "HR": {
       "code": "HR",
@@ -3168,7 +3182,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "HU": {
       "code": "HU",
@@ -3350,7 +3365,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "IE": {
       "code": "IE",
@@ -3532,7 +3548,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "IS": {
       "code": "IS",
@@ -3714,7 +3731,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.3628
     },
     "IT": {
       "code": "IT",
@@ -3895,7 +3913,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "LI": {
       "code": "LI",
@@ -4084,7 +4103,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.2361
     },
     "LT": {
       "code": "LT",
@@ -4266,7 +4286,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "LU": {
       "code": "LU",
@@ -4448,7 +4469,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": true
+      "s2_dependent": true,
+      "corridor_volatility_rms": 1.7728
     },
     "LV": {
       "code": "LV",
@@ -4629,7 +4651,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "MK": {
       "code": "MK",
@@ -4812,7 +4835,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "MT": {
       "code": "MT",
@@ -4994,7 +5018,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "NL": {
       "code": "NL",
@@ -5184,7 +5209,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.5119
     },
     "NO": {
       "code": "NO",
@@ -5375,7 +5401,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.3628
     },
     "PL": {
       "code": "PL",
@@ -5557,7 +5584,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "PT": {
       "code": "PT",
@@ -5739,7 +5767,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "RO": {
       "code": "RO",
@@ -5921,7 +5950,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "RS": {
       "code": "RS",
@@ -6104,7 +6134,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.3299
     },
     "SE": {
       "code": "SE",
@@ -6295,7 +6326,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 1.3628
     },
     "SI": {
       "code": "SI",
@@ -6477,7 +6509,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "SK": {
       "code": "SK",
@@ -6659,7 +6692,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     },
     "TR": {
       "code": "TR",
@@ -6842,7 +6876,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": true
+      "s2_dependent": true,
+      "corridor_volatility_rms": 2.2361
     },
     "UK": {
       "code": "UK",
@@ -7024,7 +7059,8 @@
           "source_field": "s2b_dependent"
         }
       },
-      "s2_dependent": false
+      "s2_dependent": false,
+      "corridor_volatility_rms": 2.4785
     }
   },
   "cross_cutting_findings": {
@@ -7572,7 +7608,9 @@
             "scenarios.{S1..S8}.probability_per_regime (S8: probability_conditional_per_regime)",
             "UN PPP2024 PPP/POP2064 (working-age 20-64, both sexes, 2024)"
           ]
-        }
+        },
+        "rms_lens1_ratio_unweighted": 2.5348,
+        "rms_lens1_ratio_population_weighted": 2.4653
       },
       "european_36": {
         "scope": "EU-27 + EFTA-4 + UK + 4 candidates (Bosnia, North Macedonia, Serbia, Turkey)",
@@ -7886,7 +7924,9 @@
             "scenarios.{S1..S8}.probability_per_regime (S8: probability_conditional_per_regime)",
             "UN PPP2024 PPP/POP2064 (working-age 20-64, both sexes, 2024)"
           ]
-        }
+        },
+        "rms_lens1_ratio_unweighted": 2.5047,
+        "rms_lens1_ratio_population_weighted": 2.5656
       },
       "variation_guard_note_p1": "Every aggregate scalar below is a population-weighted reference point; it is not a substitute for the per-country reading. This is a reminder that the one average number is only a shortcut, and you only understand the real result by seeing how different the 36 countries are from each other.",
       "variation_guard_note_p2": "The class spread (9/9/15/3 across the 36-market scope) is the most honest pan-European read because it shows those differences instead of hiding them behind a single Europe-wide average number.",
@@ -7916,7 +7956,7 @@
   },
   "scenarios": {
     "S1": {
-      "label": "Reinstatement Revival",
+      "label": "New Jobs Replace Old",
       "spectrum_position": "uber-optimistic",
       "mechanism": "Phase 1 finding: orthogonality refuted demographic buffer; Autor 2024 historical-base-rate is structurally biased — bounded above. Under post-growth, S1 mechanism requires expanding output, structurally weaker (locked spec line 92-94).",
       "probability_per_regime": {
@@ -8033,7 +8073,7 @@
       }
     },
     "S6": {
-      "label": "Reinstatement Failure (Autor 2024 weakening)",
+      "label": "New Jobs Fail to Appear (Autor 2024 weakening)",
       "spectrum_position": "pessimistic",
       "mechanism": "Autor 2024 reinstatement weakening + Lens 5 inputs hold. Under post-growth, fiscal headroom shrinks (line 98).",
       "probability_per_regime": {
