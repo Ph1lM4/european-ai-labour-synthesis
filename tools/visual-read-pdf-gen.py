@@ -57,6 +57,7 @@ from _pdf_style import (
     draw_pill, draw_pill_row,
     draw_segmented_bar, draw_simple_bar_row,
     draw_graphic_header, draw_graphic_caption, draw_class_legend,
+    DOC_VARIANTS, LADDER_URL, doc_ladder_others,
 )
 
 from reportlab.lib.pagesizes import A4
@@ -981,48 +982,32 @@ def draw_italy_card(c, x, y, w, h, label, value, note):
 # Page 8 — CTA
 # ---------------------------------------------------------------------------
 
-DOC_LADDER = [
-    # Einfache Sprache card removed (Phil-locked 2026-05-13 v4).
-    ("Long-read · 14 pp",
-     "Specialist appendix in long-form prose · 3,728 words · four graphics.",
-     "synthesis.nexalps.com/long-read"),
-    ("Executive brief · 6 pp",
-     "Decision-maker version · key tables · strict-zero finding upfront.",
-     "synthesis.nexalps.com/executive"),
-    ("Specialist document · full",
-     "All five lens findings · three corridor sub-clusters · eight scenarios in detail.",
-     "synthesis.nexalps.com/specialist"),
-]
-
-
 def page_cta(c: canvasmod.Canvas, sot: dict) -> None:
     page_background(c, PAGE_W, PAGE_H)
     overline(c, M_L, PAGE_H - M_T, "WHERE TO GO NEXT")
     y = heading_h2(c, M_L, PAGE_H - M_T - 8 * mm, "Full read", CONTENT_W)
     y = heading_lede(
         c, M_L, y - 4 * mm,
-        "This Visual Read is a derivative. Three longer renders carry the full analysis at "
-        "progressive depth.",
+        "This Visual Read is one of four renders. The companion documents carry the "
+        "full analysis at progressive depth.",
     CONTENT_W,
     )
 
     grid_top = y - 6 * mm
-    card_h = 28 * mm
-    gap = 5 * mm
-    n_cards = len(DOC_LADDER)
-    for i, (title, desc, url) in enumerate(DOC_LADDER):
+    card_h = 32 * mm
+    gap = 4 * mm
+    others = doc_ladder_others("visual-read")
+    for i, (slug, variant) in enumerate(others):
         cy = grid_top - (i + 1) * card_h - i * gap
-        draw_doc_card(c, M_L, cy, CONTENT_W, card_h, title, desc, url)
+        draw_doc_card(c, M_L, cy, CONTENT_W, card_h, variant)
 
-    landing_y = grid_top - n_cards * card_h - (n_cards - 1) * gap - 10 * mm
-    # Phil-locked 2026-05-13 v4: label replaced "LANDING" → "Inspect the
-    # full analysis at:" (kept at 9 pt Geist-Bold for eyebrow rhythm).
+    landing_y = grid_top - len(others) * card_h - (len(others) - 1) * gap - 10 * mm
     c.setFont("Geist-Bold", 9)
     c.setFillColor(GRANITE)
-    c.drawString(M_L, landing_y, "INSPECT THE FULL ANALYSIS AT:")
+    c.drawString(M_L, landing_y, "ALL FOUR AT:")
     c.setFont("Geist-LightItalic", 20)
     c.setFillColor(DEEP_TEAL)
-    c.drawString(M_L, landing_y - 10 * mm, "synthesis.nexalps.com")
+    c.drawString(M_L, landing_y - 10 * mm, LADDER_URL)
 
     cite_y = landing_y - 24 * mm
     c.setFont("Geist-Bold", 9)
@@ -1041,24 +1026,34 @@ def page_cta(c: canvasmod.Canvas, sot: dict) -> None:
     c.showPage()
 
 
-def draw_doc_card(c, x, y, w, h, title, desc, url):
+def draw_doc_card(c, x, y, w, h, variant):
+    """4-line card: meta, header, audience (italic), oneliner.
+    Per-deliverable colour accent on the left edge (matches resources.html)."""
     c.saveState()
     c.setFillColor(HexColor("#FFFFFF"))
     c.setStrokeColor(HAIRLINE)
     c.setLineWidth(0.5)
     c.roundRect(x, y, w, h, RADIUS_CARD, stroke=1, fill=1)
-    draw_card_accent(c, x, y, w, h, DEEP_TEAL, side="left", thickness=4)
-    # Locked 12 pt section sub-header (was 14 pt).
+    draw_card_accent(c, x, y, w, h, variant["color"], side="left", thickness=4)
+    text_x = x + 7 * mm
+    # Meta line: small Geist-Medium granite
+    c.setFont("Geist-Medium", 9)
+    c.setFillColor(GRANITE)
+    c.drawString(text_x, y + h - 8 * mm, variant["meta"])
+    # Header: 12 pt Geist-Medium black (title)
     c.setFont("Geist-Medium", 12)
     c.setFillColor(PURE_BLACK)
-    c.drawString(x + 6 * mm, y + h - 9 * mm, title)
-    # Locked 9 pt body (was 10 pt).
+    c.drawString(text_x, y + h - 15 * mm, variant["header"])
+    # Audience: 9 pt italic, granite-light
+    c.setFont("Geist-Italic", 9)
+    c.setFillColor(GRANITE_LIGHT)
+    c.drawString(text_x, y + h - 21 * mm, variant["audience"])
+    # One-liner: 9 pt Geist granite
     c.setFont("Geist", 9)
     c.setFillColor(GRANITE)
-    c.drawString(x + 6 * mm, y + h - 15 * mm, desc)
-    c.setFont("Geist", 9)
-    c.setFillColor(DEEP_TEAL)
-    c.drawRightString(x + w - 6 * mm, y + 5 * mm, url)
+    for line in wrap_lines(variant["oneliner"], "Geist", 9, w - 14 * mm):
+        c.drawString(text_x, y + h - 27 * mm, line)
+        break
     c.restoreState()
 
 

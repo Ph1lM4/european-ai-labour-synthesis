@@ -50,6 +50,7 @@ from _pdf_style import (
     ALPINE_GOLD, ALPINE_RED, GLACIER_BLUE, CLASS_IV_WINE,
     HEAT_1, HEAT_2, HEAT_3, HEAT_4, HEAT_5, HEAT_6,
     CLS_COLOR, CLS_LABEL,
+    DOC_VARIANTS, LADDER_URL, doc_ladder_others,
 )
 
 from reportlab.lib.enums import TA_LEFT
@@ -224,6 +225,38 @@ def _styles() -> dict[str, ParagraphStyle]:
             "cover_overline", fontName="Geist-Bold", fontSize=9,
             leading=11, textColor=GRANITE, alignment=TA_LEFT,
             spaceAfter=4 * mm,
+        ),
+        # Doc-ladder card styles (mirror Executive + Specialist).
+        "card_meta": ParagraphStyle(
+            "card_meta", fontName="Geist-Medium", fontSize=9,
+            leading=12, textColor=GRANITE, alignment=TA_LEFT,
+            spaceAfter=0.5 * mm,
+        ),
+        "card_title": ParagraphStyle(
+            "card_title", fontName="Geist-Medium", fontSize=12,
+            leading=15, textColor=PURE_BLACK, alignment=TA_LEFT,
+            spaceAfter=1 * mm,
+        ),
+        "card_audience": ParagraphStyle(
+            "card_audience", fontName="Geist-Italic", fontSize=9,
+            leading=12, textColor=GRANITE_LIGHT, alignment=TA_LEFT,
+            spaceAfter=1 * mm,
+        ),
+        "card_body": ParagraphStyle(
+            "card_body", fontName="Geist", fontSize=9, leading=12,
+            textColor=GRANITE, alignment=TA_LEFT, spaceAfter=1 * mm,
+        ),
+        # Ladder overline (eyebrow above the closing-page sections).
+        "ladder_overline": ParagraphStyle(
+            "ladder_overline", fontName="Geist-Bold", fontSize=9,
+            leading=12, textColor=GRANITE, alignment=TA_LEFT,
+            spaceAfter=4 * mm,
+        ),
+        # Ladder landing URL — large italic.
+        "ladder_url": ParagraphStyle(
+            "ladder_url", fontName="Geist-LightItalic", fontSize=20,
+            leading=26, textColor=DEEP_TEAL, alignment=TA_LEFT,
+            spaceAfter=8 * mm,
         ),
     }
 
@@ -743,6 +776,71 @@ def _build_blocks(md: str, styles: dict) -> list:
     return story
 
 
+def _doc_card(variant: dict, styles: dict) -> Table:
+    """4-row card: meta, header, audience (italic), oneliner.
+    Left edge stripe uses per-deliverable colour (matches resources.html)."""
+    inner = [
+        [Paragraph(variant["meta"], styles["card_meta"])],
+        [Paragraph(variant["header"], styles["card_title"])],
+        [Paragraph(variant["audience"], styles["card_audience"])],
+        [Paragraph(variant["oneliner"], styles["card_body"])],
+    ]
+    inner_t = Table(inner, colWidths=[CONTENT_WIDTH - 8 * mm])
+    inner_t.setStyle(
+        TableStyle(
+            [
+                ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 1),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ]
+        )
+    )
+    outer = [[Paragraph("&nbsp;", styles["card_body"]), inner_t]]
+    t = Table(outer, colWidths=[1.5 * mm, CONTENT_WIDTH - 1.5 * mm])
+    t.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (0, 0), variant["color"]),
+                ("BACKGROUND", (1, 0), (1, 0), HexColor("#FFFFFF")),
+                ("BOX", (0, 0), (-1, -1), 0.5, HAIRLINE),
+                ("LEFTPADDING", (0, 0), (0, 0), 0),
+                ("RIGHTPADDING", (0, 0), (0, 0), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 4 * mm),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4 * mm),
+                ("LEFTPADDING", (1, 0), (1, 0), 5 * mm),
+                ("RIGHTPADDING", (1, 0), (1, 0), 5 * mm),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ]
+        )
+    )
+    return t
+
+
+def _build_closing_page(styles: dict) -> list:
+    """Last-page document ladder + landing URL."""
+    story = [PageBreak()]
+    story.append(Spacer(1, 10 * mm))
+    story.append(Paragraph("WHERE TO GO NEXT", styles["ladder_overline"]))
+    story.append(Paragraph("Full read", styles["h2"]))
+    story.append(
+        Paragraph(
+            "This Long-Read is one of four renders. The companion documents "
+            "carry the analysis at different depths.",
+            styles["body"],
+        )
+    )
+    story.append(Spacer(1, 4 * mm))
+    for slug, variant in doc_ladder_others("long-read"):
+        story.append(_doc_card(variant, styles))
+        story.append(Spacer(1, 4 * mm))
+    story.append(Spacer(1, 4 * mm))
+    story.append(Paragraph("ALL FOUR AT:", styles["ladder_overline"]))
+    story.append(Paragraph(LADDER_URL, styles["ladder_url"]))
+    return story
+
+
 def build_pdf() -> Path:
     """Two-pass build so the footer can show 'Page N / total'.
 
@@ -766,7 +864,8 @@ def build_pdf() -> Path:
         author="Philipp Maul",
         subject="Part 6 Specialist Long-Read",
     )
-    story1 = _build_blocks(md, _styles())
+    styles = _styles()
+    story1 = _build_blocks(md, styles) + _build_closing_page(styles)
     doc1.build(story1, onFirstPage=_on_cover_page, onLaterPages=_on_page)
     _TOTAL_PAGES = doc1.page
     if tmp_path.exists():
@@ -781,7 +880,8 @@ def build_pdf() -> Path:
         author="Philipp Maul",
         subject="Part 6 Specialist Long-Read",
     )
-    story2 = _build_blocks(md, _styles())
+    styles = _styles()
+    story2 = _build_blocks(md, styles) + _build_closing_page(styles)
     doc2.build(story2, onFirstPage=_on_cover_page, onLaterPages=_on_page)
     return OUTPUT
 

@@ -47,6 +47,7 @@ from _pdf_style import (
     GRANITE, GRANITE_DARK, GRANITE_LIGHT, GRANITE_LIGHTER,
     HAIRLINE,
     ALPINE_GOLD, ALPINE_RED, CLASS_IV_WINE, GLACIER_BLUE,
+    DOC_VARIANTS, LADDER_URL, doc_ladder_others,
 )
 
 from reportlab.lib.enums import TA_LEFT, TA_CENTER
@@ -198,6 +199,26 @@ def _styles() -> dict[str, ParagraphStyle]:
         "ladder_row": ParagraphStyle(
             "ladder_row", fontName="Geist", fontSize=9, leading=14,
             textColor=GRANITE, alignment=TA_LEFT, spaceAfter=1.5 * mm,
+        ),
+        # Doc-card meta / title / audience / body — 4-line card to match Executive.
+        "card_meta": ParagraphStyle(
+            "card_meta", fontName="Geist-Medium", fontSize=9,
+            leading=12, textColor=GRANITE, alignment=TA_LEFT,
+            spaceAfter=0.5 * mm,
+        ),
+        "card_title": ParagraphStyle(
+            "card_title", fontName="Geist-Medium", fontSize=12,
+            leading=15, textColor=PURE_BLACK, alignment=TA_LEFT,
+            spaceAfter=1 * mm,
+        ),
+        "card_audience": ParagraphStyle(
+            "card_audience", fontName="Geist-Italic", fontSize=9,
+            leading=12, textColor=GRANITE_LIGHT, alignment=TA_LEFT,
+            spaceAfter=1 * mm,
+        ),
+        "card_body": ParagraphStyle(
+            "card_body", fontName="Geist", fontSize=9, leading=12,
+            textColor=GRANITE, alignment=TA_LEFT, spaceAfter=1 * mm,
         ),
     }
 
@@ -672,28 +693,69 @@ def _build_blocks(md: str, styles: dict) -> list:
     return story
 
 
+def _doc_card(variant: dict, styles: dict) -> Table:
+    """4-row card: meta, header, audience (italic), oneliner.
+    Left edge stripe uses per-deliverable colour (matches resources.html)."""
+    inner = [
+        [Paragraph(variant["meta"], styles["card_meta"])],
+        [Paragraph(variant["header"], styles["card_title"])],
+        [Paragraph(variant["audience"], styles["card_audience"])],
+        [Paragraph(variant["oneliner"], styles["card_body"])],
+    ]
+    inner_t = Table(inner, colWidths=[CONTENT_WIDTH - 8 * mm])
+    inner_t.setStyle(
+        TableStyle(
+            [
+                ("LEFTPADDING", (0, 0), (-1, -1), 0),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 0),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 1),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ]
+        )
+    )
+    outer = [[Paragraph("&nbsp;", styles["card_body"]), inner_t]]
+    t = Table(outer, colWidths=[1.5 * mm, CONTENT_WIDTH - 1.5 * mm])
+    t.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (0, 0), variant["color"]),
+                ("BACKGROUND", (1, 0), (1, 0), HexColor("#FFFFFF")),
+                ("BOX", (0, 0), (-1, -1), 0.5, HAIRLINE),
+                ("LEFTPADDING", (0, 0), (0, 0), 0),
+                ("RIGHTPADDING", (0, 0), (0, 0), 0),
+                ("TOPPADDING", (0, 0), (-1, -1), 4 * mm),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 4 * mm),
+                ("LEFTPADDING", (1, 0), (1, 0), 5 * mm),
+                ("RIGHTPADDING", (1, 0), (1, 0), 5 * mm),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ]
+        )
+    )
+    return t
+
+
 def _build_closing_page(styles: dict) -> list:
     """Last-page document ladder + landing URL."""
     story = []
     story.append(PageBreak())
-    story.append(Spacer(1, 30 * mm))
-    story.append(Paragraph("INSPECT THE FULL ANALYSIS AT:", styles["ladder_overline"]))
-    story.append(Paragraph("synthesis.nexalps.com", styles["ladder_url"]))
-    story.append(Spacer(1, 6 * mm))
-    story.append(Paragraph("DOCUMENT LADDER", styles["ladder_overline"]))
-    # Specialist is "this document" — omit per spec
-    ladder_rows = [
-        ("Long-Read", "14 pp · narrative analysis"),
-        ("Executive Brief", "6 pp · board-ready summary"),
-        ("Visual Read", "8 pp · graphics-first overview"),
-    ]
-    for label, desc in ladder_rows:
-        story.append(
-            Paragraph(
-                f"<b><font color='#000000'>{label}</font></b> &nbsp;&nbsp; {desc}",
-                styles["ladder_row"],
-            )
+    story.append(Spacer(1, 20 * mm))
+    story.append(Paragraph("WHERE TO GO NEXT", styles["ladder_overline"]))
+    story.append(Paragraph("Full read", styles["h2"]))
+    story.append(
+        Paragraph(
+            "This Specialist Appendix is one of four renders. The companion "
+            "documents carry the analysis at progressive depth.",
+            styles["body"],
         )
+    )
+    story.append(Spacer(1, 4 * mm))
+    for slug, variant in doc_ladder_others("specialist"):
+        story.append(_doc_card(variant, styles))
+        story.append(Spacer(1, 4 * mm))
+    story.append(Spacer(1, 4 * mm))
+    story.append(Paragraph("ALL FOUR AT:", styles["ladder_overline"]))
+    story.append(Paragraph(LADDER_URL, styles["ladder_url"]))
     return story
 
 

@@ -46,6 +46,7 @@ from _pdf_style import (
     ALPINE_GOLD, ALPINE_RED, CLASS_IV_WINE,
     CLS_COLOR,
     RADIUS_CARD,
+    DOC_VARIANTS, LADDER_URL, doc_ladder_others,
 )
 
 from reportlab.lib.enums import TA_LEFT
@@ -168,21 +169,28 @@ def _styles() -> dict[str, ParagraphStyle]:
             leading=24, textColor=DEEP_TEAL, alignment=TA_LEFT,
             spaceBefore=2 * mm, spaceAfter=4 * mm,
         ),
+        # Doc-card meta — 9 pt Geist-Medium granite (small caps register).
+        "card_meta": ParagraphStyle(
+            "card_meta", fontName="Geist-Medium", fontSize=9,
+            leading=12, textColor=GRANITE, alignment=TA_LEFT,
+            spaceAfter=0.5 * mm,
+        ),
         # Doc-card title — 12 pt Geist-Medium.
         "card_title": ParagraphStyle(
             "card_title", fontName="Geist-Medium", fontSize=12,
             leading=15, textColor=PURE_BLACK, alignment=TA_LEFT,
             spaceAfter=1 * mm,
         ),
+        # Doc-card audience — 9 pt italic granite-light.
+        "card_audience": ParagraphStyle(
+            "card_audience", fontName="Geist-Italic", fontSize=9,
+            leading=12, textColor=GRANITE_LIGHT, alignment=TA_LEFT,
+            spaceAfter=1 * mm,
+        ),
         # Doc-card body — 9 pt granite.
         "card_body": ParagraphStyle(
             "card_body", fontName="Geist", fontSize=9, leading=12,
             textColor=GRANITE, alignment=TA_LEFT, spaceAfter=1 * mm,
-        ),
-        # Doc-card URL — 9 pt teal.
-        "card_url": ParagraphStyle(
-            "card_url", fontName="Geist", fontSize=9, leading=12,
-            textColor=DEEP_TEAL, alignment=TA_LEFT,
         ),
     }
 
@@ -396,27 +404,14 @@ def _make_on_later_pages(page_count: _PageCount):
 # Last-page CTA (doc ladder, omits self)
 # ---------------------------------------------------------------------------
 
-# Mirror visual-read DOC_LADDER but drop the Executive card (we ARE that
-# document — no self-link).
-DOC_LADDER_OMIT_SELF = [
-    ("Visual read · 8 pp",
-     "Scan-first version · corridor map · one-page chart per finding.",
-     "synthesis.nexalps.com/visual-read"),
-    ("Long-read · 14 pp",
-     "Specialist appendix in long-form prose · 3,728 words · four graphics.",
-     "synthesis.nexalps.com/long-read"),
-    ("Specialist document · full",
-     "All five lens findings · three corridor sub-clusters · eight scenarios in detail.",
-     "synthesis.nexalps.com/specialist"),
-]
-
-
-def _doc_card(title: str, desc: str, url: str, styles: dict) -> Table:
-    """3-row card with left teal accent stripe + hairline border."""
+def _doc_card(variant: dict, styles: dict) -> Table:
+    """4-row card: meta, header, audience (italic), oneliner.
+    Left edge stripe uses per-deliverable colour (matches resources.html)."""
     inner = [
-        [Paragraph(_inline(title), styles["card_title"])],
-        [Paragraph(_inline(desc), styles["card_body"])],
-        [Paragraph(_inline(url), styles["card_url"])],
+        [Paragraph(_inline(variant["meta"]), styles["card_meta"])],
+        [Paragraph(_inline(variant["header"]), styles["card_title"])],
+        [Paragraph(_inline(variant["audience"]), styles["card_audience"])],
+        [Paragraph(_inline(variant["oneliner"]), styles["card_body"])],
     ]
     inner_t = Table(inner, colWidths=[CONTENT_WIDTH - 8 * mm])
     inner_t.setStyle(
@@ -430,14 +425,12 @@ def _doc_card(title: str, desc: str, url: str, styles: dict) -> Table:
             ]
         )
     )
-    # Outer 2-col table: accent stripe + content. The stripe is a 1-mm wide
-    # cell, teal-filled.
     outer = [[Paragraph("&nbsp;", styles["card_body"]), inner_t]]
-    t = Table(outer, colWidths=[1.2 * mm, CONTENT_WIDTH - 1.2 * mm])
+    t = Table(outer, colWidths=[1.5 * mm, CONTENT_WIDTH - 1.5 * mm])
     t.setStyle(
         TableStyle(
             [
-                ("BACKGROUND", (0, 0), (0, 0), DEEP_TEAL),
+                ("BACKGROUND", (0, 0), (0, 0), variant["color"]),
                 ("BACKGROUND", (1, 0), (1, 0), HexColor("#FFFFFF")),
                 ("BOX", (0, 0), (-1, -1), 0.5, HAIRLINE),
                 ("LEFTPADDING", (0, 0), (0, 0), 0),
@@ -464,19 +457,19 @@ def _build_cta(styles: dict) -> list:
     story.append(Paragraph("Full read", styles["h2"]))
     story.append(
         Paragraph(
-            "This Executive Brief is one render of three. The companion "
+            "This Executive Brief is one of four renders. The companion "
             "documents carry the full analysis at progressive depth.",
             styles["lede"],
         )
     )
     story.append(Spacer(1, 3 * mm))
-    for title, desc, url in DOC_LADDER_OMIT_SELF:
-        story.append(_doc_card(title, desc, url, styles))
+    for slug, variant in doc_ladder_others("executive"):
+        story.append(_doc_card(variant, styles))
         story.append(Spacer(1, 4 * mm))
 
     story.append(Spacer(1, 4 * mm))
-    story.append(Paragraph("INSPECT THE FULL ANALYSIS AT:", styles["eyebrow"]))
-    story.append(Paragraph("synthesis.nexalps.com", styles["cta_landing"]))
+    story.append(Paragraph("ALL FOUR AT:", styles["eyebrow"]))
+    story.append(Paragraph(LADDER_URL, styles["cta_landing"]))
 
     story.append(Spacer(1, 4 * mm))
     story.append(Paragraph("CITE AS", styles["eyebrow"]))
