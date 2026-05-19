@@ -1877,7 +1877,12 @@
         }
       },
       "s2_dependent": false,
-      "corridor_volatility_rms": 2.2361
+      "corridor_volatility_rms": 2.2361,
+      "cyclical_confounder_2026": {
+        "source": "iab_arbeitsmarktprognose_2025_2026",
+        "headline": "IAB Arbeitsmarktprognose 2025/2026 forecasts employment in Germany to decline by approximately 20,000 persons in 2026; the Erwerbspersonenpotenzial (labour force potential) declines for the first time since the pandemic.",
+        "implication": "Any AI signal in German labour data sits on top of this cyclical base. The IAB forecast identifies fiscal-policy headwinds plus demographic decline as the binding constraints on 2026 employment, independent of AI. Isolate cyclical labour weakness from technology-driven inflow suppression before attributing observed entry-level declines to AI."
+      }
     },
     "DK": {
       "code": "DK",
@@ -7060,7 +7065,13 @@
         }
       },
       "s2_dependent": false,
-      "corridor_volatility_rms": 2.4785
+      "corridor_volatility_rms": 2.4785,
+      "policy_confounder_2026": {
+        "source": "niesr_economic_outlook_winter_2026",
+        "headline": "NIESR Winter 2026 calculates that employer National Insurance Contribution increases, National Living Wage upratings, and employment-rights reforms together raised the marginal real cost of hiring an entry-level UK worker by approximately 7% (compared to the prior year).",
+        "implication": "The UK's pronounced entry-level deterioration (18-to-24 unemployment near 14.5%; graduate hiring down sharply) should not be attributed to AI alone. The 7% real cost shock plus the AI signal both contribute in unknown proportions. Treating this as an AI effect without controlling for the policy-cost shock would attribute to technology what is partly policy.",
+        "cross_reference": "Consistent with British Progress (Serodio 2026): three years post-ChatGPT, no detectable UK-wide AI employment effect at occupation level."
+      }
     }
   },
   "cross_cutting_findings": {
@@ -7931,6 +7942,62 @@
       "variation_guard_note_p1": "Every aggregate scalar below is a population-weighted reference point; it is not a substitute for the per-country reading. This is a reminder that the one average number is only a shortcut, and you only understand the real result by seeing how different the 36 countries are from each other.",
       "variation_guard_note_p2": "The class spread (9/9/15/3 across the 36-market scope) is the most honest pan-European read because it shows those differences instead of hiding them behind a single Europe-wide average number.",
       "headline_finding_pan_european": "There is no single Europe-wide average that tells the truth. The real result is the spread across 36 countries (9 resilient, 9 fragile, 15 already in trouble, 3 failing), and any one average number would hide that variation."
+    },
+    "entry_level_signal_unit_of_analysis": {
+      "summary": "Firm-level nulls and cohort-level signals are both empirically correct. The literature contradiction is a unit-of-analysis problem, not a US-vs-Europe difference.",
+      "cohort_evidence_us": {
+        "headline_finding": "16% relative employment decline for workers aged 22 to 25 in the most AI-exposed occupations (Brynjolfsson, Chandar & Chen 2025; controlling for firm-time effects).",
+        "mechanism": "Suppressed inflows, not outflows of incumbents. Job-finding rate for young plus high-AI-exposure workers is down more than 3 percentage points since the November 2023 peak; separation rates remained flat across the same period (Atkinson & Yamco / Dallas Fed 2026).",
+        "automate_vs_augment": "Declines concentrate in occupations where AI automates work; employment growth holds in occupations where AI augments (Brynjolfsson et al. 2025, Fact 3).",
+        "sources": [
+          "brynjolfsson_chandar_chen_2025",
+          "atkinson_yamco_dallasfed_2026",
+          "massenkoff_mccrory_2026"
+        ]
+      },
+      "firm_level_nulls_europe": {
+        "headline_finding": "European firm-level data show no adverse employment effects. Heaviest AI users net-hire rather than shed staff.",
+        "key_studies": [
+          "aldasoro_bis_wp1325_2026 (12,000 EU plus US firms; +4% labour productivity; no adverse firm-level employment)",
+          "ecb_blog_lebastard_sondermann_2026 (5,000 SAFE-surveyed euro-area firms; AI-intensive firms +4% more likely to hire)",
+          "ecb_speech_lane_2026 (ECB official synthesis: currently little evidence of substantial AI employment effect in euro area)",
+          "humlum_vestergaard_nber_w33777 (25,000 workers / 7,000 workplaces Denmark; precise nulls on earnings and hours; effects above 2% ruled out two years post-ChatGPT)",
+          "engberg_et_al_kiel_kpb198_2026 (3-country firm-level: Denmark, Portugal, Sweden; no systematic change in total firm employment + skill upgrading toward higher-skilled labour, with reading-comprehension / speech-recognition / language-modelling sub-domains net-positive for total employment)"
+        ],
+        "adoption_decoupling_observation": "Humlum and Vestergaard: the Danish early-career employment decline does NOT correlate with which firms actually adopted AI. The cohort signal in Denmark appears to reflect hiring expectations and employer norms rather than measured firm-level AI deployment."
+      },
+      "vacancy_nulls_us": {
+        "headline_finding": "US job postings show no AI-driven decline.",
+        "key_studies": [
+          "liu_webber_feds_2026 (7.3M observations across 1.05M firms; precisely-estimated null effects)",
+          "audoly_guerin_topa_nyfed_2026 (Lightcast postings; relative posting declines in high-exposure occupations largely predate ChatGPT)"
+        ],
+        "interpretation": "Vacancies are not where suppression operates. Firms do not post a 'do not hire a junior' listing. They raise the bar on the existing posting and fill fewer of them."
+      },
+      "oecd_inflow_endorsement": {
+        "headline_finding": "OECD case-study work in eight OECD economies (finance and manufacturing sectors, 2022): firms often opted to slow hiring instead of implementing job cuts when introducing AI, as a hedge against the technology underperforming.",
+        "source": "broecke_ruggiu_oecd_kli_2025 (Artificial Intelligence and the Labour Market in Korea, Chapter 2, pp. 25-26)",
+        "note": "Institutional OECD endorsement of the inflow-vs-outflow mechanism asserted in Brynjolfsson and Atkinson & Yamco."
+      },
+      "non_western_corroboration": {
+        "headline_finding": "In Korea, traditional-AI exposure is associated with lower full-time permanent employment growth concentrated among younger workers, low-to-medium-skilled workers, and women. A 10-percentile-point increase in Webb (2020) AI exposure is associated with 5.7% lower full-time permanent employment growth (2018 to 2023). No comparable effect was found for generative AI in the same dataset.",
+        "source": "oecd_kli_2025 (Chapter 2, Table 2.3 and Box 2.4)",
+        "note": "The cohort signal observed in US data is corroborated in a non-Western institutional setting using employment-insurance microdata."
+      },
+      "imf_cross_country_anchor": {
+        "headline_finding": "3.6% lower employment in regions with greater AI-skill demand for occupations highly exposed but with limited complementarity to AI. Six-country sample: Brazil, Denmark, Germany, South Africa, UK, USA.",
+        "framing_quote": "These occupations often serve as steppingstones for young people in the career ladder",
+        "source": "jaumotte_et_al_imf_sdn_2026_001"
+      },
+      "measurement_caveat_developmental_displacement": {
+        "summary": "Standard occupation-level AI exposure measures undercount developmental displacement. The CPS-equivalent convention codes unemployed workers by their most recent occupation, not the occupation they were trying to enter. A computer-science graduate who never finds a programming job is recorded under their actual last position (often unrelated) or as 'not in labour force'. Every occupation-level reading on this dashboard (including Lens 1 displacement velocity) likely understates the entry-level impact on workers aged 22 to 25 attempting to break into exposed fields. This is a lower bound, not a point estimate.",
+        "source": "atkinson_yamco_dallasfed_2026"
+      },
+      "_provenance": {
+        "added_by": "v4.3 amendment 2026-05-19",
+        "source_brief": "docs/layer6-update-inflow-problem-v2-2026-05-18.md",
+        "rationale": "Reconciles apparent contradiction in the 2025 to 2026 literature: firm-level nulls in Europe (Aldasoro / ECB) + vacancy nulls in US (Liu & Webber / Audoly) + cohort signal in US payroll (Brynjolfsson + Dallas Fed) + adoption-decoupled cohort signal in Denmark (Humlum). Frames the entry-level signal as suppressed inflows rather than outflows, the mechanism explicitly endorsed by OECD case-study evidence."
+      }
     }
   },
   "ukraine_reference_panel": {
