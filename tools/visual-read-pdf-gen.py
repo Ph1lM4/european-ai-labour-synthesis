@@ -861,125 +861,7 @@ def _draw_heatmap_legend(c, x, y, w):
 
 
 # ---------------------------------------------------------------------------
-# Page 7 — Italy callout (overflow-safe)
-# ---------------------------------------------------------------------------
-
-ITALY_STATS = [
-    ("Net migration · 2025",          "−485,823",   "Only major EU economy with negative migration."),
-    ("Working-age decline to 2050",   "−17.5%",     "Projected EUROPOP2023 trajectory."),
-    ("Retirement offset",             "25.3%",      "Well below the 80% buffer threshold."),
-    ("Fragility class",               "III",        "Pre-Failure Risk."),
-    ("Corridor",                      "C3",         "Displacement Without Absorption."),
-]
-
-
-def page_italy(c: canvasmod.Canvas, sot: dict) -> None:
-    page_background(c, PAGE_W, PAGE_H)
-    overline(c, M_L, PAGE_H - M_T, "THE OUTLIER")
-    y = heading_h2(
-        c, M_L, PAGE_H - M_T - 8 * mm,
-        "Italy · workforce shrinks before AI displaces a single worker",
-    CONTENT_W,
-    )
-    y = heading_lede(
-        c, M_L, y - 4 * mm,
-        "Italy is the only major European economy with negative net migration in 2025. "
-        "The headline finding is sequencing: demographic contraction precedes the AI shock. "
-        "An outlier case: Italy is Corridor C3 with Fragility Class III, "
-        "driven by pre-AI demographic contraction.",
-    CONTENT_W,
-    )
-
-    grid_top = y - 6 * mm
-    cols = 3
-    gap = 5 * mm
-    card_w = (CONTENT_W - gap * (cols - 1)) / cols
-    card_h = 46 * mm
-    for i, (label, value, note) in enumerate(ITALY_STATS):
-        col = i % cols
-        row = i // cols
-        cx = M_L + col * (card_w + gap)
-        cy = grid_top - (row + 1) * card_h - row * gap
-        draw_italy_card(c, cx, cy, card_w, card_h, label, value, note)
-
-    # Italy synthesis card — v4.1 sizes to fit (was fixed 50 mm). Blank line
-    # between the SYNTHESIS header and the body per Phil-locked 2026-05-13 v4.1.
-    body = (
-        "Italy is the only country in the suite where the labour-supply contraction is "
-        "structural and pre-AI. Caregiving, skilled manual, and medical roles already cannot be "
-        "filled. AI displacement compounds, rather than triggers, the gap."
-    )
-    body_lines = wrap_lines(body, "Geist-LightItalic", 12, CONTENT_W - 12 * mm)
-    body_leading = 16  # pt
-    header_pad_top = 6 * mm  # padding above "SYNTHESIS" eyebrow
-    header_to_body = 16 + 6  # 1 blank line + small extra (pt)
-    bottom_pad = 6 * mm
-    synth_h = (
-        header_pad_top
-        + 9  # SYNTHESIS eyebrow at 9 pt
-        + header_to_body
-        + body_leading * len(body_lines)
-        + bottom_pad
-    )
-    synth_y = grid_top - 2 * card_h - gap - synth_h - 6 * mm
-    c.saveState()
-    c.setFillColor(DEEP_TEAL)
-    c.roundRect(M_L, synth_y, CONTENT_W, synth_h, RADIUS_CARD, stroke=0, fill=1)
-    c.setFont("Geist-Bold", 9)
-    c.setFillColor(PEARL_WHITE)
-    header_y = synth_y + synth_h - header_pad_top - 3  # baseline below pad
-    c.drawString(M_L + 6 * mm, header_y, "SYNTHESIS")
-    c.setFont("Geist-LightItalic", 12)
-    by = header_y - header_to_body
-    for line in body_lines:
-        c.setFillColor(PEARL_WHITE)
-        c.drawString(M_L + 6 * mm, by, line)
-        by -= body_leading
-    c.restoreState()
-
-    footer(c, 7)
-    c.showPage()
-
-
-def draw_italy_card(c, x, y, w, h, label, value, note):
-    """Italy stat card — locked 9 pt label / 22 pt value / 9 pt note.
-
-    Per Phil-locked 2026-05-13 v4 Track 4: no shrink-to-fit; label and note
-    wrap to a second line when needed. Value stays fixed at 22 pt (its values
-    are short enough to fit at the locked column width).
-    """
-    c.saveState()
-    c.setFillColor(HexColor("#FFFFFF"))
-    c.setStrokeColor(HAIRLINE)
-    c.setLineWidth(0.5)
-    c.roundRect(x, y, w, h, RADIUS_CARD, stroke=1, fill=1)
-    draw_card_accent(c, x, y, w, h, ALPINE_RED, side="left", thickness=3)
-    avail_w = w - 10 * mm
-    # Label — locked 9 pt Geist-Bold, wrap (no shrink-to-fit)
-    c.setFont("Geist-Bold", 9)
-    c.setFillColor(GRANITE)
-    label_lines = wrap_lines(label.upper(), "Geist-Bold", 9, avail_w)
-    ly = y + h - 8 * mm
-    for line in label_lines:
-        c.drawString(x + 5 * mm, ly, line)
-        ly -= 11
-    # Value — locked 22 pt Geist-Medium
-    c.setFont("Geist-Medium", 22)
-    c.setFillColor(PURE_BLACK)
-    c.drawString(x + 5 * mm, y + h - 24 * mm, value)
-    # Note — locked 9 pt Geist (wraps naturally to a second line)
-    note_lines = wrap_lines(note, "Geist", 9, avail_w)
-    c.setFont("Geist", 9)
-    c.setFillColor(GRANITE)
-    note_y = y + 4 * mm + (len(note_lines) - 1) * 12
-    for line in note_lines:
-        c.drawString(x + 5 * mm, note_y, line)
-        note_y -= 12
-    c.restoreState()
-
-
-# ---------------------------------------------------------------------------
-# Page 8 — CTA
+# Page 7 — CTA
 # ---------------------------------------------------------------------------
 
 def page_cta(c: canvasmod.Canvas, sot: dict) -> None:
@@ -1022,7 +904,7 @@ def page_cta(c: canvasmod.Canvas, sot: dict) -> None:
         c.drawString(M_L, cy, line)
         cy -= 12
 
-    footer(c, 8)
+    footer(c, 7)
     c.showPage()
 
 
@@ -1074,7 +956,6 @@ def build() -> Path:
     page_classes(c, sot)
     page_reskilling(c, sot)
     page_scenarios(c, sot)
-    page_italy(c, sot)
     page_cta(c, sot)
     c.save()
     return OUTPUT

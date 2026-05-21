@@ -317,7 +317,7 @@ def _block_iter(md: str) -> Iterable[tuple[str, object]]:
             i += 1
             continue
 
-        # Standalone italic line (e.g. "*The outlier → Italy...*").
+        # Standalone italic line (e.g. a pull-quote on its own line).
         if (
             stripped.startswith("*")
             and not stripped.startswith("**")
@@ -533,8 +533,8 @@ def _build_blocks(md: str, styles: dict) -> list:
             continue
 
         if kind == "leadin":
-            # Lead-in mini-header (used for **Prelude**, **What Survives...**,
-            # **The outlier → Italy...**). Wrap with the next paragraph.
+            # Lead-in mini-header (used for **Prelude**, **What Survives...**).
+            # Wrap with the next paragraph.
             heading = Paragraph(_inline(payload), styles["leadin"])
             j = i + 1
             while j < n and blocks[j][0] in ("hr",):

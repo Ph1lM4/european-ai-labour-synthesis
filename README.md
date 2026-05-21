@@ -13,7 +13,7 @@ No European labour market is fully safe from AI-driven job displacement. We stre
 | Page | Description |
 |------|-------------|
 | [Overview](https://synthesis.nexalps.com/) | Landing page — the strict-zero headline, the four drill-down summaries, the Part-of-7 framing |
-| [Findings](https://synthesis.nexalps.com/findings.html) | Six findings: strict-zero result, demographic refutation, S2-dependent optimism path for AT/LU/TR, 15-country Class III capacity gap, eight-country squeeze cluster, Italy as outlier (−485,823 net migration 2025). Dot map + beeswarm switchable view. |
+| [Findings](https://synthesis.nexalps.com/findings.html) | Five findings: strict-zero result, demographic refutation, S2-dependent optimism path for AT/LU/TR, 15-country Class III capacity gap, eight-country squeeze cluster. Dot map + beeswarm switchable view. |
 | [Scenarios](https://synthesis.nexalps.com/scenarios.html) | Eight scenarios (S1 Reinstatement Revival, S2 Climate Adaptation Boom, S3 Jobs Transform, S4 Muddle Through, S5 Wage Cliff, S6 Reinstatement Failure, S7 Bandwidth Fracture, S8 Polycrisis Drag). Per-regime probability vectors with 80% CI bands. Reskilling-capacity gap (7.55M need / ~450K/yr / 15-year clearance), capability-floor breach (12 markets), squeeze-cluster mechanism split. |
 | [Europe](https://synthesis.nexalps.com/europe.html) | Pan-European aggregate — 36-market panel as primary read; delta strip showing what shifts under EU-27 restriction. Class distribution 9/9/15/3 (36 markets) vs 7/6/14/0 (EU-27). Three SMs: no single European corridor, spillover at the EU's borders, optimism through climate for ~40% of EU-27 workers. |
 | [Methodology](https://synthesis.nexalps.com/methodology.html) | Five lenses, three corridors, four fragility classes, eight scenarios. Threshold-locking ladder (1.50/3.00 literature-fitted → 1.20/2.80 theory-anchored). What we deliberately left open + missing-countries section (Albania, Montenegro, Moldova, Kosovo, Belarus). Ninth-scenario tests (Industrial Reconstruction, Wealth-Fund-Rich regime, Startup-Driven Absorption — all declined). |
@@ -45,8 +45,6 @@ No European labour market is fully safe from AI-driven job displacement. We stre
 - **For ~40% of EU-27 workers, the post-growth regime breaks the comforting story.** DE, FR, AT, SE, FI, LU sit in post-growth-empirical; the optimism path runs through climate, not conventional tech.
 - **The squeeze cluster is 8 worker-protection economies, 2 mechanisms.** Nordic sub-cluster (DK, FI, NO, SE — trade-decoupling exposure). Continental sub-cluster (BE, DE, FR, NL — UK-adjacency capital-flight risk). The squeeze flag is a **capital-flight signal**, not a labour-displacement signal.
 - **12 markets breach the capability floor at 2-digit ESCO** (BE, CH, DE, DK, IE, IS, LI, LU, NL, NO, SE, UK). Denmark is the marginal entrant. Cascade priority distribution: HIGH = 7, MEDIUM = 4, LOW = 1.
-- **Italy is the outlier.** Only major European economy with negative net migration in 2025 (**−485,823**). Working-age population trajectory: −17.5% to 2050. The workforce shrinks before AI displaces a single worker.
-
 ## The Three Corridors (Theory-Anchored)
 
 | Corridor | Lens 1 ratio | Plain meaning | n |

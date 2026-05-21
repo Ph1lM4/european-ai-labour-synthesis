@@ -12,8 +12,7 @@ Of 36 European labour markets, only 9 remain conditionally resilient under stres
 
 ## Key findings
 1. Strict-zero Class I — published "managed transition" base rates over-state robustness. Under the strict (b) ±0 rule applied to corrected thresholds (1.20 / 2.80), Class I count drops to 0.
-2. Demographic ageing does not absorb displacement. Maximum retirement-offset reading across 32 scored countries is ~26% against the 80% buffer threshold; zero countries clear. Italy is the standout demographic case: 2025 net migration −485,823.
-3. The optimism path narrows to Climate Zone-C. Three countries (Austria, Luxembourg, Türkiye) reach C1 only under S2 Climate Adaptation Boom; all other routine variants land them in C2 or C3.
+2. Demographic ageing does not absorb displacement. Maximum retirement-offset reading across 32 scored countries is ~26% against the 80% buffer threshold; zero countries clear.3. The optimism path narrows to Climate Zone-C. Three countries (Austria, Luxembourg, Türkiye) reach C1 only under S2 Climate Adaptation Boom; all other routine variants land them in C2 or C3.
 4. Averages hide a split in the high-coordination cluster. At 2-digit ISCO, teaching-heavy weight (0.582) is 3.7× ICT weight (0.157). Education / admin lift (DK, IS, LU, NO) versus finance / tech drag (CH, DE, IE, UK).
 5. The squeeze cluster is eight worker-protection economies, two distinct mechanisms. Nordic sub-cluster (DK, FI, NO, SE): worker-protection × trade-decoupling. Continental sub-cluster (BE, DE, FR, NL): worker-protection × UK adjacency × Mode 1 capital-flow vulnerability.
 6. Pan-European aggregate. No single European corridor — the centre of gravity sits in C2 + C3, with 9 markets resilient, 9 fragile, 15 already in trouble, and 3 in currently failing. Within the EU-27 specifically: 7 / 6 / 14 / 0 across Class I / II / III / IV.

@@ -126,7 +126,7 @@
         "Per-country retirement_offset_pct (32 of 36 countries) — max 26.4% (BG/EL/HR/LT/LV/MT/PL/PT/RO), min 20.4% (IE/SE), uniformly 54+ pp below 80% threshold",
         "Working-age decline trajectories to 2050 (9 countries with explicit projections: IT −17.5%, ES −12.9%, DE −12.0%, BG −29%, LV −28%, AT −7.4%, NL −5.7%, FR −5.5%, CH +1.8%)",
         "Zone A/B/C/D substitution matrix (EU-aggregate): Zone A 5–10M compounding mismatch (60–80% AI substitution vs 3.5M retirement-2030), Zone C 8–12M unfillable shortage (5–15% AI substitution vs 12M retirement-2030), Zone D chronic undersupply (EU 10M ICT vs 20M needed by 2030)",
-        "Net-migration arithmetic for 8 countries (latest 2025): IT now -485,823 (negative inflow), DE +517,140 (vs 400K/year required per L4 immigration.germany_annual_need), ES +592,984, FR +200,943, NL +107,085, CH +82,771, AT +50,463",
+        "Net-migration arithmetic, 2024 (latest available; Eurostat demo_gind, L4 dataset audited 2026-05-21): IT +255,399, DE +451,736, ES +624,658, FR +195,393, NL +107,107, CH +82,457, AT +49,711 (Germany still well below the ~400K/year required per L4 immigration.germany_annual_need)",
         "Country divergence taxonomy: 11 sharpest_decline (>30% population loss by 2100 without migration), 5 moderate_decline (TFR 1.3–1.4, migration-dependent), 3 relative_resilience (organic stabilisation possible)"
       ],
       "data_gaps_acknowledged": [
@@ -3793,7 +3793,7 @@
             "zone_c_healthcare_trades": "AI substitutes only 5–15% of tasks; EU-wide ~12M retirements by 2030 = 8–12M unfillable shortage — negative buffer (demographic load amplifies, not absorbs)",
             "headline": "25.3% retirement offset (above-median attrition, far below 80% threshold); L4 sharpest-decline tier (>30% population loss by 2100 without migration) compounds Zone C unfillable shortage"
           },
-          "net_migration_dependency": "L4: 2025 net migration = −485,823 (negative inflow); working-age trajectory −17.5% to 2050 makes migration-dependence acute but politically constrained",
+          "net_migration_dependency": "L4: 2024 net migration = +255,399 (per L4 demographics-data.json population_trends, Eurostat demo_gind — latest available)",
           "_provenance": {
             "source_layer": "L4",
             "source_data": "demographics-data.json + Eurostat EUROPOP2023 (via L4) + L6 phase1 retirement_offset",
